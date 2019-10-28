@@ -91,7 +91,12 @@ __webpack_require__(5);
 window.live_home = {
     props: ['ctx'],
     basename: 'live-home',
-    template: '<div class="com-live-home">jjyy</div>'
+    template: '<div class="com-live-home">\n\n    <div class="middle-wrap">\n       <div class="mybtn btn_500" @click="on_click()">\n        <img src="/static/images/button_500_1.png" alt="">\n       <div class="mytitle">\u54C1<span>\u724C</span></div>\n        </div>\n    </div>\n    </div>',
+    methods: {
+        on_click: function on_click() {
+            cfg.showMsg('点击500');
+        }
+    }
 };
 
 /***/ }),
@@ -103,7 +108,7 @@ exports = module.exports = __webpack_require__(3)();
 
 
 // module
-exports.push([module.i, ".com-live-home {\n  background: url(\"/static/images/底.jpg\");\n  height: var(--app-height);\n  width: var(--app-width);\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n  font-size: 0.3rem;\n}\n", ""]);
+exports.push([module.i, ".com-live-home {\n  background: url(\"/static/images/底.jpg\");\n  height: var(--app-height);\n  width: var(--app-width);\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n  font-size: 0.3rem;\n  position: relative;\n}\n.com-live-home .middle-wrap {\n  width: 0;\n  height: 0;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n}\n.com-live-home .middle-wrap .mybtn {\n  position: absolute;\n  text-align: center;\n}\n.com-live-home .middle-wrap .mybtn img {\n  width: 1rem;\n}\n.com-live-home .middle-wrap .mybtn .mytitle {\n  letter-spacing: 0.4rem;\n  font-size: 0.2rem;\n  color: #fff;\n}\n.com-live-home .middle-wrap .mybtn .mytitle span {\n  letter-spacing: 0;\n}\n.com-live-home .middle-wrap .btn_500 {\n  left: -2.5rem;\n  top: -3rem;\n}\n", ""]);
 
 // exports
 
