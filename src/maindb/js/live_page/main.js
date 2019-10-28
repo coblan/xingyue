@@ -1,0 +1,1 @@
+import * as live_page_home from './home'
