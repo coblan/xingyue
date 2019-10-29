@@ -1,12 +1,15 @@
+
 .com-live-home
-  background url('/static/images/底.jpg')
   height var(--app-height)
   width var(--app-width)
+  font-size .3rem
+  position relative;
+
+  background url('/static/images/底.jpg')
   background-size 100% auto
   background-repeat:no-repeat;
   background-position center
-  font-size .3rem
-  position relative;
+
   //background-origin content-box
 
   .middle-wrap
@@ -25,9 +28,52 @@
         letter-spacing .4rem
         font-size .2rem
         color white
+        white-space nowrap
         span
           letter-spacing 0
 
     .btn_500
       left -2.5rem
       top -3rem
+    .btn_block
+      left -.9rem
+      top -1.2rem
+    .produce
+      left -.3rem
+      top 1rem
+    .contact
+      left -.2rem
+      top 3.4rem
+      .mytitle
+        letter-spacing .1rem
+    .block-posion
+      left -.2rem
+      top -2.5rem
+    .six
+      left 1rem
+      top -1.3rem
+    .garden
+      left 1.4rem
+      top .3rem
+    .overloap-btn
+      left: .5rem;
+      top: -.5rem
+    .tall-build
+      left: 1.4rem;
+      top: .6rem
+    .fashion
+      left: 1rem;
+      top: 2rem;
+
+
+
+  .after-btn
+    z-index 900
+
+  .my-model
+    position absolute
+    left 0
+    top 0
+    right 0
+    bottom 0
+    background rgba(0,0,0,.3)

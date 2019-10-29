@@ -63,58 +63,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 18);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _home = __webpack_require__(1);
-
-var live_page_home = _interopRequireWildcard(_home);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(5);
-
-window.live_home = {
-    props: ['ctx'],
-    basename: 'live-home',
-    template: '<div class="com-live-home">\n\n    <div class="middle-wrap">\n       <div class="mybtn btn_500" @click="on_click()">\n        <img src="/static/images/button_500_1.png" alt="">\n       <div class="mytitle">\u54C1<span>\u724C</span></div>\n        </div>\n    </div>\n    </div>',
-    methods: {
-        on_click: function on_click() {
-            cfg.showMsg('点击500');
-        }
-    }
-};
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)();
-// imports
-
-
-// module
-exports.push([module.i, ".com-live-home {\n  background: url(\"/static/images/底.jpg\");\n  height: var(--app-height);\n  width: var(--app-width);\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n  font-size: 0.3rem;\n  position: relative;\n}\n.com-live-home .middle-wrap {\n  width: 0;\n  height: 0;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n}\n.com-live-home .middle-wrap .mybtn {\n  position: absolute;\n  text-align: center;\n}\n.com-live-home .middle-wrap .mybtn img {\n  width: 1rem;\n}\n.com-live-home .middle-wrap .mybtn .mytitle {\n  letter-spacing: 0.4rem;\n  font-size: 0.2rem;\n  color: #fff;\n}\n.com-live-home .middle-wrap .mybtn .mytitle span {\n  letter-spacing: 0;\n}\n.com-live-home .middle-wrap .btn_500 {\n  left: -2.5rem;\n  top: -3rem;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 3 */
 /***/ (function(module, exports) {
 
 /*
@@ -170,7 +123,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 4 */
+/* 1 */
 /***/ (function(module, exports) {
 
 /*
@@ -422,16 +375,295 @@ function updateLink(linkElement, obj) {
 
 
 /***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _back = __webpack_require__(4);
+
+var back = _interopRequireWildcard(_back);
+
+var _menu_circle = __webpack_require__(27);
+
+var menu_circle = _interopRequireWildcard(_menu_circle);
+
+var _menu_vertical = __webpack_require__(30);
+
+var menu_vertical = _interopRequireWildcard(_menu_vertical);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _home = __webpack_require__(6);
+
+var live_page_home = _interopRequireWildcard(_home);
+
+var _page = __webpack_require__(7);
+
+var page500 = _interopRequireWildcard(_page);
+
+var _contact = __webpack_require__(5);
+
+var contact = _interopRequireWildcard(_contact);
+
+var _block_pos = __webpack_require__(19);
+
+var block_pos = _interopRequireWildcard(_block_pos);
+
+var _six = __webpack_require__(22);
+
+var six = _interopRequireWildcard(_six);
+
+var _garden = __webpack_require__(23);
+
+var garden = _interopRequireWildcard(_garden);
+
+var _page3d = __webpack_require__(24);
+
+var page3d = _interopRequireWildcard(_page3d);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+__webpack_require__(17);
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(13);
+
+Vue.component('com-btn-back', {
+    template: '<div class="com-btn-back" @click="back()">\n        <img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">\n    </div>',
+    methods: {
+        back: function back() {
+            history.back();
+        }
+    }
+});
+
+/***/ }),
 /* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(14);
+
+window.live_contact = {
+    props: ['ctx'],
+    basename: 'live-contact',
+    template: '<div class="com-live-contact">\n     <div class="contace0" >\n            <img src="/static/images/button_\u8054\u7CFB\u65B9\u5F0F_1.png" alt="">\n        </div>\n    <div class="contace1">\n        <img src="/static/images/contact/txt_\u8054\u7CFB1.png" alt="">\n    </div>\n    <div class="contact2">\n        <img src="/static/images/contact/txt_\u8054\u7CFB2.png" alt="">\n    </div>\n    <div class="contact3">\n        <img src="/static/images/contact/txt_\u8054\u7CFB3.png" alt="">\n    </div>\n   <com-btn-back class="normal-back-btn"></com-btn-back>\n    </div>',
+    methods: {}
+};
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(15);
+
+window.live_home = {
+    props: ['ctx'],
+    basename: 'live-home',
+    template: '<div class="com-live-home">\n\n\n    <div class="middle-wrap">\n       <div class="mybtn btn_500" @click="open_500()">\n            <img src="/static/images/button_500_1.png" alt="">\n           <div class="mytitle">\u54C1<span>\u724C</span></div>\n        </div>\n       <div class="mybtn btn_block" @click="open_block()">\n            <img src="/static/images/button_\u533A\u57DF_1.png" alt="">\n           <div class="mytitle">\u533A<span>\u57DF</span></div>\n        </div>\n       <div class="mybtn produce" @click="open_product()">\n            <img src="/static/images/button_\u4EA7\u54C1_1.png" alt="">\n           <div class="mytitle">\u4EA7<span>\u54C1</span></div>\n       </div>\n\n        <div class="mybtn contact" @click="open_contact()">\n            <img src="/static/images/button_\u8054\u7CFB\u65B9\u5F0F_1.png" alt="">\n           <div class="mytitle">\u8054\u7CFB\u65B9<span>\u5F0F</span></div>\n        </div>\n\n          <template v-if="crt_model==\'block\'">\n           <div class="mybtn block-posion after-btn" @click="open_block_pos()">\n                <img src="/static/images/block_btn/\u533A\u4F4D.png" alt="">\n            </div>\n             <div class="mybtn six after-btn" @click="open_six()">\n                <img src="/static/images/block_btn/\u4E00\u6E7E\u516D\u6838.png" alt="">\n            </div>\n             <div class="mybtn garden after-btn" @click="open_garden()">\n                <img src="/static/images/block_btn/\u516C\u56ED\u914D\u5957.png" alt="">\n            </div>\n          </template>\n\n            <template v-if="crt_model==\'product\'">\n           <div class="mybtn overloap-btn after-btn" @click="open_overlap()">\n                <img src="/static/images/product/button_\u53E0\u62FC_1.png" alt="">\n            </div>\n             <div class="mybtn tall-build after-btn" @click="open_six()">\n                <img src="/static/images/product/button_\u9AD8\u5C42_1.png" alt="">\n            </div>\n             <div class="mybtn fashion after-btn" @click="open_garden()">\n                <img src="/static/images/product/button_\u6D0B\u623F_1.png" alt="">\n            </div>\n          </template>\n    </div>\n\n       <div class="my-model whole-page" v-if="crt_model!=\'\'" @click="crt_model=\'\'">\n\n        </div>\n    </div>',
+    data: function data() {
+        return {
+            crt_model: ''
+        };
+    },
+
+    methods: {
+        open_500: function open_500() {
+            live_root.open_live('live_page500', {});
+        },
+        open_block: function open_block() {
+            this.crt_model = 'block';
+        },
+        open_contact: function open_contact() {
+            live_root.open_live('live_contact', {});
+        },
+        open_block_pos: function open_block_pos() {
+            live_root.open_live('live_block_pos', {});
+        },
+        open_six: function open_six() {
+            live_root.open_live('live_six', {});
+        },
+        open_garden: function open_garden() {
+            live_root.open_live('live_garden', {});
+        },
+        open_product: function open_product() {
+            this.crt_model = 'product';
+        },
+        open_overlap: function open_overlap() {
+            live_root.open_live('live_page_3d', { menu_circle: 'com-menu-circle', menu_vertical: 'com-menu-vertical' });
+        }
+    }
+};
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(16);
+
+window.live_page500 = {
+    props: ['ctx'],
+    basename: 'live-page500',
+    template: '<div class="com-live-page500">\n    <!--<div class="mytitle">-->\n        <!--<img src="/static/images/page500/txt_\u54C1\u724Clogo.png" alt="">-->\n    <!--</div>-->\n    <!--<div class="mytitle2">-->\n        <!--<img src="/static/images/page500/txt_\u54C1\u724C1.png" alt="">-->\n    <!--</div>-->\n    <div class="mytitle">\n        <img src="/static/images/page500/txt_\u54C1\u724C_new.png" alt="">\n    </div>\n\n   <com-btn-back class="page500-back-btn"></com-btn-back>\n    </div>',
+    methods: {}
+};
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".com-btn-back img {\n  width: 1rem;\n  height: auto;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".com-live-contact {\n  background: url(\"/static/images/back_通用底图.jpg\");\n  height: var(--app-height);\n  width: var(--app-width);\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n  font-size: 0.3rem;\n  position: relative;\n}\n.com-live-contact .contace0 {\n  padding-top: 2rem;\n  text-align: center;\n}\n.com-live-contact .contace0 img {\n  width: 1rem;\n}\n.com-live-contact .contace1 {\n  padding-top: 0.5rem;\n  text-align: center;\n}\n.com-live-contact .contace1 img {\n  width: 4rem;\n}\n.com-live-contact .contact2 {\n  padding-top: 2rem;\n  text-align: center;\n}\n.com-live-contact .contact2 img {\n  width: 1.2rem;\n}\n.com-live-contact .contact3 {\n  padding: 1rem;\n  text-align: center;\n}\n.com-live-contact .contact3 img {\n  width: 4rem;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".com-live-home {\n  height: var(--app-height);\n  width: var(--app-width);\n  font-size: 0.3rem;\n  position: relative;\n  background: url(\"/static/images/底.jpg\");\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.com-live-home .middle-wrap {\n  width: 0;\n  height: 0;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n}\n.com-live-home .middle-wrap .mybtn {\n  position: absolute;\n  text-align: center;\n}\n.com-live-home .middle-wrap .mybtn img {\n  width: 1rem;\n}\n.com-live-home .middle-wrap .mybtn .mytitle {\n  letter-spacing: 0.4rem;\n  font-size: 0.2rem;\n  color: #fff;\n  white-space: nowrap;\n}\n.com-live-home .middle-wrap .mybtn .mytitle span {\n  letter-spacing: 0;\n}\n.com-live-home .middle-wrap .btn_500 {\n  left: -2.5rem;\n  top: -3rem;\n}\n.com-live-home .middle-wrap .btn_block {\n  left: -0.9rem;\n  top: -1.2rem;\n}\n.com-live-home .middle-wrap .produce {\n  left: -0.3rem;\n  top: 1rem;\n}\n.com-live-home .middle-wrap .contact {\n  left: -0.2rem;\n  top: 3.4rem;\n}\n.com-live-home .middle-wrap .contact .mytitle {\n  letter-spacing: 0.1rem;\n}\n.com-live-home .middle-wrap .block-posion {\n  left: -0.2rem;\n  top: -2.5rem;\n}\n.com-live-home .middle-wrap .six {\n  left: 1rem;\n  top: -1.3rem;\n}\n.com-live-home .middle-wrap .garden {\n  left: 1.4rem;\n  top: 0.3rem;\n}\n.com-live-home .middle-wrap .overloap-btn {\n  left: 0.5rem;\n  top: -0.5rem;\n}\n.com-live-home .middle-wrap .tall-build {\n  left: 1.4rem;\n  top: 0.6rem;\n}\n.com-live-home .middle-wrap .fashion {\n  left: 1rem;\n  top: 2rem;\n}\n.com-live-home .after-btn {\n  z-index: 900;\n}\n.com-live-home .my-model {\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(0,0,0,0.3);\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".com-live-page500 {\n  background: url(\"/static/images/page500/back_品牌.jpg\");\n  height: var(--app-height);\n  width: var(--app-width);\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n  font-size: 0.3rem;\n  position: relative;\n}\n.com-live-page500 .page500-back-btn {\n  position: absolute;\n  bottom: 1rem;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.com-live-page500 .mytitle {\n  padding-top: 1rem;\n  text-align: center;\n}\n.com-live-page500 .mytitle img {\n  width: 2.6rem;\n  height: auto;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".normal-back-btn {\n  position: absolute;\n  left: 1rem;\n  bottom: 1rem;\n}\n.banner img {\n  width: 100%;\n  height: auto;\n}\n.general-page {\n  background: url(\"/static/images/back_通用底图.jpg\");\n  height: var(--app-height);\n  width: var(--app-width);\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n  font-size: 0.3rem;\n  position: relative;\n}\n.mybtn {\n  position: absolute;\n  text-align: center;\n}\n.mybtn img {\n  width: 1rem;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(2);
+var content = __webpack_require__(8);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(4)(content, {});
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./back.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./back.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(9);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./contact.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./contact.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(10);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -448,17 +680,324 @@ if(false) {
 }
 
 /***/ }),
-/* 6 */
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(11);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page500.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page500.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(12);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./share.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./share.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _main = __webpack_require__(0);
+var _main = __webpack_require__(3);
 
 var live_page_main = _interopRequireWildcard(_main);
 
+var _main2 = __webpack_require__(2);
+
+var com_main = _interopRequireWildcard(_main2);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(21);
+
+window.live_block_pos = {
+    props: ['ctx'],
+    basename: 'live-block-pos',
+    template: '<div class="com-live-block-pos general-page">\n    <div class="banner">\n        <img src="/static/images/block/back_\u533A\u4F4D\u56FE\u5E95\u56FE.jpg" alt="">\n    </div>\n   <com-btn-back class="normal-back-btn"></com-btn-back>\n    </div>',
+    methods: {}
+};
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(20);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./block_pos.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./block_pos.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+window.live_six = {
+    props: ['ctx'],
+    basename: 'live-six',
+    template: '<div class="com-live-six general-page">\n    <div class="banner">\n        <img src="/static/images/block/back_\u4E00\u6E7E\u516D\u6838.jpg" alt="">\n    </div>\n   <com-btn-back class="normal-back-btn"></com-btn-back>\n    </div>',
+    methods: {}
+};
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+window.live_garden = {
+    props: ['ctx'],
+    basename: 'live-garden',
+    template: '<div class="com-live-garden general-page">\n    <div class="banner">\n        <img src="/static/images/block/back_\u516C\u56ED\u914D\u5957.jpg" alt="">\n    </div>\n   <com-btn-back class="normal-back-btn"></com-btn-back>\n    </div>',
+    methods: {}
+};
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(26);
+
+window.live_page_3d = {
+    props: ['ctx'],
+    basename: 'live-page-3d',
+    template: '<div class="com-live-page-3d">\n    <component :is="ctx.menu_circle"></component>\n\n     <component :is="ctx.menu_vertical"></component>\n    </div>',
+    methods: {}
+};
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".com-live-page-3d {\n  background: url(\"/static/images/pic_3d背景图.jpg\");\n  height: var(--app-height);\n  width: var(--app-width);\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n  font-size: 0.3rem;\n  position: relative;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(25);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page3d.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page3d.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(29);
+
+Vue.component('com-menu-circle', {
+    template: '<div class="com-menu-circle">\n    <div class="mybtn main-menu">\n        <img src="/static/images/2d3d/button_\u83DC\u53551.png" alt="">\n    </div>\n    <div class="mybtn back-btn" @click="back()">\n        <img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">\n    </div>\n     <div class="mybtn btn-720">\n        <img src="/static/images/2d3d/button_720.png" alt="">\n    </div>\n      <div class="mybtn btn-first-page">\n        <img src="/static/images/2d3d/button_\u9996\u9875.png" alt="">\n    </div>\n\n    </div>',
+    methods: {
+        back: function back() {
+            history.back();
+        }
+    }
+});
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".com-menu-circle {\n  position: absolute;\n  bottom: 1rem;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.com-menu-circle .main-menu {\n  left: -0.5rem;\n  top: -0.5rem;\n}\n.com-menu-circle .main-menu img {\n  width: 1.2rem;\n}\n.com-menu-circle .back-btn {\n  left: 1rem;\n  top: -1rem;\n}\n.com-menu-circle .back-btn img {\n  width: 0.9rem;\n}\n.com-menu-circle .btn-720 {\n  left: -0.4rem;\n  top: -1.5rem;\n}\n.com-menu-circle .btn-720 img {\n  width: 0.9rem;\n}\n.com-menu-circle .btn-first-page {\n  left: -1.9rem;\n  top: -1rem;\n}\n.com-menu-circle .btn-first-page img {\n  width: 0.9rem;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(28);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(32);
+
+Vue.component('com-menu-vertical', {
+    template: '<div class="com-menu-vertical">\n    <div class="mybtn f1">\n        <img src="/static/images/2d3d/button_F1.png" alt="">\n    </div>\n    <div class="mybtn f2">\n        <img src="/static/images/2d3d/button_F2.png" alt="">\n    </div>\n\n    </div>'
+});
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".com-menu-vertical .f1 {\n  right: 0.2rem;\n  bottom: 6rem;\n}\n.com-menu-vertical .f2 {\n  right: 0.2rem;\n  bottom: 4rem;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(31);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_vertical.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_vertical.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);
