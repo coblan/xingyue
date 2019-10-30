@@ -16,7 +16,7 @@ window.live_home={
            <div class="mytitle">区<span>域</span></div>
         </div>
        <div class="mybtn produce" @click="open_product()">
-            <img src="/static/images/button_产品_1.png" alt="">
+            <img src="/static/images/button_产品_1.png?v=1" alt="">
            <div class="mytitle">产<span>品</span></div>
        </div>
 
