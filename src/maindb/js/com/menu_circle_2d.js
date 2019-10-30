@@ -13,7 +13,7 @@ Vue.component('com-menu-circle-2d',{
          <div class="mybtn btn-720" @click="goto_po()">
             <img src="/static/images/2d3d/button_剖切户型1.png" alt="">
         </div>
-          <div class="mybtn btn-first-page" >
+          <div class="mybtn btn-first-page" @click="home()">
             <img src="/static/images/2d3d/button_首页.png" alt="">
         </div>
     </div>

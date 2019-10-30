@@ -1510,7 +1510,7 @@ named_ctx.product = [{ name: 'xx', image_2d: '/static/images/2d3d/pic_星空独�
 
 
 Vue.component('com-menu-circle-2d', {
-    template: '<div class="com-menu-circle-2d com-menu-circle">\n    <div class="mybtn main-menu" @click="is_open = !is_open">\n        <img src="/static/images/2d3d/button_\u83DC\u53551.png" alt="">\n    </div>\n    <div v-show="is_open">\n\n        <div class="mybtn back-btn" @click="back()">\n            <img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">\n        </div>\n         <div class="mybtn btn-720" @click="goto_po()">\n            <img src="/static/images/2d3d/button_\u5256\u5207\u6237\u578B1.png" alt="">\n        </div>\n          <div class="mybtn btn-first-page" >\n            <img src="/static/images/2d3d/button_\u9996\u9875.png" alt="">\n        </div>\n    </div>\n\n    </div>',
+    template: '<div class="com-menu-circle-2d com-menu-circle">\n    <div class="mybtn main-menu" @click="is_open = !is_open">\n        <img src="/static/images/2d3d/button_\u83DC\u53551.png" alt="">\n    </div>\n    <div v-show="is_open">\n\n        <div class="mybtn back-btn" @click="back()">\n            <img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">\n        </div>\n         <div class="mybtn btn-720" @click="goto_po()">\n            <img src="/static/images/2d3d/button_\u5256\u5207\u6237\u578B1.png" alt="">\n        </div>\n          <div class="mybtn btn-first-page" @click="home()">\n            <img src="/static/images/2d3d/button_\u9996\u9875.png" alt="">\n        </div>\n    </div>\n\n    </div>',
     data: function data() {
         return {
             is_open: false,
