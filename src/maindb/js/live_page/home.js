@@ -44,7 +44,7 @@ window.live_home={
              <div class="mybtn tall-build after-btn" @click="open_tall_build()">
                 <img src="/static/images/product/button_高层_1.png" alt="">
             </div>
-             <div class="mybtn fashion after-btn" @click="open_garden()">
+             <div class="mybtn fashion after-btn" @click="open_yang_fang()">
                 <img src="/static/images/product/button_洋房_1.png" alt="">
             </div>
           </template>
@@ -82,10 +82,17 @@ window.live_home={
             this.crt_model='product'
         },
         open_overlap(){
-            live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle',menu_vertical:'com-menu-vertical'})
+            location = '/mb/page3d?page=overlap'
+            //live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle-sm',menu_vertical:'com-menu-vertical-d',link3d:named_ctx.first3d})
+            //live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle',menu_vertical:'com-menu-vertical'})
         },
         open_tall_build(){
-            live_root.open_live('live_page_2d',{menu_circle:'com-menu-circle',content_img:'/static/images/2d3d/pic_高层户型图.jpg'})
+
+            location = '/mb/page2d?page=tall_buiding_2d'
+            //live_root.open_live('live_page_2d',{menu_circle:'com-menu-circle',content_img:'/static/images/2d3d/pic_高层户型图.jpg'})
+        },
+        open_yang_fang(){
+            location = '/mb/page2d?page=yang_fang_2d'
         }
     }
 }

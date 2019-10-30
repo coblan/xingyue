@@ -13,9 +13,12 @@ window.live_page500={
     <div class="mytitle">
         <img src="/static/images/page500/txt_品牌_new.png" alt="">
     </div>
-
-   <com-btn-back class="page500-back-btn"></com-btn-back>
+    <div class="right-title">
+        <span>品牌</span>
+    </div>
+   <com-btn-back class="normal-back-btn "></com-btn-back>
     </div>`,
     methods:{
+        // page500-back-btn
     }
 }
