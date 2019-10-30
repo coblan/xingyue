@@ -3854,6 +3854,8 @@ if (window.named_hub == undefined) {
         }
         if (event.state && event.state.callback) {
             var callback = named_hub[event.state.callback];
+            //alert(JSON.stringify(event))
+            //alert(JSON.stringify(event.state))
             callback();
             //delete named_hub[event.state.callback]
         }
