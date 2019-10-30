@@ -41,7 +41,7 @@ window.live_home={
            <div class="mybtn overloap-btn after-btn" @click="open_overlap()">
                 <img src="/static/images/product/button_叠拼_1.png" alt="">
             </div>
-             <div class="mybtn tall-build after-btn" @click="open_six()">
+             <div class="mybtn tall-build after-btn" @click="open_tall_build()">
                 <img src="/static/images/product/button_高层_1.png" alt="">
             </div>
              <div class="mybtn fashion after-btn" @click="open_garden()">
@@ -83,6 +83,9 @@ window.live_home={
         },
         open_overlap(){
             live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle',menu_vertical:'com-menu-vertical'})
+        },
+        open_tall_build(){
+            live_root.open_live('live_page_2d',{menu_circle:'com-menu-circle',content_img:'/static/images/2d3d/pic_高层户型图.jpg'})
         }
     }
 }

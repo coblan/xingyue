@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 18);
+/******/ 	return __webpack_require__(__webpack_require__.s = 36);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -385,13 +385,17 @@ var _back = __webpack_require__(4);
 
 var back = _interopRequireWildcard(_back);
 
-var _menu_circle = __webpack_require__(27);
+var _menu_circle = __webpack_require__(5);
 
 var menu_circle = _interopRequireWildcard(_menu_circle);
 
-var _menu_vertical = __webpack_require__(30);
+var _menu_vertical = __webpack_require__(6);
 
 var menu_vertical = _interopRequireWildcard(_menu_vertical);
+
+var _help = __webpack_require__(37);
+
+var help = _interopRequireWildcard(_help);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -402,37 +406,41 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 "use strict";
 
 
-var _home = __webpack_require__(6);
+var _home = __webpack_require__(10);
 
 var live_page_home = _interopRequireWildcard(_home);
 
-var _page = __webpack_require__(7);
+var _page = __webpack_require__(12);
 
 var page500 = _interopRequireWildcard(_page);
 
-var _contact = __webpack_require__(5);
+var _contact = __webpack_require__(8);
 
 var contact = _interopRequireWildcard(_contact);
 
-var _block_pos = __webpack_require__(19);
+var _block_pos = __webpack_require__(7);
 
 var block_pos = _interopRequireWildcard(_block_pos);
 
-var _six = __webpack_require__(22);
+var _six = __webpack_require__(13);
 
 var six = _interopRequireWildcard(_six);
 
-var _garden = __webpack_require__(23);
+var _garden = __webpack_require__(9);
 
 var garden = _interopRequireWildcard(_garden);
 
-var _page3d = __webpack_require__(24);
+var _page3d = __webpack_require__(11);
 
 var page3d = _interopRequireWildcard(_page3d);
 
+var _page2d = __webpack_require__(40);
+
+var page2d = _interopRequireWildcard(_page2d);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-__webpack_require__(17);
+__webpack_require__(34);
 
 /***/ }),
 /* 4 */
@@ -441,7 +449,7 @@ __webpack_require__(17);
 "use strict";
 
 
-__webpack_require__(13);
+__webpack_require__(25);
 
 Vue.component('com-btn-back', {
     template: '<div class="com-btn-back" @click="back()">\n        <img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">\n    </div>',
@@ -459,7 +467,59 @@ Vue.component('com-btn-back', {
 "use strict";
 
 
-__webpack_require__(14);
+__webpack_require__(26);
+
+Vue.component('com-menu-circle', {
+    template: '<div class="com-menu-circle">\n    <div class="mybtn main-menu">\n        <img src="/static/images/2d3d/button_\u83DC\u53551.png" alt="">\n    </div>\n    <div class="mybtn back-btn" @click="back()">\n        <img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">\n    </div>\n     <div class="mybtn btn-720">\n        <img src="/static/images/2d3d/button_720.png" alt="">\n    </div>\n      <div class="mybtn btn-first-page">\n        <img src="/static/images/2d3d/button_\u9996\u9875.png" alt="">\n    </div>\n\n    </div>',
+    methods: {
+        back: function back() {
+            history.back();
+        }
+    }
+});
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(27);
+
+Vue.component('com-menu-vertical', {
+    template: '<div class="com-menu-vertical">\n    <div class="mybtn f1" @click="open_help()">\n        <img src="/static/images/2d3d/button_F1.png" alt="">\n    </div>\n    <div class="mybtn f2">\n        <img src="/static/images/2d3d/button_F2.png" alt="">\n    </div>\n\n    </div>',
+    methods: {
+        open_help: function open_help() {
+            cfg.pop_small('com-pop-help', {});
+        }
+    }
+});
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(28);
+
+window.live_block_pos = {
+    props: ['ctx'],
+    basename: 'live-block-pos',
+    template: '<div class="com-live-block-pos general-page">\n    <div class="banner">\n        <img src="/static/images/block/back_\u533A\u4F4D\u56FE\u5E95\u56FE.jpg" alt="">\n    </div>\n    <div class="devid-line title-line">\n        <img src="/static/images/pic_\u5206\u5272\u7EBF.png" alt="">\n    </div>\n    <div class="mytitle">\n        <span>\u5929\u5E9C\u65B0\u533A\u6838\u5FC3\u5C45\u4F4F\u533A\u533A\u4F4D\u56FE</span>\n    </div>\n    <div class="right-title">\n        <span>\u533A\u4F4D\u56FE</span>\n    </div>\n   <com-btn-back class="normal-back-btn"></com-btn-back>\n    </div>',
+    methods: {}
+};
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(29);
 
 window.live_contact = {
     props: ['ctx'],
@@ -469,18 +529,34 @@ window.live_contact = {
 };
 
 /***/ }),
-/* 6 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(15);
+__webpack_require__(30);
+
+window.live_garden = {
+    props: ['ctx'],
+    basename: 'live-garden',
+    template: '<div class="com-live-garden general-page">\n    <div class="banner">\n        <img src="/static/images/block/back_\u516C\u56ED\u914D\u5957.jpg" alt="">\n    </div>\n    <div class="title1">\n        <span>\u81EA\u7136\u6DF1\u5904.\u8FD1\u4EAB\u9187\u719F</span>\n    </div>\n    <div class="title2">\n        <span>Starlight Lakeshore</span>\n    </div>\n    <div class="devid-line title-line">\n        <img src="/static/images/pic_\u5206\u5272\u7EBF.png" alt="">\n    </div>\n    <div class="title4">\n        <div>\u4E2D\u94C1.\u661F\u6708\u5C71\u6E56\u5750\u843D\u4E8E\u4E2D\u94C1\u9ED1\u9F99\u6EE9.\u56FD\u9645\u65C5\u6E38\u5EA6\u5047\u533A\u7684\u6838\u5FC3\u677F\u5757\u5185,</div>\n        <div>\u88AB200\u4EA9\u6E7F\u5730\u516C\u56ED\u73AF\u62B1\u3002\u5343\u4EA9\u6E7F\u5730\u751F\u6001\u516C\u56ED\u4E0E\u89C4\u5212\u4E2D\u7684</div>\n        <div>\u56DB\u5DDD\u7701\u4EBA\u6C11\u533B\u9662\u8FD1\u5728\u54AB\u5C3A\uFF0C\u6B65\u884C10\u5206\u949F\u5373\u8FBE\u91D1\u6C99\u6E7E\u56FD\u9645\u5EA6\u5047\u6838\u5FC3\u533A\u3002</div>\n        <div>\u79BB\u5C18\u4E0D\u79BB\u57CE\u3001\u95F9\u4E2D\u53D6\u9759\u7684\u8212\u9002\u65F6\u5149\u89E6\u624B\u53EF\u53CA\u3002</div>\n    </div>\n     <div class="right-title">\n        <span>\u516C\u56ED\u914D\u5957</span>\n    </div>\n   <com-btn-back class="normal-back-btn"></com-btn-back>\n    </div>',
+    methods: {}
+};
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(31);
 
 window.live_home = {
     props: ['ctx'],
     basename: 'live-home',
-    template: '<div class="com-live-home">\n\n\n    <div class="middle-wrap">\n       <div class="mybtn btn_500" @click="open_500()">\n            <img src="/static/images/button_500_1.png" alt="">\n           <div class="mytitle">\u54C1<span>\u724C</span></div>\n        </div>\n       <div class="mybtn btn_block" @click="open_block()">\n            <img src="/static/images/button_\u533A\u57DF_1.png" alt="">\n           <div class="mytitle">\u533A<span>\u57DF</span></div>\n        </div>\n       <div class="mybtn produce" @click="open_product()">\n            <img src="/static/images/button_\u4EA7\u54C1_1.png" alt="">\n           <div class="mytitle">\u4EA7<span>\u54C1</span></div>\n       </div>\n\n        <div class="mybtn contact" @click="open_contact()">\n            <img src="/static/images/button_\u8054\u7CFB\u65B9\u5F0F_1.png" alt="">\n           <div class="mytitle">\u8054\u7CFB\u65B9<span>\u5F0F</span></div>\n        </div>\n\n          <template v-if="crt_model==\'block\'">\n           <div class="mybtn block-posion after-btn" @click="open_block_pos()">\n                <img src="/static/images/block_btn/\u533A\u4F4D.png" alt="">\n            </div>\n             <div class="mybtn six after-btn" @click="open_six()">\n                <img src="/static/images/block_btn/\u4E00\u6E7E\u516D\u6838.png" alt="">\n            </div>\n             <div class="mybtn garden after-btn" @click="open_garden()">\n                <img src="/static/images/block_btn/\u516C\u56ED\u914D\u5957.png" alt="">\n            </div>\n          </template>\n\n            <template v-if="crt_model==\'product\'">\n           <div class="mybtn overloap-btn after-btn" @click="open_overlap()">\n                <img src="/static/images/product/button_\u53E0\u62FC_1.png" alt="">\n            </div>\n             <div class="mybtn tall-build after-btn" @click="open_six()">\n                <img src="/static/images/product/button_\u9AD8\u5C42_1.png" alt="">\n            </div>\n             <div class="mybtn fashion after-btn" @click="open_garden()">\n                <img src="/static/images/product/button_\u6D0B\u623F_1.png" alt="">\n            </div>\n          </template>\n    </div>\n\n       <div class="my-model whole-page" v-if="crt_model!=\'\'" @click="crt_model=\'\'">\n\n        </div>\n    </div>',
+    template: '<div class="com-live-home">\n\n\n    <div class="middle-wrap">\n       <div class="mybtn btn_500" @click="open_500()">\n            <img src="/static/images/button_500_1.png" alt="">\n           <div class="mytitle">\u54C1<span>\u724C</span></div>\n        </div>\n       <div class="mybtn btn_block" @click="open_block()">\n            <img src="/static/images/button_\u533A\u57DF_1.png" alt="">\n           <div class="mytitle">\u533A<span>\u57DF</span></div>\n        </div>\n       <div class="mybtn produce" @click="open_product()">\n            <img src="/static/images/button_\u4EA7\u54C1_1.png" alt="">\n           <div class="mytitle">\u4EA7<span>\u54C1</span></div>\n       </div>\n\n        <div class="mybtn contact" @click="open_contact()">\n            <img src="/static/images/button_\u8054\u7CFB\u65B9\u5F0F_1.png" alt="">\n           <div class="mytitle">\u8054\u7CFB\u65B9<span>\u5F0F</span></div>\n        </div>\n\n          <template v-if="crt_model==\'block\'">\n           <div class="mybtn block-posion after-btn" @click="open_block_pos()">\n                <img src="/static/images/block_btn/\u533A\u4F4D.png" alt="">\n            </div>\n             <div class="mybtn six after-btn" @click="open_six()">\n                <img src="/static/images/block_btn/\u4E00\u6E7E\u516D\u6838.png" alt="">\n            </div>\n             <div class="mybtn garden after-btn" @click="open_garden()">\n                <img src="/static/images/block_btn/\u516C\u56ED\u914D\u5957.png" alt="">\n            </div>\n          </template>\n\n            <template v-if="crt_model==\'product\'">\n           <div class="mybtn overloap-btn after-btn" @click="open_overlap()">\n                <img src="/static/images/product/button_\u53E0\u62FC_1.png" alt="">\n            </div>\n             <div class="mybtn tall-build after-btn" @click="open_tall_build()">\n                <img src="/static/images/product/button_\u9AD8\u5C42_1.png" alt="">\n            </div>\n             <div class="mybtn fashion after-btn" @click="open_garden()">\n                <img src="/static/images/product/button_\u6D0B\u623F_1.png" alt="">\n            </div>\n          </template>\n    </div>\n\n       <div class="my-model whole-page" v-if="crt_model!=\'\'" @click="crt_model=\'\'">\n\n        </div>\n    </div>',
     data: function data() {
         return {
             crt_model: ''
@@ -511,18 +587,37 @@ window.live_home = {
         },
         open_overlap: function open_overlap() {
             live_root.open_live('live_page_3d', { menu_circle: 'com-menu-circle', menu_vertical: 'com-menu-vertical' });
+        },
+        open_tall_build: function open_tall_build() {
+            live_root.open_live('live_page_2d', { menu_circle: 'com-menu-circle', content_img: '/static/images/2d3d/pic_高层户型图.jpg' });
         }
     }
 };
 
 /***/ }),
-/* 7 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(16);
+__webpack_require__(32);
+
+window.live_page_3d = {
+    props: ['ctx'],
+    basename: 'live-page-3d',
+    template: '<div class="com-live-page-3d">\n    <component :is="ctx.menu_circle"></component>\n\n     <component :is="ctx.menu_vertical"></component>\n    </div>',
+    methods: {}
+};
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(33);
 
 window.live_page500 = {
     props: ['ctx'],
@@ -532,7 +627,23 @@ window.live_page500 = {
 };
 
 /***/ }),
-/* 8 */
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(35);
+
+window.live_six = {
+    props: ['ctx'],
+    basename: 'live-six',
+    template: '<div class="com-live-six general-page">\n    <div class="banner">\n        <img src="/static/images/block/back_\u4E00\u6E7E\u516D\u6838.jpg" alt="">\n    </div>\n    <div class="title1">\n        <span>\u4E00\u6E7E\u516D\u6838</span>\n    </div>\n    <div class="title2">\n        <span>\u5168\u7403\u89C6\u91CE\u4E0B\u7684\u521B\u65B0\u578B\u57CE\u5E02\u6837\u672C</span>\n    </div>\n     <div class="devid-line title-line">\n        <img src="/static/images/pic_\u5206\u5272\u7EBF.png" alt="">\n    </div>\n    <div class="title3">\n        <span>\u9762\u5411\u4E16\u754C\u7684\u591A\u7EF4\u4F4F\u5047\u57CE\u5E02\u201C\u4E00\u6E7E\u516D\u6838\u201D\u57CE\u5E02\u7EA7\u914D\u5957</span>\n    </div>\n\n     <div class="right-title">\n        <span>\u4E00\u6E7E\u516D\u6838</span>\n    </div>\n   <com-btn-back class="normal-back-btn"></com-btn-back>\n    </div>',
+    methods: {}
+};
+
+/***/ }),
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -546,7 +657,7 @@ exports.push([module.i, ".com-btn-back img {\n  width: 1rem;\n  height: auto;\n}
 
 
 /***/ }),
-/* 9 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -554,13 +665,69 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, ".com-live-contact {\n  background: url(\"/static/images/back_通用底图.jpg\");\n  height: var(--app-height);\n  width: var(--app-width);\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n  font-size: 0.3rem;\n  position: relative;\n}\n.com-live-contact .contace0 {\n  padding-top: 2rem;\n  text-align: center;\n}\n.com-live-contact .contace0 img {\n  width: 1rem;\n}\n.com-live-contact .contace1 {\n  padding-top: 0.5rem;\n  text-align: center;\n}\n.com-live-contact .contace1 img {\n  width: 4rem;\n}\n.com-live-contact .contact2 {\n  padding-top: 2rem;\n  text-align: center;\n}\n.com-live-contact .contact2 img {\n  width: 1.2rem;\n}\n.com-live-contact .contact3 {\n  padding: 1rem;\n  text-align: center;\n}\n.com-live-contact .contact3 img {\n  width: 4rem;\n}\n", ""]);
+exports.push([module.i, ".com-menu-circle {\n  position: absolute;\n  bottom: 1rem;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.com-menu-circle .main-menu {\n  left: -0.5rem;\n  top: -0.5rem;\n}\n.com-menu-circle .main-menu img {\n  width: 1.2rem;\n}\n.com-menu-circle .back-btn {\n  left: 1rem;\n  top: -1rem;\n}\n.com-menu-circle .back-btn img {\n  width: 0.9rem;\n}\n.com-menu-circle .btn-720 {\n  left: -0.4rem;\n  top: -1.5rem;\n}\n.com-menu-circle .btn-720 img {\n  width: 0.9rem;\n}\n.com-menu-circle .btn-first-page {\n  left: -1.9rem;\n  top: -1rem;\n}\n.com-menu-circle .btn-first-page img {\n  width: 0.9rem;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 10 */
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".com-menu-vertical .f1 {\n  right: 0.2rem;\n  bottom: 6rem;\n}\n.com-menu-vertical .f2 {\n  right: 0.2rem;\n  bottom: 4rem;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".com-live-block-pos .title-line {\n  padding-top: 0.3rem;\n}\n.com-live-block-pos .mytitle {\n  text-align: center;\n  padding-top: 0.2rem;\n  font-size: 0.28rem;\n  font-family: \"\\9ED1\\4F53\";\n  color: #fff;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".com-live-contact {\n  background: url(\"/static/images/back_通用底图.jpg\");\n  height: var(--app-height);\n  width: var(--app-width);\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n  font-size: 0.3rem;\n  position: relative;\n}\n.com-live-contact .contace0 {\n  padding-top: 2rem;\n  text-align: center;\n}\n.com-live-contact .contace0 img {\n  width: 1rem;\n}\n.com-live-contact .contace1 {\n  padding-top: 0.5rem;\n  text-align: center;\n}\n.com-live-contact .contace1 img {\n  width: 4rem;\n}\n.com-live-contact .contact2 {\n  padding-top: 2rem;\n  text-align: center;\n}\n.com-live-contact .contact2 img {\n  width: 1.2rem;\n}\n.com-live-contact .contact3 {\n  padding: 1rem;\n  text-align: center;\n}\n.com-live-contact .contact3 img {\n  width: 4rem;\n}\n.com-live-contact .normal-back-btn {\n  position: absolute;\n  left: 50%;\n  bottom: 0.6rem;\n  transform: translateX(-50%);\n}\n.com-live-contact .normal-back-btn img {\n  width: 1rem;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".com-live-garden {\n  text-align: center;\n  font-size: 0.28rem;\n  font-family: \"\\9ED1\\4F53\";\n  color: #fff;\n}\n.com-live-garden .title1 {\n  padding-top: 0.4rem;\n}\n.com-live-garden .title2 {\n  padding-top: 0.3rem;\n  font-family: Cambria;\n  font-size: 0.16rem;\n}\n.com-live-garden .title4 {\n  padding-top: 0.3rem;\n  font-size: 0.2rem;\n  line-height: 0.5rem;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -574,7 +741,21 @@ exports.push([module.i, ".com-live-home {\n  height: var(--app-height);\n  width
 
 
 /***/ }),
-/* 11 */
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".com-live-page-3d {\n  background: url(\"/static/images/pic_3d背景图.jpg\");\n  height: var(--app-height);\n  width: var(--app-width);\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n  font-size: 0.3rem;\n  position: relative;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -588,7 +769,7 @@ exports.push([module.i, ".com-live-page500 {\n  background: url(\"/static/images
 
 
 /***/ }),
-/* 12 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -596,19 +777,33 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, ".normal-back-btn {\n  position: absolute;\n  left: 1rem;\n  bottom: 1rem;\n}\n.banner img {\n  width: 100%;\n  height: auto;\n}\n.general-page {\n  background: url(\"/static/images/back_通用底图.jpg\");\n  height: var(--app-height);\n  width: var(--app-width);\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n  font-size: 0.3rem;\n  position: relative;\n}\n.mybtn {\n  position: absolute;\n  text-align: center;\n}\n.mybtn img {\n  width: 1rem;\n}\n", ""]);
+exports.push([module.i, ".banner img {\n  width: 100%;\n  height: auto;\n}\n.general-page {\n  background: url(\"/static/images/back_通用底图.jpg\");\n  height: var(--app-height);\n  width: var(--app-width);\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n  font-size: 0.3rem;\n  position: relative;\n}\n.general-page .normal-back-btn {\n  position: absolute;\n  left: 0.6rem;\n  bottom: 0.6rem;\n}\n.general-page .normal-back-btn img {\n  width: 0.8rem;\n}\n.mybtn {\n  position: absolute;\n  text-align: center;\n}\n.mybtn img {\n  width: 1rem;\n}\n.devid-line {\n  text-align: center;\n}\n.devid-line img {\n  width: 4rem;\n}\n.right-title {\n  color: #fff;\n  font-size: 0.3rem;\n  writing-mode: vertical-rl;\n  text-orientation: upright;\n  letter-spacing: 0.16rem;\n  position: absolute;\n  right: 0.5rem;\n  bottom: 0.3rem;\n  font-family: \"\\6977\\4F53\";\n  font-size: 0.4rem;\n  font-weight: 800;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 13 */
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".com-live-six {\n  text-align: center;\n  font-size: 0.28rem;\n  font-family: \"\\9ED1\\4F53\";\n  color: #fff;\n}\n.com-live-six .title1 {\n  padding-top: 0.3rem;\n  font-size: 0.28rem;\n  letter-spacing: 0.1rem;\n}\n.com-live-six .title2 {\n  padding-top: 0.2rem;\n  font-size: 0.32rem;\n  font-weight: 800;\n}\n.com-live-six .title3 {\n  padding-top: 0.5rem;\n  font-size: 0.2rem;\n}\n.com-live-six .title-line {\n  padding-top: 0.2rem;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(8);
+var content = __webpack_require__(14);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(1)(content, {});
@@ -628,306 +823,13 @@ if(false) {
 }
 
 /***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(9);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./contact.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./contact.styl");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(10);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./home.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./home.styl");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(11);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page500.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page500.styl");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(12);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./share.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./share.styl");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _main = __webpack_require__(3);
-
-var live_page_main = _interopRequireWildcard(_main);
-
-var _main2 = __webpack_require__(2);
-
-var com_main = _interopRequireWildcard(_main2);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(21);
-
-window.live_block_pos = {
-    props: ['ctx'],
-    basename: 'live-block-pos',
-    template: '<div class="com-live-block-pos general-page">\n    <div class="banner">\n        <img src="/static/images/block/back_\u533A\u4F4D\u56FE\u5E95\u56FE.jpg" alt="">\n    </div>\n   <com-btn-back class="normal-back-btn"></com-btn-back>\n    </div>',
-    methods: {}
-};
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)();
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(20);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./block_pos.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./block_pos.styl");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-window.live_six = {
-    props: ['ctx'],
-    basename: 'live-six',
-    template: '<div class="com-live-six general-page">\n    <div class="banner">\n        <img src="/static/images/block/back_\u4E00\u6E7E\u516D\u6838.jpg" alt="">\n    </div>\n   <com-btn-back class="normal-back-btn"></com-btn-back>\n    </div>',
-    methods: {}
-};
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-window.live_garden = {
-    props: ['ctx'],
-    basename: 'live-garden',
-    template: '<div class="com-live-garden general-page">\n    <div class="banner">\n        <img src="/static/images/block/back_\u516C\u56ED\u914D\u5957.jpg" alt="">\n    </div>\n   <com-btn-back class="normal-back-btn"></com-btn-back>\n    </div>',
-    methods: {}
-};
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(26);
-
-window.live_page_3d = {
-    props: ['ctx'],
-    basename: 'live-page-3d',
-    template: '<div class="com-live-page-3d">\n    <component :is="ctx.menu_circle"></component>\n\n     <component :is="ctx.menu_vertical"></component>\n    </div>',
-    methods: {}
-};
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)();
-// imports
-
-
-// module
-exports.push([module.i, ".com-live-page-3d {\n  background: url(\"/static/images/pic_3d背景图.jpg\");\n  height: var(--app-height);\n  width: var(--app-width);\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n  font-size: 0.3rem;\n  position: relative;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
 /* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(25);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page3d.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page3d.styl");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(29);
-
-Vue.component('com-menu-circle', {
-    template: '<div class="com-menu-circle">\n    <div class="mybtn main-menu">\n        <img src="/static/images/2d3d/button_\u83DC\u53551.png" alt="">\n    </div>\n    <div class="mybtn back-btn" @click="back()">\n        <img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">\n    </div>\n     <div class="mybtn btn-720">\n        <img src="/static/images/2d3d/button_720.png" alt="">\n    </div>\n      <div class="mybtn btn-first-page">\n        <img src="/static/images/2d3d/button_\u9996\u9875.png" alt="">\n    </div>\n\n    </div>',
-    methods: {
-        back: function back() {
-            history.back();
-        }
-    }
-});
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)();
-// imports
-
-
-// module
-exports.push([module.i, ".com-menu-circle {\n  position: absolute;\n  bottom: 1rem;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.com-menu-circle .main-menu {\n  left: -0.5rem;\n  top: -0.5rem;\n}\n.com-menu-circle .main-menu img {\n  width: 1.2rem;\n}\n.com-menu-circle .back-btn {\n  left: 1rem;\n  top: -1rem;\n}\n.com-menu-circle .back-btn img {\n  width: 0.9rem;\n}\n.com-menu-circle .btn-720 {\n  left: -0.4rem;\n  top: -1.5rem;\n}\n.com-menu-circle .btn-720 img {\n  width: 0.9rem;\n}\n.com-menu-circle .btn-first-page {\n  left: -1.9rem;\n  top: -1rem;\n}\n.com-menu-circle .btn-first-page img {\n  width: 0.9rem;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(28);
+var content = __webpack_require__(15);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(1)(content, {});
@@ -947,40 +849,13 @@ if(false) {
 }
 
 /***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(32);
-
-Vue.component('com-menu-vertical', {
-    template: '<div class="com-menu-vertical">\n    <div class="mybtn f1">\n        <img src="/static/images/2d3d/button_F1.png" alt="">\n    </div>\n    <div class="mybtn f2">\n        <img src="/static/images/2d3d/button_F2.png" alt="">\n    </div>\n\n    </div>'
-});
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)();
-// imports
-
-
-// module
-exports.push([module.i, ".com-menu-vertical .f1 {\n  right: 0.2rem;\n  bottom: 6rem;\n}\n.com-menu-vertical .f2 {\n  right: 0.2rem;\n  bottom: 4rem;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 32 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(31);
+var content = __webpack_require__(16);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(1)(content, {});
@@ -991,6 +866,345 @@ if(false) {
 	if(!content.locals) {
 		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_vertical.styl", function() {
 			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_vertical.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(17);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./block_pos.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./block_pos.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(18);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./contact.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./contact.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(19);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./garden.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./garden.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(20);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./home.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./home.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(21);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page3d.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page3d.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(22);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page500.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page500.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(23);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./share.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./share.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(24);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./six.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./six.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(3);
+
+var live_page_main = _interopRequireWildcard(_main);
+
+var _main2 = __webpack_require__(2);
+
+var com_main = _interopRequireWildcard(_main2);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(39);
+
+Vue.component('com-pop-help', {
+    template: '<div class="com-pop-help">\n    <div class="close-btn" @click="get_close()">\n        <img src="/static/images/help/button_\u5173\u95ED.png" alt="">\n    </div>\n     <div class="handle-btn">\n        <img src="/static/images/help/pic_\u6559\u7A0B1.png" alt="">\n     </div>\n     <div class="handle-btn">\n        <img src="/static/images/help/pic_\u6559\u7A0B2.png" alt="">\n     </div>\n     <div class="handle-btn">\n        <img src="/static/images/help/pic_\u6559\u7A0B3.png" alt="">\n     </div>\n     <div class="i-know" @click="get_close()">\n     <img src="/static/images/help/button_\u77E5\u9053\u4E86.png" alt="">\n     </div>\n    </div>',
+    methods: {
+        get_close: function get_close() {
+            this.$emit('finish');
+        }
+    }
+});
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".com-pop-help {\n  background: #fff;\n  width: 5rem;\n  height: 7rem;\n  padding-top: 0.2rem;\n  border-radius: 0.3rem;\n}\n.com-pop-help .close-btn {\n  position: absolute;\n  right: -0.4rem;\n  top: -0.4rem;\n}\n.com-pop-help .close-btn img {\n  width: 1rem;\n}\n.com-pop-help .handle-btn {\n  text-align: center;\n  padding: 0.2rem 0;\n}\n.com-pop-help .handle-btn img {\n  width: 1.2rem;\n  height: auto;\n}\n.com-pop-help .i-know {\n  text-align: center;\n  padding-top: 0.4rem;\n}\n.com-pop-help .i-know img {\n  width: 1.2rem;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(38);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./help.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./help.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(42);
+
+window.live_page_2d = {
+    props: ['ctx'],
+    basename: 'live-page-2d',
+    template: '<div class="com-live-page-2d">\n    <div class="content">\n        <img  :src="ctx.content_img" alt="">\n    </div>\n\n    <component :is="ctx.menu_circle"></component>\n    </div>',
+    methods: {}
+};
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".com-live-page-2d {\n  height: var(--app-height);\n  width: var(--app-width);\n  font-size: 0.3rem;\n  position: relative;\n  background: #fff;\n}\n.com-live-page-2d .content {\n  width: 100%;\n  height: 100%;\n  overflow-y: auto;\n}\n.com-live-page-2d .content img {\n  width: 100%;\n  height: auto;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(41);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page2d.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page2d.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
