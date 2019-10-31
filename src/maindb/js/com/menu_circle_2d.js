@@ -21,7 +21,7 @@ Vue.component('com-menu-circle-2d',{
     </div>`,
     data(){
         return {
-            is_open:false,
+            is_open:true,
             parStore:ex.vueParStore(this)
         }
     },

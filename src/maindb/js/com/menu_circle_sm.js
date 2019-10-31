@@ -17,7 +17,7 @@ Vue.component('com-menu-circle-sm',{
     </div>`,
     data(){
         return {
-            is_open:false
+            is_open:true
         }
     },
     methods:{

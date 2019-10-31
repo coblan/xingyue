@@ -21,7 +21,7 @@ Vue.component('com-menu-circle',{
     </div>`,
     data(){
         return {
-            is_open:false
+            is_open:true
         }
     },
     methods:{
