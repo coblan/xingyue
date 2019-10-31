@@ -7,6 +7,14 @@ window.live_home={
 
 
     <div class="middle-wrap">
+            <div class="light">
+        <img src="/static/images/动画-光圈.png" alt="">
+    </div>
+    <div class="liuxing">
+        <img src="/static/images/动画-流星.png" alt="">
+    </div>
+
+
        <div class="mybtn btn_500" @click="open_500()">
             <img src="/static/images/button_500_1.png" alt="">
            <div class="mytitle">品<span>牌</span></div>
@@ -24,6 +32,8 @@ window.live_home={
             <img src="/static/images/button_联系方式_1.png" alt="">
            <div class="mytitle">联系方<span>式</span></div>
         </div>
+
+
 
           <template v-if="crt_model=='block'">
            <div class="mybtn block-posion after-btn" @click="open_block_pos()">
@@ -50,14 +60,38 @@ window.live_home={
           </template>
     </div>
 
+
+
        <div class="my-model whole-page" v-if="crt_model!=''" @click="crt_model=''">
+
 
         </div>
     </div>`,
     data(){
         return {
-            crt_model:''
+            crt_model:'',
+            //show_light:true,
         }
+    },
+    mounted(){
+        //$(this.$el).find('.light').css('opacity',1)
+        //
+        //setInterval(()=>{
+        //    if(this.show_light){
+        //        this.show_light = false
+        //        $(this.$el).find('.light').css('opacity',0)
+        //    }else{
+        //        this.show_light = true
+        //        $(this.$el).find('.light').css('opacity',1)
+        //    }
+            //$(this.$el).find('.liuxing').addClass('nomove')
+            //$(this.$el).find('.liuxing').css('transform','translate(0, 0)')
+            //$(this.$el).find('.liuxing').removeClass('nomove')
+            //$(this.$el).find('.liuxing').css('transform','translate(80%, 80%)')
+
+        //},1000*10)
+
+
     },
     methods:{
         open_500(){
