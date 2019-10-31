@@ -12,6 +12,9 @@ class Home(object):
              'editor_ctx':{
             },
             'editor':'live_home',
+            'init_express':'''ex.each(["/static/images/page500/back_品牌.jpg","/static/images/back_通用底图.jpg"],img=>{
+                ex.load_img(img)
+            })'''
         }
 
 mb_page.update({

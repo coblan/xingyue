@@ -63,7 +63,7 @@ page_ctx={
         'po_3d':'xing_kong_po'
     },
     'yang_fang_2d':{
-        'img_url':'/static/images/2d3d/pic_洋房户型图.jpg',
+        'img_url':'/static/images/2d3d/pic_洋房户型图.jpg?v=1',
         'menu_circle':'com-menu-circle-2d',
         'po_3d':'xing_kong_po'
     }
