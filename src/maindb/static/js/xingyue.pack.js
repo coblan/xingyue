@@ -631,10 +631,31 @@ Vue.component('com-menu-circle-sm', {
 __webpack_require__(42);
 
 Vue.component('com-menu-vertical', {
-    template: '<div class="com-menu-vertical">\n    <div class="mybtn f1" @click="open_help()">\n        <img src="/static/images/2d3d/button_F1.png" alt="">\n    </div>\n    <div class="mybtn f2">\n        <img src="/static/images/2d3d/button_F2.png" alt="">\n    </div>\n\n    </div>',
+    template: '<div class="com-menu-vertical">\n    <div class="mybtn f1" @click="open_f1()">\n        <img src="/static/images/2d3d/button_F1.png" alt="">\n    </div>\n    <div class="mybtn f2" @click="open_f2()">\n        <img src="/static/images/2d3d/button_F2.png" alt="">\n    </div>\n\n    </div>',
+    data: function data() {
+        return {
+            parStore: ex.vueParStore(this)
+        };
+    },
+
     methods: {
-        open_help: function open_help() {
-            cfg.pop_small('com-pop-help', {});
+        //open_help(){
+        //    cfg.pop_small('com-pop-help',{})
+        //}
+        open_f1: function open_f1() {
+            if (this.parStore.ctx.crt_btn != 'f1' && this.parStore.ctx.f1_page) {
+                var url = ex.appendSearch('/mb/page3d', { page: this.parStore.ctx.f1_page });
+                location = url;
+            }
+            //if(this.parStore.ctx.active !=0){
+            //    live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle-lg',menu_vertical:'com-menu-vertical-d',active:0})
+            //}
+        },
+        open_f2: function open_f2() {
+            if (this.parStore.ctx.crt_btn != 'f2' && this.parStore.ctx.f2_page) {
+                var url = ex.appendSearch('/mb/page3d', { page: this.parStore.ctx.f2_page });
+                location = url;
+            }
         }
     }
 });
@@ -1006,7 +1027,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, ".com-live-garden {\n  text-align: center;\n  font-size: 0.28rem;\n  font-family: \"\\9ED1\\4F53\";\n  color: #fff;\n}\n.com-live-garden .title1 {\n  padding-top: 0.4rem;\n}\n.com-live-garden .title2 {\n  padding-top: 0.3rem;\n  font-family: Cambria;\n  font-size: 0.16rem;\n}\n.com-live-garden .title4 {\n  padding-top: 0.3rem;\n  font-size: 0.2rem;\n  line-height: 0.5rem;\n}\n", ""]);
+exports.push([module.i, ".com-live-garden {\n  text-align: center;\n  font-size: 0.28rem;\n  font-family: \"\\9ED1\\4F53\";\n  color: #fff;\n  vertical-align: middle;\n}\n.com-live-garden .title1 {\n  padding-top: 0.4rem;\n}\n.com-live-garden .title2 {\n  padding-top: 0.3rem;\n  font-family: Cambria;\n  font-size: 0.16rem;\n}\n.com-live-garden .title4 {\n  padding-top: 0.3rem;\n  font-size: 0.2rem;\n  line-height: 0.5rem;\n}\n", ""]);
 
 // exports
 
