@@ -35,7 +35,8 @@ window.live_home={
 
 
 
-          <template v-if="crt_model=='block'">
+<transition name="btn-fade">
+          <div v-if="crt_model=='block'">
            <div class="mybtn block-posion after-btn" @click="open_block_pos()">
                 <img src="/static/images/block_btn/区位.png" alt="">
             </div>
@@ -45,9 +46,10 @@ window.live_home={
              <div class="mybtn garden after-btn" @click="open_garden()">
                 <img src="/static/images/block_btn/公园配套.png" alt="">
             </div>
-          </template>
-
-            <template v-if="crt_model=='product'">
+          </div>
+          </transition>
+<transition name="btn-fade">
+            <div v-if="crt_model=='product'">
            <div class="mybtn overloap-btn after-btn" @click="open_overlap()">
                 <img src="/static/images/product/button_叠拼_1.png" alt="">
             </div>
@@ -57,7 +59,8 @@ window.live_home={
              <div class="mybtn fashion after-btn" @click="open_yang_fang()">
                 <img src="/static/images/product/button_洋房_1.png" alt="">
             </div>
-          </template>
+          </div>
+          </transition>
     </div>
 
 
