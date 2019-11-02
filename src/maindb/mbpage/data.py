@@ -1,12 +1,14 @@
+from django.conf import settings
+
 page_ctx={
     'overlap':{
-        'link3d':'/media/HLT_DP/index.html',
+        'link3d':settings.BIG_MEDIA + '/3d/HLT_DP/index.html',
         'menu_circle':'com-menu-circle-sm',
         'menu_vertical':'com-menu-vertical-d',
         'show_help':True
     },
     'xing_kong':{ #D1
-        'link3d':'/media/HLT_D1/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/HLT_D1/index.html',
         'menu_circle':'com-menu-circle-lg',
         'menu_vertical':'com-menu-vertical-d',
         'page2d':'xing_kong_2d',
@@ -18,7 +20,7 @@ page_ctx={
         'po_3d':'xing_kong_po'
     },
     'xing_kong_po':{
-        'link3d':'/media/HLT_D1_1F/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/HLT_D1_1F/index.html',
         'menu_circle':'com-menu-circle',
         'menu_vertical':'com-menu-vertical',
         'crt_btn':'f1',
@@ -26,7 +28,7 @@ page_ctx={
         'f2_page':'xing_kong_po_f2'
     },
     'xing_kong_po_f2':{
-        'link3d':'/media/HLT_D1_2F/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/HLT_D1_2F/index.html',
         'menu_circle':'com-menu-circle',
         'menu_vertical':'com-menu-vertical',
         'crt_btn':'f2',
@@ -34,7 +36,7 @@ page_ctx={
         'f2_page':'xing_kong_po_f2'
     },
     'xing_yue':{ #D2
-        'link3d':'/media/HLT_D2/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/HLT_D2/index.html',
         'menu_circle':'com-menu-circle-lg',
         'menu_vertical':'com-menu-vertical-d',
         'page2d':'xing_yue_2d',
@@ -46,12 +48,12 @@ page_ctx={
         'po_3d':'xing_yue_po'
     },
     'xing_yue_po':{
-        'link3d':'/media/HLT_DP/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/HLT_DP/index.html',
         'menu_circle':'com-menu-circle',
         'menu_vertical':'com-menu-vertical',
     },
     'xing_hai':{ #D3
-        'link3d':'/media/HLT_D3/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/HLT_D3/index.html',
         'menu_circle':'com-menu-circle-lg',
         'menu_vertical':'com-menu-vertical-d',
         'page2d':'xing_hai_2d',
@@ -63,7 +65,7 @@ page_ctx={
         'po_3d':'xing_hai_po'
     },
     'xing_hai_po':{
-        'link3d':'/media/HLT_DP/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/HLT_DP/index.html',
         'menu_circle':'com-menu-circle',
         'menu_vertical':'com-menu-vertical',
     },
