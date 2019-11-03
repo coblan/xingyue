@@ -8,7 +8,7 @@ page_ctx={
         'show_help':True
     },
     'xing_kong':{ #D1
-        'link3d':settings.BIG_MEDIA +'/3d/HLT_D1/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/HLT_DP_D1/index.html',
         'menu_circle':'com-menu-circle-lg',
         'menu_vertical':'com-menu-vertical-d',
         'page2d':'xing_kong_2d',
@@ -36,7 +36,7 @@ page_ctx={
         'f2_page':'xing_kong_po_f2'
     },
     'xing_yue':{ #D2
-        'link3d':settings.BIG_MEDIA +'/3d/HLT_D2/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/HLT_DP_D2/index.html',
         'menu_circle':'com-menu-circle-lg',
         'menu_vertical':'com-menu-vertical-d',
         'page2d':'xing_yue_2d',
@@ -47,13 +47,26 @@ page_ctx={
         'menu_circle':'com-menu-circle-2d',
         'po_3d':'xing_yue_po'
     },
+
     'xing_yue_po':{
-        'link3d':settings.BIG_MEDIA +'/3d/HLT_DP/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/HLT_D2_1F/index.html',
         'menu_circle':'com-menu-circle',
         'menu_vertical':'com-menu-vertical',
+        'crt_btn':'f1',
+        'f1_page':'xing_yue_po',
+        'f2_page':'xing_yue_po_f2'
     },
+    'xing_yue_po_f2':{
+        'link3d':settings.BIG_MEDIA +'/3d/HLT_D2_2F/index.html',
+        'menu_circle':'com-menu-circle',
+        'menu_vertical':'com-menu-vertical',
+        'crt_btn':'f2',
+        'f1_page':'xing_yue_po',
+        'f2_page':'xing_yue_po_f2'
+    },
+        
     'xing_hai':{ #D3
-        'link3d':settings.BIG_MEDIA +'/3d/HLT_D3/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/HLT_DP_D3/index.html',
         'menu_circle':'com-menu-circle-lg',
         'menu_vertical':'com-menu-vertical-d',
         'page2d':'xing_hai_2d',
@@ -65,9 +78,20 @@ page_ctx={
         'po_3d':'xing_hai_po'
     },
     'xing_hai_po':{
-        'link3d':settings.BIG_MEDIA +'/3d/HLT_DP/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/HLT_D3_1F/index.html',
         'menu_circle':'com-menu-circle',
         'menu_vertical':'com-menu-vertical',
+        'crt_btn':'f1',
+        'f1_page':'xing_hai_po',
+        'f2_page':'xing_hai_po_f2'
+    },
+     'xing_hai_po_f2':{
+        'link3d':settings.BIG_MEDIA +'/3d/HLT_D3_2F/index.html',
+        'menu_circle':'com-menu-circle',
+        'menu_vertical':'com-menu-vertical',
+        'crt_btn':'f2',
+        'f1_page':'xing_hai_po',
+        'f2_page':'xing_hai_po_f2'
     },
     
     'tall_buiding_2d':{
