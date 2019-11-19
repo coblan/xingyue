@@ -6,14 +6,21 @@
 
 
 .general-page
-  background url('/static/images/back_通用底图.jpg')
-  height var(--app-height)
-  width var(--app-width)
-  background-size 100% auto
-  background-repeat:no-repeat;
-  background-position center
+  height 100%
+  width 100%
   font-size .3rem
   position relative;
+  overflow auto
+  .scroll-area
+    height 100%
+    width 100%
+    overflow hidden
+    position relative;
+    background url('/static/images/back_通用底图.jpg')
+    background-size 100% auto
+    background-repeat:no-repeat;
+    background-position center
+
 
 .normal-back-btn
   position absolute

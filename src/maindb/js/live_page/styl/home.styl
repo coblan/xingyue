@@ -1,14 +1,22 @@
 
 .com-live-home
-  height var(--app-height)
-  width var(--app-width)
+  //height var(--app-height)
+  //width var(--app-width)
+  height 100%
+  width 100%
   font-size .3rem
   position relative;
+  overflow auto
 
-  background url('/static/images/底.jpg')
-  background-size 100% auto
-  background-repeat:no-repeat;
-  background-position center
+  .scroll-area
+    height 100%
+    width 100%
+    overflow hidden
+    position relative;
+    background url('/static/images/底.jpg')
+    background-size 100% auto
+    background-repeat:no-repeat;
+    background-position center
 
   //background-origin content-box
 

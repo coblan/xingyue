@@ -5,8 +5,8 @@ window.live_home={
     basename:'live-home',
     template:`<div class="com-live-home">
 
-
-    <div class="middle-wrap">
+    <div class="scroll-area">
+        <div class="middle-wrap">
             <div class="light">
         <img src="/static/images/动画-光圈.png" alt="">
     </div>
@@ -67,7 +67,7 @@ window.live_home={
 
        <div class="my-model whole-page" v-if="crt_model!=''" @click="crt_model=''">
 
-
+    </div>
         </div>
     </div>`,
     data(){
@@ -77,6 +77,12 @@ window.live_home={
         }
     },
     mounted(){
+        if(ex.os.isTablet){
+            var hh = window.innerWidth / 0.563
+            $(this.$el).find('.scroll-area').height( hh +'px')
+            //$('#main-panel').css('overflow','auto')
+        }
+
         //$(this.$el).find('.light').css('opacity',1)
         //
         //setInterval(()=>{

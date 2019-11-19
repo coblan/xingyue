@@ -9,6 +9,7 @@ class Home(object):
     
     def get_context(self):
         return {
+             'adapt_size':'fullwidth',
              'editor_ctx':{
             },
             'editor':'live_home',
