@@ -735,7 +735,14 @@ __webpack_require__(45);
 window.live_contact = {
     props: ['ctx'],
     basename: 'live-contact',
-    template: '<div class="com-live-contact">\n     <div class="contace0" >\n            <img src="/static/images/button_\u8054\u7CFB\u65B9\u5F0F_1.png" alt="">\n        </div>\n    <div class="contace1">\n        <img src="/static/images/contact/txt_\u8054\u7CFB1.png" alt="">\n    </div>\n    <div class="contact2">\n        <img src="/static/images/contact/txt_\u8054\u7CFB2.png" alt="">\n    </div>\n    <div class="contact3">\n        <img src="/static/images/contact/txt_\u8054\u7CFB3.png" alt="">\n    </div>\n   <com-btn-back class="normal-back-btn"></com-btn-back>\n    </div>',
+    template: '<div class="com-live-contact general-page">\n    <div class="scroll-area">\n        <div class="contace0" >\n            <img src="/static/images/button_\u8054\u7CFB\u65B9\u5F0F_1.png" alt="">\n        </div>\n        <div class="contace1">\n            <img src="/static/images/contact/txt_\u8054\u7CFB1.png" alt="">\n        </div>\n        <div class="contact2">\n            <img src="/static/images/contact/txt_\u8054\u7CFB2.png" alt="">\n        </div>\n        <div class="contact3">\n            <img src="/static/images/contact/txt_\u8054\u7CFB3.png" alt="">\n        </div>\n       <com-btn-back class="normal-back-btn"></com-btn-back>\n    </div>\n\n    </div>',
+    mounted: function mounted() {
+        if (ex.os.isTablet) {
+            var hh = window.innerWidth / 0.563;
+            $(this.$el).find('.scroll-area').height(hh + 'px');
+        }
+    },
+
     methods: {}
 };
 
@@ -881,18 +888,24 @@ __webpack_require__(49);
 window.live_page_3d = {
     props: ['ctx'],
     basename: 'live-page-3d',
-    template: '<div class="com-live-page-3d">\n    <component :is="ctx.menu_circle"></component>\n     <component :is="ctx.menu_vertical" ></component>\n     <iframe :src="ctx.link3d" style="width: 100%;height: 100%"></iframe>\n    </div>',
+    template: '<div class="com-live-page-3d">\n    <component :is="ctx.menu_circle"></component>\n     <component :is="ctx.menu_vertical" ></component>\n     <iframe :src="ctx.link3d" style="width: 100%;height: 100%"></iframe>\n     <!--<iframe allowvr="yes" scrolling="no"  :src="ctx.link3d" frameborder="0" width="100%" height="100%"></iframe>-->\n     \n    </div>',
     data: function data() {
         var childStore = new Vue();
         childStore.ctx = this.ctx;
         return {
-            childStore: childStore
+            childStore: childStore,
+            myurl: ''
         };
     },
     mounted: function mounted() {
+        var _this = this;
+
         if (this.ctx.show_help) {
             cfg.pop_small('com-pop-help', {});
         }
+        setTimeout(function () {
+            _this.myurl = _this.ctx.link3d;
+        }, 50);
     },
 
     methods: {}
@@ -910,7 +923,14 @@ __webpack_require__(50);
 window.live_page500 = {
     props: ['ctx'],
     basename: 'live-page500',
-    template: '<div class="com-live-page500">\n    <!--<div class="mytitle">-->\n        <!--<img src="/static/images/page500/txt_\u54C1\u724Clogo.png" alt="">-->\n    <!--</div>-->\n    <!--<div class="mytitle2">-->\n        <!--<img src="/static/images/page500/txt_\u54C1\u724C1.png" alt="">-->\n    <!--</div>-->\n    <div class="mytitle">\n        <img src="/static/images/page500/txt_\u54C1\u724C_new.png" alt="">\n    </div>\n    <div class="right-title">\n        <span>\u54C1\u724C</span>\n    </div>\n   <com-btn-back class="normal-back-btn "></com-btn-back>\n    </div>',
+    template: '<div class="com-live-page500 general-page">\n    <!--<div class="mytitle">-->\n        <!--<img src="/static/images/page500/txt_\u54C1\u724Clogo.png" alt="">-->\n    <!--</div>-->\n    <!--<div class="mytitle2">-->\n        <!--<img src="/static/images/page500/txt_\u54C1\u724C1.png" alt="">-->\n    <!--</div>-->\n    <div class="scroll-area">\n        <div class="mytitle">\n            <img src="/static/images/page500/txt_\u54C1\u724C_new.png" alt="">\n        </div>\n        <div class="right-title">\n            <span>\u54C1\u724C</span>\n        </div>\n       <com-btn-back class="normal-back-btn "></com-btn-back>\n    </div>\n\n    </div>',
+    mounted: function mounted() {
+        if (ex.os.isTablet) {
+            var hh = window.innerWidth / 0.563;
+            $(this.$el).find('.scroll-area').height(hh + 'px');
+        }
+    },
+
     methods: {
         // page500-back-btn
     }
@@ -1088,7 +1108,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, ".com-live-home {\n  height: 100%;\n  width: 100%;\n  font-size: 0.3rem;\n  position: relative;\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\n.com-live-home .scroll-area {\n  height: 100%;\n  width: 100%;\n  overflow: hidden;\n  position: relative;\n  background: url(\"/static/images/底.jpg\");\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.com-live-home .middle-wrap {\n  width: 0;\n  height: 0;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n}\n.com-live-home .middle-wrap .light {\n  position: absolute;\n  top: -3.8rem;\n  left: -4.8rem;\n  animation: lightmove 5s linear infinite;\n  opacity: 0;\n}\n.com-live-home .middle-wrap .light img {\n  width: 7.2rem;\n  height: auto;\n}\n@-moz-keyframes lightmove {\n  0% {\n    opacity: 0;\n  }\n  10% {\n    opacity: 0.4;\n  }\n  30% {\n    opacity: 1;\n  }\n  40% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes lightmove {\n  0% {\n    opacity: 0;\n  }\n  10% {\n    opacity: 0.4;\n  }\n  30% {\n    opacity: 1;\n  }\n  40% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@-o-keyframes lightmove {\n  0% {\n    opacity: 0;\n  }\n  10% {\n    opacity: 0.4;\n  }\n  30% {\n    opacity: 1;\n  }\n  40% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@keyframes lightmove {\n  0% {\n    opacity: 0;\n  }\n  10% {\n    opacity: 0.4;\n  }\n  30% {\n    opacity: 1;\n  }\n  40% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n.com-live-home .middle-wrap .liuxing {\n  position: absolute;\n  top: -9rem;\n  left: -9rem;\n  animation: liuxingmove 10s infinite;\n}\n.com-live-home .middle-wrap .liuxing img {\n  width: 7rem;\n  height: auto;\n}\n@-moz-keyframes liuxingmove {\n  from {\n    transform: translate(0, 0);\n  }\n  to {\n    transform: translate(13rem, 13rem);\n  }\n}\n@-webkit-keyframes liuxingmove {\n  from {\n    transform: translate(0, 0);\n  }\n  to {\n    transform: translate(13rem, 13rem);\n  }\n}\n@-o-keyframes liuxingmove {\n  from {\n    transform: translate(0, 0);\n  }\n  to {\n    transform: translate(13rem, 13rem);\n  }\n}\n@keyframes liuxingmove {\n  from {\n    transform: translate(0, 0);\n  }\n  to {\n    transform: translate(13rem, 13rem);\n  }\n}\n.com-live-home .middle-wrap .mybtn {\n  position: absolute;\n  text-align: center;\n}\n.com-live-home .middle-wrap .mybtn img {\n  width: 1rem;\n}\n.com-live-home .middle-wrap .mybtn .mytitle {\n  letter-spacing: 0.4rem;\n  font-size: 0.2rem;\n  color: #fff;\n  white-space: nowrap;\n}\n.com-live-home .middle-wrap .mybtn .mytitle span {\n  letter-spacing: 0;\n}\n.com-live-home .middle-wrap .btn_500 {\n  left: -2.5rem;\n  top: -3rem;\n}\n.com-live-home .middle-wrap .btn_block {\n  left: -0.9rem;\n  top: -1.2rem;\n}\n.com-live-home .middle-wrap .produce {\n  left: -0.3rem;\n  top: 1rem;\n}\n.com-live-home .middle-wrap .contact {\n  left: -0.2rem;\n  top: 3.4rem;\n}\n.com-live-home .middle-wrap .contact .mytitle {\n  letter-spacing: 0.1rem;\n}\n.com-live-home .middle-wrap .block-posion {\n  left: -0.2rem;\n  top: -2.5rem;\n}\n.com-live-home .middle-wrap .six {\n  left: 1rem;\n  top: -1.3rem;\n}\n.com-live-home .middle-wrap .garden {\n  left: 1.4rem;\n  top: 0.3rem;\n}\n.com-live-home .middle-wrap .overloap-btn {\n  left: 0.5rem;\n  top: -0.5rem;\n}\n.com-live-home .middle-wrap .tall-build {\n  left: 1.4rem;\n  top: 0.6rem;\n}\n.com-live-home .middle-wrap .fashion {\n  left: 1rem;\n  top: 2rem;\n}\n.com-live-home .after-btn {\n  z-index: 900;\n}\n.com-live-home .my-model {\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(0,0,0,0.3);\n}\n", ""]);
+exports.push([module.i, ".com-live-home {\n  height: 100%;\n  width: 100%;\n  font-size: 0.3rem;\n  position: relative;\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\n.com-live-home .scroll-area {\n  height: 100%;\n  width: 100%;\n  overflow: hidden;\n  position: relative;\n  background: url(\"/static/images/底.jpg\");\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.com-live-home .middle-wrap {\n  width: 0;\n  height: 0;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n}\n.com-live-home .middle-wrap .light {\n  position: absolute;\n  top: -3.8rem;\n  left: -4.8rem;\n  animation: lightmove 5s linear infinite;\n  opacity: 0;\n}\n.com-live-home .middle-wrap .light img {\n  width: 7.2rem;\n  height: auto;\n}\n@-moz-keyframes lightmove {\n  0% {\n    opacity: 0;\n  }\n  10% {\n    opacity: 0.4;\n  }\n  30% {\n    opacity: 1;\n  }\n  40% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes lightmove {\n  0% {\n    opacity: 0;\n  }\n  10% {\n    opacity: 0.4;\n  }\n  30% {\n    opacity: 1;\n  }\n  40% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@-o-keyframes lightmove {\n  0% {\n    opacity: 0;\n  }\n  10% {\n    opacity: 0.4;\n  }\n  30% {\n    opacity: 1;\n  }\n  40% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@keyframes lightmove {\n  0% {\n    opacity: 0;\n  }\n  10% {\n    opacity: 0.4;\n  }\n  30% {\n    opacity: 1;\n  }\n  40% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n.com-live-home .middle-wrap .liuxing {\n  position: absolute;\n  top: -12rem;\n  left: -8rem;\n  animation: liuxingmove 10s infinite;\n}\n.com-live-home .middle-wrap .liuxing img {\n  width: 7rem;\n  height: auto;\n}\n@-moz-keyframes liuxingmove {\n  from {\n    transform: translate(0, 0);\n  }\n  to {\n    transform: translate(13rem, 13rem);\n  }\n}\n@-webkit-keyframes liuxingmove {\n  from {\n    transform: translate(0, 0);\n  }\n  to {\n    transform: translate(13rem, 13rem);\n  }\n}\n@-o-keyframes liuxingmove {\n  from {\n    transform: translate(0, 0);\n  }\n  to {\n    transform: translate(13rem, 13rem);\n  }\n}\n@keyframes liuxingmove {\n  from {\n    transform: translate(0, 0);\n  }\n  to {\n    transform: translate(13rem, 13rem);\n  }\n}\n.com-live-home .middle-wrap .mybtn {\n  position: absolute;\n  text-align: center;\n}\n.com-live-home .middle-wrap .mybtn img {\n  width: 1rem;\n}\n.com-live-home .middle-wrap .mybtn .mytitle {\n  letter-spacing: 0.4rem;\n  font-size: 0.2rem;\n  color: #fff;\n  white-space: nowrap;\n}\n.com-live-home .middle-wrap .mybtn .mytitle span {\n  letter-spacing: 0;\n}\n.com-live-home .middle-wrap .btn_500 {\n  left: -2.5rem;\n  top: -3rem;\n}\n.com-live-home .middle-wrap .btn_block {\n  left: -0.9rem;\n  top: -1.2rem;\n}\n.com-live-home .middle-wrap .produce {\n  left: -0.3rem;\n  top: 1rem;\n}\n.com-live-home .middle-wrap .contact {\n  left: -0.2rem;\n  top: 3.4rem;\n}\n.com-live-home .middle-wrap .contact .mytitle {\n  letter-spacing: 0.1rem;\n}\n.com-live-home .middle-wrap .block-posion {\n  left: -0.2rem;\n  top: -2.5rem;\n}\n.com-live-home .middle-wrap .six {\n  left: 1rem;\n  top: -1.3rem;\n}\n.com-live-home .middle-wrap .garden {\n  left: 1.4rem;\n  top: 0.3rem;\n}\n.com-live-home .middle-wrap .overloap-btn {\n  left: 0.5rem;\n  top: -0.5rem;\n}\n.com-live-home .middle-wrap .tall-build {\n  left: 1.4rem;\n  top: 0.6rem;\n}\n.com-live-home .middle-wrap .fashion {\n  left: 1rem;\n  top: 2rem;\n}\n.com-live-home .after-btn {\n  z-index: 900;\n}\n.com-live-home .my-model {\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(0,0,0,0.3);\n}\n", ""]);
 
 // exports
 
@@ -1116,7 +1136,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, ".com-live-page-3d {\n  background: url(\"/static/images/pic_3d背景图.jpg?v=1\");\n  height: var(--app-height);\n  width: var(--app-width);\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n  font-size: 0.3rem;\n  position: relative;\n}\n", ""]);
+exports.push([module.i, ".com-live-page-3d {\n  background: url(\"/static/images/pic_3d背景图.jpg?v=1\");\n  height: 100%;\n  width: 100%;\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n  font-size: 0.3rem;\n  position: relative;\n}\n", ""]);
 
 // exports
 
