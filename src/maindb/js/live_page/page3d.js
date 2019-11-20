@@ -6,7 +6,8 @@ window.live_page_3d={
     template:`<div class="com-live-page-3d">
     <component :is="ctx.menu_circle"></component>
      <component :is="ctx.menu_vertical" ></component>
-     <iframe :src="ctx.link3d" style="width: 100%;height: 100%"></iframe>
+
+     <iframe v-show="is_show"  :src="ctx.link3d" style="width: 100%;height: 100%"></iframe>
      <!--<iframe allowvr="yes" scrolling="no"  :src="ctx.link3d" frameborder="0" width="100%" height="100%"></iframe>-->
      
     </div>`,
@@ -15,7 +16,8 @@ window.live_page_3d={
         childStore.ctx = this.ctx
         return {
             childStore:childStore,
-            myurl:''
+            myurl:'',
+            is_show:false
         }
     },
     mounted(){
@@ -23,8 +25,9 @@ window.live_page_3d={
             cfg.pop_small('com-pop-help',{})
         }
         setTimeout(()=>{
-            this.myurl=this.ctx.link3d
-        },50)
+            //this.myurl=this.ctx.link3d
+            this.is_show=true
+        },500)
     },
     methods:{
     }

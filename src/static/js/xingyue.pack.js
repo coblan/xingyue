@@ -888,13 +888,14 @@ __webpack_require__(49);
 window.live_page_3d = {
     props: ['ctx'],
     basename: 'live-page-3d',
-    template: '<div class="com-live-page-3d">\n    <component :is="ctx.menu_circle"></component>\n     <component :is="ctx.menu_vertical" ></component>\n     <iframe :src="ctx.link3d" style="width: 100%;height: 100%"></iframe>\n     <!--<iframe allowvr="yes" scrolling="no"  :src="ctx.link3d" frameborder="0" width="100%" height="100%"></iframe>-->\n     \n    </div>',
+    template: '<div class="com-live-page-3d">\n    <component :is="ctx.menu_circle"></component>\n     <component :is="ctx.menu_vertical" ></component>\n\n     <iframe v-show="is_show"  :src="ctx.link3d" style="width: 100%;height: 100%"></iframe>\n     <!--<iframe allowvr="yes" scrolling="no"  :src="ctx.link3d" frameborder="0" width="100%" height="100%"></iframe>-->\n     \n    </div>',
     data: function data() {
         var childStore = new Vue();
         childStore.ctx = this.ctx;
         return {
             childStore: childStore,
-            myurl: ''
+            myurl: '',
+            is_show: false
         };
     },
     mounted: function mounted() {
@@ -904,8 +905,9 @@ window.live_page_3d = {
             cfg.pop_small('com-pop-help', {});
         }
         setTimeout(function () {
-            _this.myurl = _this.ctx.link3d;
-        }, 50);
+            //this.myurl=this.ctx.link3d
+            _this.is_show = true;
+        }, 500);
     },
 
     methods: {}
