@@ -3,7 +3,8 @@
 Vue.component('com-menu-circle-2d',{
     template:`<div class="com-menu-circle-2d com-menu-circle">
     <div class="mybtn main-menu" @click="is_open = !is_open">
-        <img src="/static/images/2d3d/button_菜单1.png" alt="">
+        <!--<img src="/static/images/2d3d/button_菜单1.png" alt="">-->
+        <img src="/static/images/2d3d/户型.png" alt="">
     </div>
      <transition name="btn-fade">
         <div v-show="is_open">
@@ -13,8 +14,9 @@ Vue.component('com-menu-circle-2d',{
              <div class="mybtn btn-720" @click="goto_po()">
                 <img src="/static/images/2d3d/button_剖切户型1.png" alt="">
             </div>
-              <div class="mybtn btn-first-page" @click="home()">
-                <img src="/static/images/2d3d/button_首页.png" alt="">
+              <div class="mybtn btn-first-page"  @click="goto_720()">
+                <!--<img src="/static/images/2d3d/button_首页.png" alt="">-->
+                 <img src="/static/images/2d3d/button_720.png" alt="">
             </div>
         </div>
     </transition>
@@ -36,6 +38,9 @@ Vue.component('com-menu-circle-2d',{
         },
         back(){
             history.back()
+        },
+        goto_720(){
+            location ='/mb/page720?page=' + this.parStore.ctx.page_720
         }
     }
 })

@@ -1,7 +1,7 @@
 require('./styl/menu_circle_sm.styl')
 
-Vue.component('com-menu-circle-sm',{
-    template:`<div class="com-menu-circle-sm">
+Vue.component('com-menu-circle-dp',{
+    template:`<div class="com-menu-circle-dp">
     <div class="mybtn main-menu" @click="is_open = !is_open">
         <img src="/static/images/2d3d/button_菜单1.png" alt="">
     </div>
@@ -13,6 +13,17 @@ Vue.component('com-menu-circle-sm',{
             </div>
               <div class="mybtn btn-first-page" @click="home()">
                 <img src="/static/images/2d3d/button_首页.png" alt="">
+            </div>
+
+            <div class="mybtn d1" @click="open_d1()">
+                <img  src="/static/images/2d3d/button_D1.png" alt="">
+            </div>
+            <div class="mybtn d2" @click="open_d2()">
+                <img  src="/static/images/2d3d/button_D2.png" alt="">
+
+            </div>
+             <div class="mybtn d3" @click="open_d3()">
+                <img  src="/static/images/2d3d/button_D3.png" alt="">
             </div>
         </div>
     </transition>
@@ -29,6 +40,15 @@ Vue.component('com-menu-circle-sm',{
         },
         back(){
             history.back()
+        },
+        open_d1(){
+            location = '/mb/page3d?page=xing_kong'
+        },
+        open_d2(){
+            location = '/mb/page3d?page=xing_yue'
+        },
+        open_d3(){
+            location = '/mb/page3d?page=xing_hai'
         }
     }
 })

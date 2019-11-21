@@ -7,5 +7,6 @@ import * as six from './six'
 import * as garden from './garden'
 import * as page3d from './page3d'
 import * as page2d from './page2d'
+import * as vedio_page from './vedio_page'
 
 require('./styl/share.styl')

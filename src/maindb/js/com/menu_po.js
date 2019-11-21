@@ -1,23 +1,20 @@
-require('./styl/menu_circle_lg.styl')
+require('./styl/menu_po.styl')
 
-Vue.component('com-menu-circle-lg',{
-    template:`<div class="com-menu-circle-lg">
+Vue.component('com-menu-po',{
+    template:`<div class="com-menu-po">
     <div class="mybtn main-menu" @click="is_open = !is_open">
-        <img src="/static/images/2d3d/button_菜单1.png" alt="">
+         <img src="/static/images/2d3d/button_剖切户型1.png" alt="">
     </div>
      <transition name="btn-fade">
         <div v-show="is_open">
             <div class="mybtn back-btn" @click="back()">
                 <img src="/static/images/page500/button_返回.png" alt="">
             </div>
-             <div class="mybtn btn-house" @click="open_house()">
-                <img src="/static/images/2d3d/户型.png" alt="">
-            </div>
-            <div class="mybtn btn-720">
+             <div class="mybtn btn-720" @click="goto_720()">
                 <img src="/static/images/2d3d/button_720.png" alt="">
             </div>
-              <div class="mybtn btn-first-page" @click="home()">
-                <img src="/static/images/2d3d/button_首页.png" alt="">
+              <div class="mybtn btn-first-page" @click="open_house()">
+               <img src="/static/images/2d3d/户型.png" alt="">
             </div>
         </div>
     </transition>
@@ -38,8 +35,9 @@ Vue.component('com-menu-circle-lg',{
         },
         open_house(){
             location='/mb/page2d?page='+this.parStore.ctx.page2d
-            //var active =this.parStore.ctx.active
-            //live_root.open_live('live_page_2d',{menu_circle:'com-menu-circle-2d',content_img:named_ctx.product[active].image_2d})
+        },
+        goto_720(){
+            location ='/mb/page720?page=' + this.parStore.ctx.page_720
         }
     }
 })

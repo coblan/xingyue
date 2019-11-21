@@ -28,9 +28,13 @@ window.live_home={
            <div class="mytitle">产<span>品</span></div>
        </div>
 
-        <div class="mybtn contact" @click="open_contact()">
-            <img src="/static/images/button_联系方式_1.png" alt="">
-           <div class="mytitle">联系方<span>式</span></div>
+        <!--<div class="mybtn contact" @click="open_contact()">-->
+            <!--<img src="/static/images/button_联系方式_1.png" alt="">-->
+           <!--<div class="mytitle">联系方<span>式</span></div>-->
+        <!--</div>-->
+         <div class="mybtn contact" @click="open_video()">
+            <img src="/static/images/button_播放.png" alt="">
+           <div class="mytitle">宣传<span>片</span></div>
         </div>
 
 
@@ -82,27 +86,11 @@ window.live_home={
             $(this.$el).find('.scroll-area').height( hh +'px')
             //$('#main-panel').css('overflow','auto')
         }
-
-        //$(this.$el).find('.light').css('opacity',1)
-        //
-        //setInterval(()=>{
-        //    if(this.show_light){
-        //        this.show_light = false
-        //        $(this.$el).find('.light').css('opacity',0)
-        //    }else{
-        //        this.show_light = true
-        //        $(this.$el).find('.light').css('opacity',1)
-        //    }
-            //$(this.$el).find('.liuxing').addClass('nomove')
-            //$(this.$el).find('.liuxing').css('transform','translate(0, 0)')
-            //$(this.$el).find('.liuxing').removeClass('nomove')
-            //$(this.$el).find('.liuxing').css('transform','translate(80%, 80%)')
-
-        //},1000*10)
-
-
     },
     methods:{
+        open_video(){
+            live_root.open_live('live_video_page',{src:this.ctx.video_src})
+        },
         open_500(){
             live_root.open_live('live_page500',{})
         },
