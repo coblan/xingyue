@@ -417,6 +417,10 @@ var _menu_po = __webpack_require__(62);
 
 var menu_po = _interopRequireWildcard(_menu_po);
 
+var _menu_tallbuild = __webpack_require__(65);
+
+var menu_tallbuild = _interopRequireWildcard(_menu_tallbuild);
+
 var _help = __webpack_require__(6);
 
 var help = _interopRequireWildcard(_help);
@@ -1844,6 +1848,81 @@ if(false) {
 	if(!content.locals) {
 		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_po.styl", function() {
 			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_po.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(67);
+
+Vue.component('com-menu-tallbuild', {
+    template: '<div class="com-menu-tallbuild com-menu-circle-2d com-menu-circle">\n    <div class="mybtn main-menu" @click="is_open = !is_open">\n        <img src="/static/images/2d3d/button_\u83DC\u53551.png" alt="">\n    </div>\n     <transition name="btn-fade">\n        <div v-show="is_open">\n            <div class="mybtn back-btn" @click="back()">\n                <img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">\n            </div>\n             <!--<div class="mybtn btn-720" @click="goto_po()">-->\n                <!--<img src="/static/images/2d3d/button_\u5256\u5207\u6237\u578B1.png" alt="">-->\n            <!--</div>-->\n              <div class="mybtn btn-first-page"  @click="home()">\n                <img src="/static/images/2d3d/button_\u9996\u9875.png" alt="">\n                 <!--<img src="/static/images/2d3d/button_720.png" alt="">-->\n            </div>\n        </div>\n    </transition>\n\n    </div>',
+    data: function data() {
+        return {
+            is_open: true,
+            parStore: ex.vueParStore(this)
+        };
+    },
+
+    methods: {
+        home: function home() {
+            location = '/';
+        },
+        goto_po: function goto_po() {
+            location = '/mb/page3d?page=' + this.parStore.ctx.po_3d;
+            //live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle',menu_vertical:'com-menu-vertical'})
+        },
+        back: function back() {
+            history.back();
+        },
+        goto_720: function goto_720() {
+            location = '/mb/page720?page=' + this.parStore.ctx.page_720;
+        }
+    }
+});
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, ".com-menu-tallbuild .btn-first-page {\n  left: -1.6rem;\n}\n.com-menu-tallbuild .back-btn {\n  left: 0.8rem;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(66);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_tallbuild.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_tallbuild.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});

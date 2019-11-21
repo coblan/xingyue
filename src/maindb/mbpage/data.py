@@ -163,16 +163,14 @@ page_ctx={
     },
      
      
-     
-    
     'tall_buiding_2d':{
         'img_url':'/static/images/2d3d/pic_高层户型图.jpg',
-        'menu_circle':'com-menu-circle-2d',
-        'po_3d':'xing_kong_po'
+        'menu_circle':'com-menu-tallbuild',
+        #'po_3d':'xing_kong_po'
     },
     'yang_fang_2d':{
         'img_url':'/static/images/2d3d/pic_洋房户型图.jpg?v=1',
-        'menu_circle':'com-menu-circle-2d',
-        'po_3d':'xing_kong_po'
+        'menu_circle':'com-menu-tallbuild',
+        #'po_3d':'xing_kong_po'
     }
 }
