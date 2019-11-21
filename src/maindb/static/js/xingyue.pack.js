@@ -1089,7 +1089,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, ".com-live-page-2d {\n  height: var(--app-height);\n  width: var(--app-width);\n  font-size: 0.3rem;\n  position: relative;\n  background: #fff;\n}\n.com-live-page-2d .content {\n  width: 100%;\n  height: 100%;\n  overflow-y: auto;\n}\n.com-live-page-2d .content img {\n  width: 100%;\n  height: auto;\n}\n", ""]);
+exports.push([module.i, ".com-live-page-2d {\n  height: var(--app-height);\n  width: var(--app-width);\n  font-size: 0.3rem;\n  position: relative;\n  background: #fff;\n}\n.com-live-page-2d .content {\n  width: 100%;\n  height: 100%;\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\n.com-live-page-2d .content img {\n  width: 100%;\n  height: auto;\n}\n", ""]);
 
 // exports
 
