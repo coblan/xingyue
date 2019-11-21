@@ -17,3 +17,4 @@ venv
 .idea
 *.wpr
 *.wpu
+/src/db.sqlite3
