@@ -43,6 +43,7 @@ Vue.component('com-menu-circle-dp',{
         },
         open_d1(){
             location = '/mb/page3d?page=xing_kong'
+            //live_root.open_live('live_page_3d',live_root.link_ctx.xing_kong)
         },
         open_d2(){
             location = '/mb/page3d?page=xing_yue'

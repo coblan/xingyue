@@ -1,3 +1,8 @@
+.btn-animate
+  .fade-in-btn
+    opacity 0
+    animation  fade-in .4s
+    animation-fill-mode forwards;
 
 .com-live-home
   //height var(--app-height)
@@ -19,8 +24,21 @@
     background-repeat:no-repeat;
     background-position center
 
-  //background-origin content-box
-
+  //.fade-in-btn
+  //  opacity 0
+  //  animation  fade-in .4s
+  //  animation-fill-mode forwards;
+  @keyframes  fade-in
+    from
+      opacity 0
+    to
+      opacity 1
+  .btn_block
+    animation-delay 500ms
+  .produce
+    animation-delay 1000ms
+  .contact
+    animation-delay 1500ms
   .middle-wrap
     width 0
     height 0
@@ -57,7 +75,7 @@
     .liuxing
       position absolute
       //transition  transform  8s
-      top: -12rem;
+      top: -15rem;
       left: -8rem;
       animation liuxingmove 10s infinite ;
       img
@@ -66,9 +84,9 @@
       @keyframes liuxingmove
         from
           transform translate(0, 0)
-
         to
-          transform translate(13rem, 13rem)
+          transform translate(13rem, 17rem)
+
 
     .mybtn
       position absolute
@@ -82,6 +100,77 @@
         white-space nowrap
         span
           letter-spacing 0
+      &.active
+        z-index 900
+        position relative
+        &::before
+          z-index 800
+          content ''
+          display block
+          position absolute
+          width .6rem
+          height .6rem
+
+          border-width .1rem
+          border-style solid
+          top .46rem
+          left .46rem
+          box-sizing border
+          transform translate(-50%,-50%)
+          animation spread 3s infinite ;
+          //-webkit-backface-visibility: hidden;
+          @keyframes spread
+            0%
+              opacity 0
+              width 1rem
+              height 1rem
+              border-radius 1rem
+              border-width 0
+              background-color white
+              border-color rgba(100, 100,100, 0.3)
+            5%
+              opacity .3
+              width 1rem
+              height 1rem
+              border-radius 1rem
+              border-width .1rem
+              background-color white
+              border-color rgba(100, 100,100, 0.3)
+            100%
+              opacity 0
+              width 2.6rem
+              height 2.6rem
+              border-radius 2.6rem
+              border-width 1rem
+              //display none
+              border-color rgba(100, 100,100, 0)
+        //&::after
+        //  z-index 700
+        //  content ''
+        //  display block
+        //  position absolute
+        //
+        //  width .6rem
+        //  height .6rem
+        //  top .46rem
+        //  left .46rem
+        //  transform translate(-50%,-50%)
+        //  opacity 0
+        //  animation-fill-mode forwards
+        //  animation spread2 3s infinite
+        //  animation-delay 200ms
+        //  @keyframes spread2
+        //    from
+        //      opacity .6
+        //      width .6rem
+        //      height .6rem
+        //      border-radius .3rem
+        //      background-color white
+        //    to
+        //      opacity 0
+        //      width 2rem
+        //      height 2rem
+        //      border-radius 1rem
 
     .btn_500
       left -2.5rem
@@ -99,22 +188,29 @@
         letter-spacing .1rem
     .block-posion
       left -.2rem
-      top -2.5rem
+      top -2.8rem
+      animation-delay 500ms
     .six
-      left 1rem
-      top -1.3rem
+      left .8rem
+      top -1.7rem
+      animation-delay 1000ms
     .garden
-      left 1.4rem
-      top .3rem
+      left 1rem
+      top -.4rem
+      animation-delay 1500ms
+
     .overloap-btn
       left: .5rem;
       top: -.5rem
+      animation-delay 500ms
     .tall-build
       left: 1.4rem;
       top: .6rem
+      animation-delay 1000ms
     .fashion
       left: 1rem;
       top: 2rem;
+      animation-delay 1500ms
 
 
 

@@ -2,15 +2,14 @@ from django.conf import settings
 
 page_ctx={
     'overlap':{
-        'link3d':settings.BIG_MEDIA + '/3d/v2/HLT_DP/index.html',
+        'link3d':settings.BIG_MEDIA + '/3d/v3/HLT_DP/index.html',
         'menu_circle':'com-menu-circle-dp',
         #'menu_vertical':'com-menu-vertical-d',
         'show_help':True
     },
     
-    
     'xing_kong':{ #D1
-        'link3d':settings.BIG_MEDIA +'/3d/v2/HLT_DP_D1/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/v3/HLT_DP_D1/index.html',
         'menu_circle':'com-menu-circle-d',
         #'menu_vertical':'com-menu-vertical-d',
         'page2d':'xing_kong_2d',
@@ -25,7 +24,7 @@ page_ctx={
         'page_720':'xing_kong_720_f1',
     },
     'xing_kong_po':{
-        'link3d':settings.BIG_MEDIA +'/3d/v2/HLT_D1_1F/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/v3/HLT_D1_1F/index.html',
         'menu_circle':'com-menu-po',
         'menu_vertical':'com-menu-vertical',
         'crt_btn':'f1',
@@ -35,7 +34,7 @@ page_ctx={
         'page_720':'xing_kong_720_f1',
     },
     'xing_kong_po_f2':{
-        'link3d':settings.BIG_MEDIA +'/3d/v2/HLT_D1_2F/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/v3/HLT_D1_2F/index.html',
         'menu_circle':'com-menu-po',
         'menu_vertical':'com-menu-vertical',
         'crt_btn':'f2',
@@ -45,14 +44,14 @@ page_ctx={
         'page_720':'xing_kong_720_f2',
     },
         'xing_kong_720_f1':{
-        'link3d':settings.BIG_MEDIA +'/720/星空独栋D1_1F/index.html',
+        'link3d':settings.BIG_MEDIA +'/720/v2/星空独栋D1_1F/index.html',
         'menu_circle':'com-menu-circle-720',
         'page2d':'xing_kong_2d',
         'crt_btn':'d1',
         'po_3d':'xing_kong_po',
     },
     'xing_kong_720_f2':{
-        'link3d':settings.BIG_MEDIA +'/720/星空独栋D1_2F/index.html',
+        'link3d':settings.BIG_MEDIA +'/720/v2/星空独栋D1_2F/index.html',
         'menu_circle':'com-menu-circle-720',
         'page2d':'xing_kong_2d',
         'crt_btn':'d1',
@@ -62,7 +61,7 @@ page_ctx={
     
     
     'xing_yue':{ #D2
-        'link3d':settings.BIG_MEDIA +'/3d/v2/HLT_DP_D2/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/v3/HLT_DP_D2/index.html',
         'menu_circle':'com-menu-circle-d',
         #'menu_vertical':'com-menu-vertical-d',
         'page2d':'xing_yue_2d',
@@ -78,7 +77,7 @@ page_ctx={
     },
 
     'xing_yue_po':{
-        'link3d':settings.BIG_MEDIA +'/3d/v2/HLT_D2_1F/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/v3/HLT_D2_1F/index.html',
         'menu_circle':'com-menu-po',
         'menu_vertical':'com-menu-vertical',
         'crt_btn':'f1',
@@ -88,7 +87,7 @@ page_ctx={
         'page_720':'xing_yue_720_f1',
     },
     'xing_yue_po_f2':{
-        'link3d':settings.BIG_MEDIA +'/3d/v2/HLT_D2_2F/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/v3/HLT_D2_2F/index.html',
         'menu_circle':'com-menu-po',
         'menu_vertical':'com-menu-vertical',
         'crt_btn':'f2',
@@ -98,14 +97,14 @@ page_ctx={
         'page_720':'xing_yue_720_f2',
     },
     'xing_yue_720_f1':{
-        'link3d':settings.BIG_MEDIA +'/720/星悦环幕D2_1F/index.html',
+        'link3d':settings.BIG_MEDIA +'/720/v2/星悦环幕D2_1F/index.html',
         'menu_circle':'com-menu-circle-720',
         'page2d':'xing_yue_2d',
         'crt_btn':'d1',
         'po_3d':'xing_yue_po',
     },
     'xing_yue_720_f2':{
-        'link3d':settings.BIG_MEDIA +'/720/星悦环幕D2_2F/index.html',
+        'link3d':settings.BIG_MEDIA +'/720/v2/星悦环幕D2_2F/index.html',
         'menu_circle':'com-menu-circle-720',
         'page2d':'xing_yue_2d',
         'crt_btn':'d1',
@@ -113,7 +112,7 @@ page_ctx={
     },
         
     'xing_hai':{ #D3
-        'link3d':settings.BIG_MEDIA +'/3d/v2/HLT_DP_D3/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/v3/HLT_DP_D3/index.html',
         'menu_circle':'com-menu-circle-d',
         #'menu_vertical':'com-menu-vertical-d',
         'page2d':'xing_hai_2d',
@@ -128,7 +127,7 @@ page_ctx={
         'page_720':'xing_hai_720_f1',
     },
     'xing_hai_po':{
-        'link3d':settings.BIG_MEDIA +'/3d/v2/HLT_D3_1F/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/v3/HLT_D3_1F/index.html',
         'menu_circle':'com-menu-po',
         'menu_vertical':'com-menu-vertical',
         'crt_btn':'f1',
@@ -138,7 +137,7 @@ page_ctx={
         'page_720':'xing_hai_720_f1',
     },
      'xing_hai_po_f2':{
-        'link3d':settings.BIG_MEDIA +'/3d/v2/HLT_D3_2F/index.html',
+        'link3d':settings.BIG_MEDIA +'/3d/v3/HLT_D3_2F/index.html',
         'menu_circle':'com-menu-po',
         'menu_vertical':'com-menu-vertical',
         'crt_btn':'f2',
@@ -148,14 +147,14 @@ page_ctx={
         'page_720':'xing_hai_720_f2',
     },
     'xing_hai_720_f1':{
-        'link3d':settings.BIG_MEDIA +'/720/星海花园D3_1F/index.html',
+        'link3d':settings.BIG_MEDIA +'/720/v2/星海花园D3_1F/index.html',
         'menu_circle':'com-menu-circle-720',
         'page2d':'xing_hai_2d',
         'crt_btn':'d1',
         'po_3d':'xing_hai_po',
     },
     'xing_hai_720_f2':{
-        'link3d':settings.BIG_MEDIA +'/720/星海花园D3_2F/index.html',
+        'link3d':settings.BIG_MEDIA +'/720/v2/星海花园D3_2F/index.html',
         'menu_circle':'com-menu-circle-720',
         'page2d':'xing_hai_2d',
         'crt_btn':'d1',

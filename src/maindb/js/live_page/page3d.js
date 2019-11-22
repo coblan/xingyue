@@ -24,10 +24,17 @@ window.live_page_3d={
         if(this.ctx.show_help){
             cfg.pop_small('com-pop-help',{})
         }
+        //setTimeout(()=>{
+        //    this.myurl=this.ctx.link3d
+        //    setTimeout(()=>{
+        //        //this.myurl=this.ctx.link3d
+        //        this.is_show=true
+        //    },500)
+        //},500)
         setTimeout(()=>{
-            //this.myurl=this.ctx.link3d
             this.is_show=true
         },500)
+
     },
     methods:{
     }
