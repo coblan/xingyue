@@ -919,7 +919,7 @@ __webpack_require__(55);
 window.live_video_page = {
     props: ['ctx'],
     basename: 'live-video-page',
-    template: '<div class="com-live-video-page">\n    <div class="video-content">\n        <video :src="ctx.src" autoplay controls width="100%" height="auto"></video>\n    </div>\n\n    </div>',
+    template: '<div class="com-live-video-page">\n    <div class="video-content">\n        <video :src="ctx.src" autoplay controls width="100%" height="auto"></video>\n    </div>\n    <com-btn-back class="right-top-back-btn"></com-btn-back>\n    </div>',
     mounted: function mounted() {
         //if(ex.os.isTablet){
         //    var hh = window.innerWidth / 0.563
@@ -1135,7 +1135,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, ".banner img {\n  width: 100%;\n  height: auto;\n}\n.general-page {\n  height: 100%;\n  width: 100%;\n  font-size: 0.3rem;\n  position: relative;\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\n.general-page .scroll-area {\n  height: 100%;\n  width: 100%;\n  overflow: hidden;\n  position: relative;\n  background: url(\"/static/images/back_通用底图.jpg\");\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.normal-back-btn {\n  position: absolute;\n  left: 0.6rem;\n  bottom: 0.6rem;\n}\n.normal-back-btn img {\n  width: 0.8rem;\n}\n.mybtn {\n  position: absolute;\n  text-align: center;\n}\n.mybtn img {\n  width: 1rem;\n}\n.devid-line {\n  text-align: center;\n}\n.devid-line img {\n  width: 4rem;\n}\n.right-title {\n  color: #fff;\n  font-size: 0.3rem;\n  writing-mode: vertical-rl;\n  text-orientation: upright;\n  letter-spacing: 0.16rem;\n  position: absolute;\n  right: 0.5rem;\n  bottom: 0.3rem;\n  font-family: \"\\6977\\4F53\";\n  font-size: 0.4rem;\n  font-weight: 800;\n}\n", ""]);
+exports.push([module.i, ".banner img {\n  width: 100%;\n  height: auto;\n}\n.general-page {\n  height: 100%;\n  width: 100%;\n  font-size: 0.3rem;\n  position: relative;\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\n.general-page .scroll-area {\n  height: 100%;\n  width: 100%;\n  overflow: hidden;\n  position: relative;\n  background: url(\"/static/images/back_通用底图.jpg\");\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.normal-back-btn {\n  position: absolute;\n  left: 0.6rem;\n  bottom: 0.6rem;\n}\n.normal-back-btn img {\n  width: 0.8rem;\n}\n.right-top-back-btn {\n  position: absolute;\n  right: 0.5rem;\n  top: 0.5rem;\n}\n.right-top-back-btn img {\n  width: 0.8rem;\n}\n.mybtn {\n  position: absolute;\n  text-align: center;\n}\n.mybtn img {\n  width: 1rem;\n}\n.devid-line {\n  text-align: center;\n}\n.devid-line img {\n  width: 4rem;\n}\n.right-title {\n  color: #fff;\n  font-size: 0.3rem;\n  writing-mode: vertical-rl;\n  text-orientation: upright;\n  letter-spacing: 0.16rem;\n  position: absolute;\n  right: 0.5rem;\n  bottom: 0.3rem;\n  font-family: \"\\6977\\4F53\";\n  font-size: 0.4rem;\n  font-weight: 800;\n}\n", ""]);
 
 // exports
 
