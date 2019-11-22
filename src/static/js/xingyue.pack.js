@@ -960,7 +960,12 @@ window.live_home = {
             live_root.open_live('live_page500', {});
         },
         open_block: function open_block() {
-            this.crt_model = 'block';
+
+            if (!this.crt_model) {
+                this.crt_model = 'block';
+            } else {
+                this.crt_model = '';
+            }
         },
         open_contact: function open_contact() {
             live_root.open_live('live_contact', {});
@@ -975,7 +980,11 @@ window.live_home = {
             live_root.open_live('live_garden', {});
         },
         open_product: function open_product() {
-            this.crt_model = 'product';
+            if (!this.crt_model) {
+                this.crt_model = 'product';
+            } else {
+                this.crt_model = '';
+            }
         },
         open_overlap: function open_overlap() {
             location = '/mb/page3d?page=overlap';
