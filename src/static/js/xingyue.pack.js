@@ -1357,7 +1357,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, ".com-live-page-2d {\n  height: 100%;\n  width: 100%;\n  font-size: 0.3rem;\n  position: relative;\n  background: #f00;\n}\n.com-live-page-2d .content {\n  background-color: #ff0;\n  width: 100%;\n  height: 100%;\n  position: relative;\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\n.com-live-page-2d .content img {\n  display: block;\n  width: 100%;\n  height: auto;\n}\n", ""]);
+exports.push([module.i, ".com-live-page-2d {\n  height: 100%;\n  width: 100%;\n  font-size: 0.3rem;\n  position: relative;\n}\n.com-live-page-2d .content {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\n.com-live-page-2d .content img {\n  display: block;\n  width: 100%;\n  height: auto;\n}\n", ""]);
 
 // exports
 
