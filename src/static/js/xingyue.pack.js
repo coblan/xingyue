@@ -421,6 +421,10 @@ var _menu_tallbuild = __webpack_require__(13);
 
 var menu_tallbuild = _interopRequireWildcard(_menu_tallbuild);
 
+var _menu_back = __webpack_require__(66);
+
+var menu_back = _interopRequireWildcard(_menu_back);
+
 var _help = __webpack_require__(6);
 
 var help = _interopRequireWildcard(_help);
@@ -971,13 +975,16 @@ window.live_home = {
             live_root.open_live('live_contact', {});
         },
         open_block_pos: function open_block_pos() {
-            live_root.open_live('live_block_pos', {});
+            //live_root.open_live('live_block_pos',{})
+            live_root.open_live('live_page_2d', this.ctx.link_ctx.block_image);
         },
         open_six: function open_six() {
-            live_root.open_live('live_six', {});
+            //live_root.open_live('live_six',{})
+            live_root.open_live('live_page_2d', this.ctx.link_ctx.one_six);
         },
         open_garden: function open_garden() {
-            live_root.open_live('live_garden', {});
+            //live_root.open_live('live_garden',{})
+            live_root.open_live('live_page_2d', this.ctx.link_ctx.garden);
         },
         open_product: function open_product() {
             if (!this.crt_model) {
@@ -1965,6 +1972,41 @@ var _data = __webpack_require__(3);
 var data = _interopRequireWildcard(_data);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+//require('./styl/menu_back.styl')
+
+Vue.component('com-menu-back', {
+    template: '<div class="com-menu-back com-menu-circle-2d com-menu-circle">\n    <!--<div class="mybtn main-menu" @click="is_open = !is_open">-->\n        <!--<img src="/static/images/2d3d/button_\u83DC\u53551.png" alt="">-->\n    <!--</div>-->\n     <div class="mybtn main-menu" @click="back()">\n           <img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">\n     </div>\n\n\n    </div>',
+    data: function data() {
+        return {
+            is_open: true,
+            parStore: ex.vueParStore(this)
+        };
+    },
+
+    methods: {
+        home: function home() {
+            location = '/';
+        },
+        goto_po: function goto_po() {
+            location = '/mb/page3d?page=' + this.parStore.ctx.po_3d;
+            //live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle',menu_vertical:'com-menu-vertical'})
+        },
+        back: function back() {
+            history.back();
+        },
+        goto_720: function goto_720() {
+            location = '/mb/page720?page=' + this.parStore.ctx.page_720;
+        }
+    }
+});
 
 /***/ })
 /******/ ]);

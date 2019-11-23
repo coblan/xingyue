@@ -160,8 +160,19 @@ page_ctx={
         'crt_btn':'d1',
         'po_3d':'xing_hai_po',
     },
-     
-     
+    
+    'block_image':{
+        'img_url':settings.BIG_MEDIA + '/images/block.png',
+        'menu_circle':'com-menu-back',
+     },
+    'one_six':{
+        'img_url':settings.BIG_MEDIA + '/images/one_six.png',
+        'menu_circle':'com-menu-back',
+    },
+    'garden':{
+        'img_url':settings.BIG_MEDIA + '/images/garden.png',
+        'menu_circle':'com-menu-back',
+    },
     'tall_buiding_2d':{
         'img_url':'/static/images/2d3d/pic_高层户型图.jpg',
         'menu_circle':'com-menu-tallbuild',

@@ -121,13 +121,17 @@ window.live_home={
             live_root.open_live('live_contact',{})
         },
         open_block_pos(){
-            live_root.open_live('live_block_pos',{})
+            //live_root.open_live('live_block_pos',{})
+            live_root.open_live('live_page_2d',this.ctx.link_ctx.block_image)
+
         },
         open_six(){
-            live_root.open_live('live_six',{})
+            //live_root.open_live('live_six',{})
+            live_root.open_live('live_page_2d',this.ctx.link_ctx.one_six)
         },
         open_garden(){
-            live_root.open_live('live_garden',{})
+            //live_root.open_live('live_garden',{})
+            live_root.open_live('live_page_2d',this.ctx.link_ctx.garden)
         },
         open_product(){
             if(!this.crt_model){
