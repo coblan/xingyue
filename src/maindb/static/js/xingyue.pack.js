@@ -1093,10 +1093,10 @@ window.live_page_3d = {
         //},500)
         setTimeout(function () {
             _this.is_show = true;
-            if (_this.ctx.music) {
-                play_music(_this.ctx.music);
-            }
         }, 500);
+        if (this.ctx.music) {
+            play_music(this.ctx.music);
+        }
     },
 
     methods: {}
@@ -2046,12 +2046,22 @@ window.play_music = function (music) {
     //audio.loop = 'loop'
     audio.src = music;
 
-    document.body.addEventListener("mousemove", function () {
-        audio.play();
-    });
-    document.addEventListener('click', function () {
-        audio.play();
-    });
+    //document.body.addEventListener("mousemove", function () {
+    //    audio.play()
+    //})
+    //document.addEventListener('click', function () {
+    //    audio.play()
+    //});
+
+    setInterval(function () {
+        audio.play().catch(function (error) {
+            console.log(error);
+            // Automatic playback failed.
+            // Show a UI element to let the user manually start playback.
+        });
+        console.log('play');
+    }, 5000);
+
     //document.addEventListener('touchend', function () {
     //    audio.play()
     //});

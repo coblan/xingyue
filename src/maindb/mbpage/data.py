@@ -49,14 +49,14 @@ page_ctx={
         'music':settings.BIG_MEDIA + '/mp3/Music.mp3',
     },
         'xing_kong_720_f1':{
-        'link3d':settings.BIG_MEDIA +'/720/v2/星空独栋D1_1F/index.html',
+        'link3d':settings.BIG_MEDIA +'/720/v3/星空独栋D1_1F/index.html',
         'menu_circle':'com-menu-circle-720',
         'page2d':'xing_kong_2d',
         'crt_btn':'d1',
         'po_3d':'xing_kong_po',
     },
     'xing_kong_720_f2':{
-        'link3d':settings.BIG_MEDIA +'/720/v2/星空独栋D1_2F/index.html',
+        'link3d':settings.BIG_MEDIA +'/720/v3/星空独栋D1_2F/index.html',
         'menu_circle':'com-menu-circle-720',
         'page2d':'xing_kong_2d',
         'crt_btn':'d1',
@@ -73,12 +73,14 @@ page_ctx={
         'crt_btn':'d2',
         'po_3d':'xing_yue_po',
         'page_720':'xing_yue_720_f1',
+        'music':settings.BIG_MEDIA + '/mp3/Music.mp3',
     },
     'xing_yue_2d':{
         'img_url':'/static/images/2d3d/pic_星悦环幕首层户型图.jpg',
         'menu_circle':'com-menu-circle-2d',
         'po_3d':'xing_yue_po',
         'page_720':'xing_yue_720_f1',
+        'music':settings.BIG_MEDIA + '/mp3/Music.mp3',
     },
 
     'xing_yue_po':{
@@ -90,6 +92,7 @@ page_ctx={
         'f2_page':'xing_yue_po_f2',
         'page2d':'xing_yue_2d',
         'page_720':'xing_yue_720_f1',
+        'music':settings.BIG_MEDIA + '/mp3/Music.mp3',
     },
     'xing_yue_po_f2':{
         'link3d':settings.BIG_MEDIA +'/3d/v3/HLT_D2_2F/index.html',
@@ -100,16 +103,17 @@ page_ctx={
         'f2_page':'xing_yue_po_f2',
         'page2d':'xing_yue_2d',
         'page_720':'xing_yue_720_f2',
+        'music':settings.BIG_MEDIA + '/mp3/Music.mp3',
     },
     'xing_yue_720_f1':{
-        'link3d':settings.BIG_MEDIA +'/720/v2/星悦环幕D2_1F/index.html',
+        'link3d':settings.BIG_MEDIA +'/720/v3/星悦环幕D2_1F/index.html',
         'menu_circle':'com-menu-circle-720',
         'page2d':'xing_yue_2d',
         'crt_btn':'d1',
         'po_3d':'xing_yue_po',
     },
     'xing_yue_720_f2':{
-        'link3d':settings.BIG_MEDIA +'/720/v2/星悦环幕D2_2F/index.html',
+        'link3d':settings.BIG_MEDIA +'/720/v3/星悦环幕D2_2F/index.html',
         'menu_circle':'com-menu-circle-720',
         'page2d':'xing_yue_2d',
         'crt_btn':'d1',
@@ -124,12 +128,14 @@ page_ctx={
         'crt_btn':'d3',
         'po_3d':'xing_hai_po',
         'page_720':'xing_hai_720_f1',
+        'music':settings.BIG_MEDIA + '/mp3/Music.mp3',
     },
     'xing_hai_2d':{
         'img_url':'/static/images/2d3d/pic_星海花园首层.jpg',
         'menu_circle':'com-menu-circle-2d',
         'po_3d':'xing_hai_po',
         'page_720':'xing_hai_720_f1',
+        'music':settings.BIG_MEDIA + '/mp3/Music.mp3',
     },
     'xing_hai_po':{
         'link3d':settings.BIG_MEDIA +'/3d/v3/HLT_D3_1F/index.html',
@@ -140,6 +146,7 @@ page_ctx={
         'f2_page':'xing_hai_po_f2',
         'page2d':'xing_hai_2d',
         'page_720':'xing_hai_720_f1',
+        'music':settings.BIG_MEDIA + '/mp3/Music.mp3',
     },
      'xing_hai_po_f2':{
         'link3d':settings.BIG_MEDIA +'/3d/v3/HLT_D3_2F/index.html',
@@ -150,6 +157,7 @@ page_ctx={
         'f2_page':'xing_hai_po_f2',
         'page2d':'xing_hai_2d',
         'page_720':'xing_hai_720_f2',
+        'music':settings.BIG_MEDIA + '/mp3/Music.mp3',
     },
     'xing_hai_720_f1':{
         'link3d':settings.BIG_MEDIA +'/720/v2/星海花园D3_1F/index.html',
