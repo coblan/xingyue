@@ -5,7 +5,8 @@ page_ctx={
         'link3d':settings.BIG_MEDIA + '/3d/v3/HLT_DP/index.html',
         'menu_circle':'com-menu-circle-dp',
         #'menu_vertical':'com-menu-vertical-d',
-        'show_help':True
+        'show_help':True,
+        'music':settings.BIG_MEDIA + '/mp3/Music.mp3',
     },
     
     'xing_kong':{ #D1
@@ -16,12 +17,14 @@ page_ctx={
         'crt_btn':'d1',
         'po_3d':'xing_kong_po',
         'page_720':'xing_kong_720_f1',
+        'music':settings.BIG_MEDIA + '/mp3/Music.mp3',
     },
     'xing_kong_2d':{
         'img_url':'/static/images/2d3d/pic_星空独栋户型图.jpg',
         'menu_circle':'com-menu-circle-2d',
         'po_3d':'xing_kong_po',
         'page_720':'xing_kong_720_f1',
+        'music':settings.BIG_MEDIA + '/mp3/Music.mp3',
     },
     'xing_kong_po':{
         'link3d':settings.BIG_MEDIA +'/3d/v3/HLT_D1_1F/index.html',
@@ -32,6 +35,7 @@ page_ctx={
         'f2_page':'xing_kong_po_f2',
         'page2d':'xing_kong_2d',
         'page_720':'xing_kong_720_f1',
+        'music':settings.BIG_MEDIA + '/mp3/Music.mp3',
     },
     'xing_kong_po_f2':{
         'link3d':settings.BIG_MEDIA +'/3d/v3/HLT_D1_2F/index.html',
@@ -42,6 +46,7 @@ page_ctx={
         'f2_page':'xing_kong_po_f2',
         'page2d':'xing_kong_2d',
         'page_720':'xing_kong_720_f2',
+        'music':settings.BIG_MEDIA + '/mp3/Music.mp3',
     },
         'xing_kong_720_f1':{
         'link3d':settings.BIG_MEDIA +'/720/v2/星空独栋D1_1F/index.html',
@@ -182,5 +187,9 @@ page_ctx={
         'img_url':'/static/images/2d3d/pic_洋房户型图.jpg?v=1',
         'menu_circle':'com-menu-tallbuild',
         #'po_3d':'xing_kong_po'
+    },
+    
+    'ad_video':{
+        'src':settings.BIG_MEDIA + '/video/中铁·星月山湖 网络版 11.13~1.mp4',
     }
 }

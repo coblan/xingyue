@@ -33,6 +33,9 @@ window.live_page_3d={
         //},500)
         setTimeout(()=>{
             this.is_show=true
+            if(this.ctx.music){
+                play_music(this.ctx.music)
+            }
         },500)
 
     },

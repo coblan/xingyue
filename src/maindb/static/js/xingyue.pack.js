@@ -944,7 +944,19 @@ window.live_home = {
         }
         Vue.nextTick(function () {
             live_root.link_ctx = _this.ctx.link_ctx;
+
+            //window.audio= new Audio(this.ctx.musice)
+            //var self =this
+            //function play(){
+            //    window.audio.autoplay = true
+            //    window.audio.play()
+            //
+            //}
+            //document.addEventListener('click', play);
+            //document.addEventListener('touchend', play);
         });
+
+        play_music(this.ctx.musice);
     },
 
 
@@ -958,7 +970,8 @@ window.live_home = {
             this.btn_animate = false;
         },
         open_video: function open_video() {
-            live_root.open_live('live_video_page', { src: this.ctx.video_src });
+            //live_root.open_live('live_video_page',{src:this.ctx.video_src})
+            location = '/mb/video?page=ad_video';
         },
         open_500: function open_500() {
             live_root.open_live('live_page500', {});
@@ -1034,6 +1047,11 @@ window.live_page_2d = {
             childStore: childStore
         };
     },
+    mounted: function mounted() {
+        if (this.ctx.music) {
+            play_music(this.ctx.music);
+        }
+    },
 
     methods: {}
 };
@@ -1075,6 +1093,9 @@ window.live_page_3d = {
         //},500)
         setTimeout(function () {
             _this.is_show = true;
+            if (_this.ctx.music) {
+                play_music(_this.ctx.music);
+            }
         }, 500);
     },
 
@@ -1093,7 +1114,7 @@ __webpack_require__(61);
 window.live_page500 = {
     props: ['ctx'],
     basename: 'live-page500',
-    template: '<div class="com-live-page500 general-page">\n    <!--<div class="mytitle">-->\n        <!--<img src="/static/images/page500/txt_\u54C1\u724Clogo.png" alt="">-->\n    <!--</div>-->\n    <!--<div class="mytitle2">-->\n        <!--<img src="/static/images/page500/txt_\u54C1\u724C1.png" alt="">-->\n    <!--</div>-->\n    <div class="scroll-area">\n        <div class="mytitle">\n            <img src="/static/images/page500/txt_\u54C1\u724C_new.png" alt="">\n        </div>\n        <div class="right-title">\n            <span>\u54C1\u724C</span>\n        </div>\n       <com-btn-back class="normal-back-btn "></com-btn-back>\n    </div>\n\n    </div>',
+    template: '<div class="com-live-page500 general-page">\n    <!--<div class="mytitle">-->\n        <!--<img src="/static/images/page500/txt_\u54C1\u724Clogo.png" alt="">-->\n    <!--</div>-->\n    <!--<div class="mytitle2">-->\n        <!--<img src="/static/images/page500/txt_\u54C1\u724C1.png" alt="">-->\n    <!--</div>-->\n    <div class="scroll-area">\n        <div class="mytitle">\n            <img src="/static/images/page500/txt_\u54C1\u724C_new.png" alt="">\n        </div>\n        <!--<div class="right-title">-->\n            <!--<span>\u54C1\u724C</span>-->\n        <!--</div>-->\n       <com-btn-back class="normal-back-btn "></com-btn-back>\n    </div>\n\n    </div>',
     mounted: function mounted() {
         if (ex.os.isTablet) {
             var hh = window.innerWidth / 0.563;
@@ -1343,7 +1364,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, ".btn-animate .fade-in-btn {\n  opacity: 0;\n  animation: fade-in 0.4s;\n  animation-fill-mode: forwards;\n}\n.com-live-home {\n  height: 100%;\n  width: 100%;\n  font-size: 0.3rem;\n  position: relative;\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\n.com-live-home .scroll-area {\n  height: 100%;\n  width: 100%;\n  overflow: hidden;\n  position: relative;\n  background: url(\"/static/images/底.jpg\");\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.com-live-home .btn_block {\n  animation-delay: 500ms;\n}\n.com-live-home .produce {\n  animation-delay: 1000ms;\n}\n.com-live-home .contact {\n  animation-delay: 1500ms;\n}\n.com-live-home .middle-wrap {\n  width: 0;\n  height: 0;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n}\n.com-live-home .middle-wrap .light {\n  position: absolute;\n  top: -3.8rem;\n  left: -4.8rem;\n  animation: lightmove 5s linear infinite;\n  opacity: 0;\n}\n.com-live-home .middle-wrap .light img {\n  width: 7.2rem;\n  height: auto;\n}\n@-moz-keyframes lightmove {\n  0% {\n    opacity: 0;\n  }\n  10% {\n    opacity: 0.4;\n  }\n  30% {\n    opacity: 1;\n  }\n  40% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes lightmove {\n  0% {\n    opacity: 0;\n  }\n  10% {\n    opacity: 0.4;\n  }\n  30% {\n    opacity: 1;\n  }\n  40% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@-o-keyframes lightmove {\n  0% {\n    opacity: 0;\n  }\n  10% {\n    opacity: 0.4;\n  }\n  30% {\n    opacity: 1;\n  }\n  40% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@keyframes lightmove {\n  0% {\n    opacity: 0;\n  }\n  10% {\n    opacity: 0.4;\n  }\n  30% {\n    opacity: 1;\n  }\n  40% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n.com-live-home .middle-wrap .liuxing {\n  position: absolute;\n  top: -15rem;\n  left: -8rem;\n  animation: liuxingmove 10s infinite;\n}\n.com-live-home .middle-wrap .liuxing img {\n  width: 7rem;\n  height: auto;\n}\n@-moz-keyframes liuxingmove {\n  from {\n    transform: translate(0, 0);\n  }\n  to {\n    transform: translate(13rem, 17rem);\n  }\n}\n@-webkit-keyframes liuxingmove {\n  from {\n    transform: translate(0, 0);\n  }\n  to {\n    transform: translate(13rem, 17rem);\n  }\n}\n@-o-keyframes liuxingmove {\n  from {\n    transform: translate(0, 0);\n  }\n  to {\n    transform: translate(13rem, 17rem);\n  }\n}\n@keyframes liuxingmove {\n  from {\n    transform: translate(0, 0);\n  }\n  to {\n    transform: translate(13rem, 17rem);\n  }\n}\n.com-live-home .middle-wrap .mybtn {\n  position: absolute;\n  text-align: center;\n}\n.com-live-home .middle-wrap .mybtn img {\n  width: 1rem;\n}\n.com-live-home .middle-wrap .mybtn .mytitle {\n  letter-spacing: 0.4rem;\n  font-size: 0.2rem;\n  color: #fff;\n  white-space: nowrap;\n}\n.com-live-home .middle-wrap .mybtn .mytitle span {\n  letter-spacing: 0;\n}\n.com-live-home .middle-wrap .mybtn.active {\n  z-index: 900;\n  position: relative;\n}\n.com-live-home .middle-wrap .mybtn.active::before {\n  pointer-events: none;\n  z-index: 800;\n  content: '';\n  display: block;\n  position: absolute;\n  width: 0.6rem;\n  height: 0.6rem;\n  border-width: 0.1rem;\n  border-style: solid;\n  top: 0.46rem;\n  left: 0.46rem;\n  box-sizing: border;\n  transform: translate(-50%, -50%);\n  animation: spread 3s infinite;\n}\n@-moz-keyframes spread {\n  0% {\n    opacity: 0;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    border-width: 0;\n    background-color: #fff;\n    border-color: rgba(100,100,100,0.3);\n  }\n  5% {\n    opacity: 0.3;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    border-width: 0.1rem;\n    background-color: #fff;\n    border-color: rgba(100,100,100,0.3);\n  }\n  100% {\n    opacity: 0;\n    width: 2.6rem;\n    height: 2.6rem;\n    border-radius: 2.6rem;\n    border-width: 1rem;\n    border-color: rgba(100,100,100,0);\n  }\n}\n@-webkit-keyframes spread {\n  0% {\n    opacity: 0;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    border-width: 0;\n    background-color: #fff;\n    border-color: rgba(100,100,100,0.3);\n  }\n  5% {\n    opacity: 0.3;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    border-width: 0.1rem;\n    background-color: #fff;\n    border-color: rgba(100,100,100,0.3);\n  }\n  100% {\n    opacity: 0;\n    width: 2.6rem;\n    height: 2.6rem;\n    border-radius: 2.6rem;\n    border-width: 1rem;\n    border-color: rgba(100,100,100,0);\n  }\n}\n@-o-keyframes spread {\n  0% {\n    opacity: 0;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    border-width: 0;\n    background-color: #fff;\n    border-color: rgba(100,100,100,0.3);\n  }\n  5% {\n    opacity: 0.3;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    border-width: 0.1rem;\n    background-color: #fff;\n    border-color: rgba(100,100,100,0.3);\n  }\n  100% {\n    opacity: 0;\n    width: 2.6rem;\n    height: 2.6rem;\n    border-radius: 2.6rem;\n    border-width: 1rem;\n    border-color: rgba(100,100,100,0);\n  }\n}\n@keyframes spread {\n  0% {\n    opacity: 0;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    border-width: 0;\n    background-color: #fff;\n    border-color: rgba(100,100,100,0.3);\n  }\n  5% {\n    opacity: 0.3;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    border-width: 0.1rem;\n    background-color: #fff;\n    border-color: rgba(100,100,100,0.3);\n  }\n  100% {\n    opacity: 0;\n    width: 2.6rem;\n    height: 2.6rem;\n    border-radius: 2.6rem;\n    border-width: 1rem;\n    border-color: rgba(100,100,100,0);\n  }\n}\n.com-live-home .middle-wrap .btn_500 {\n  left: -2.5rem;\n  top: -3rem;\n}\n.com-live-home .middle-wrap .btn_block {\n  left: -0.9rem;\n  top: -1.2rem;\n}\n.com-live-home .middle-wrap .produce {\n  left: -0.3rem;\n  top: 1rem;\n}\n.com-live-home .middle-wrap .contact {\n  left: -0.2rem;\n  top: 3.4rem;\n}\n.com-live-home .middle-wrap .contact .mytitle {\n  letter-spacing: 0.1rem;\n}\n.com-live-home .middle-wrap .block-posion {\n  left: -0.2rem;\n  top: -2.8rem;\n  animation-delay: 500ms;\n}\n.com-live-home .middle-wrap .six {\n  left: 0.8rem;\n  top: -1.7rem;\n  animation-delay: 1000ms;\n}\n.com-live-home .middle-wrap .garden {\n  left: 1rem;\n  top: -0.4rem;\n  animation-delay: 1500ms;\n}\n.com-live-home .middle-wrap .overloap-btn {\n  left: 0.5rem;\n  top: -0.5rem;\n  animation-delay: 500ms;\n}\n.com-live-home .middle-wrap .tall-build {\n  left: 1.4rem;\n  top: 0.6rem;\n  animation-delay: 1000ms;\n}\n.com-live-home .middle-wrap .fashion {\n  left: 1rem;\n  top: 2rem;\n  animation-delay: 1500ms;\n}\n.com-live-home .after-btn {\n  z-index: 900;\n}\n.com-live-home .my-model {\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(0,0,0,0.3);\n}\n@-moz-keyframes fade-in {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fade-in {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-o-keyframes fade-in {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fade-in {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n", ""]);
+exports.push([module.i, ".btn-animate .fade-in-btn {\n  opacity: 0;\n  animation: fade-in 0.4s;\n  animation-fill-mode: forwards;\n}\n.com-live-home {\n  height: 100%;\n  width: 100%;\n  font-size: 0.3rem;\n  position: relative;\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\n.com-live-home .scroll-area {\n  height: 100%;\n  width: 100%;\n  overflow: hidden;\n  position: relative;\n  background: url(\"/static/1123/back.jpg\");\n  background-size: 100% auto;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.com-live-home .btn_block {\n  animation-delay: 500ms;\n}\n.com-live-home .produce {\n  animation-delay: 1000ms;\n}\n.com-live-home .contact {\n  animation-delay: 1500ms;\n}\n.com-live-home .middle-wrap {\n  width: 0;\n  height: 0;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n}\n.com-live-home .middle-wrap .light {\n  position: absolute;\n  top: -3.8rem;\n  left: -4.8rem;\n  animation: lightmove 5s linear infinite;\n  opacity: 0;\n}\n.com-live-home .middle-wrap .light img {\n  width: 7.2rem;\n  height: auto;\n}\n@-moz-keyframes lightmove {\n  0% {\n    opacity: 0;\n  }\n  10% {\n    opacity: 0.4;\n  }\n  30% {\n    opacity: 1;\n  }\n  40% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes lightmove {\n  0% {\n    opacity: 0;\n  }\n  10% {\n    opacity: 0.4;\n  }\n  30% {\n    opacity: 1;\n  }\n  40% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@-o-keyframes lightmove {\n  0% {\n    opacity: 0;\n  }\n  10% {\n    opacity: 0.4;\n  }\n  30% {\n    opacity: 1;\n  }\n  40% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@keyframes lightmove {\n  0% {\n    opacity: 0;\n  }\n  10% {\n    opacity: 0.4;\n  }\n  30% {\n    opacity: 1;\n  }\n  40% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n.com-live-home .middle-wrap .liuxing {\n  position: absolute;\n  top: -15rem;\n  left: -8rem;\n  animation: liuxingmove 10s infinite;\n}\n.com-live-home .middle-wrap .liuxing img {\n  width: 7rem;\n  height: auto;\n}\n@-moz-keyframes liuxingmove {\n  from {\n    transform: translate(0, 0);\n  }\n  to {\n    transform: translate(13rem, 17rem);\n  }\n}\n@-webkit-keyframes liuxingmove {\n  from {\n    transform: translate(0, 0);\n  }\n  to {\n    transform: translate(13rem, 17rem);\n  }\n}\n@-o-keyframes liuxingmove {\n  from {\n    transform: translate(0, 0);\n  }\n  to {\n    transform: translate(13rem, 17rem);\n  }\n}\n@keyframes liuxingmove {\n  from {\n    transform: translate(0, 0);\n  }\n  to {\n    transform: translate(13rem, 17rem);\n  }\n}\n.com-live-home .middle-wrap .mybtn {\n  position: absolute;\n  text-align: center;\n}\n.com-live-home .middle-wrap .mybtn img {\n  width: 1rem;\n}\n.com-live-home .middle-wrap .mybtn .mytitle {\n  letter-spacing: 0.4rem;\n  font-size: 0.2rem;\n  color: #fff;\n  white-space: nowrap;\n}\n.com-live-home .middle-wrap .mybtn .mytitle span {\n  letter-spacing: 0;\n}\n.com-live-home .middle-wrap .mybtn.active {\n  z-index: 900;\n  position: relative;\n}\n.com-live-home .middle-wrap .mybtn.active::before {\n  pointer-events: none;\n  z-index: 800;\n  content: '';\n  display: block;\n  position: absolute;\n  width: 0.6rem;\n  height: 0.6rem;\n  border-width: 0.1rem;\n  border-style: solid;\n  top: 0.46rem;\n  left: 0.46rem;\n  box-sizing: border;\n  transform: translate(-50%, -50%);\n  animation: spread 3s infinite;\n}\n@-moz-keyframes spread {\n  0% {\n    opacity: 0;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    border-width: 0;\n    background-color: #fff;\n    border-color: rgba(100,100,100,0.3);\n  }\n  5% {\n    opacity: 0.3;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    border-width: 0.1rem;\n    background-color: #fff;\n    border-color: rgba(100,100,100,0.3);\n  }\n  100% {\n    opacity: 0;\n    width: 2.6rem;\n    height: 2.6rem;\n    border-radius: 2.6rem;\n    border-width: 1rem;\n    border-color: rgba(100,100,100,0);\n  }\n}\n@-webkit-keyframes spread {\n  0% {\n    opacity: 0;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    border-width: 0;\n    background-color: #fff;\n    border-color: rgba(100,100,100,0.3);\n  }\n  5% {\n    opacity: 0.3;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    border-width: 0.1rem;\n    background-color: #fff;\n    border-color: rgba(100,100,100,0.3);\n  }\n  100% {\n    opacity: 0;\n    width: 2.6rem;\n    height: 2.6rem;\n    border-radius: 2.6rem;\n    border-width: 1rem;\n    border-color: rgba(100,100,100,0);\n  }\n}\n@-o-keyframes spread {\n  0% {\n    opacity: 0;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    border-width: 0;\n    background-color: #fff;\n    border-color: rgba(100,100,100,0.3);\n  }\n  5% {\n    opacity: 0.3;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    border-width: 0.1rem;\n    background-color: #fff;\n    border-color: rgba(100,100,100,0.3);\n  }\n  100% {\n    opacity: 0;\n    width: 2.6rem;\n    height: 2.6rem;\n    border-radius: 2.6rem;\n    border-width: 1rem;\n    border-color: rgba(100,100,100,0);\n  }\n}\n@keyframes spread {\n  0% {\n    opacity: 0;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    border-width: 0;\n    background-color: #fff;\n    border-color: rgba(100,100,100,0.3);\n  }\n  5% {\n    opacity: 0.3;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    border-width: 0.1rem;\n    background-color: #fff;\n    border-color: rgba(100,100,100,0.3);\n  }\n  100% {\n    opacity: 0;\n    width: 2.6rem;\n    height: 2.6rem;\n    border-radius: 2.6rem;\n    border-width: 1rem;\n    border-color: rgba(100,100,100,0);\n  }\n}\n.com-live-home .middle-wrap .btn_500 {\n  left: -2.5rem;\n  top: -3rem;\n}\n.com-live-home .middle-wrap .btn_block {\n  left: -0.9rem;\n  top: -1.2rem;\n}\n.com-live-home .middle-wrap .produce {\n  left: -0.3rem;\n  top: 1rem;\n}\n.com-live-home .middle-wrap .contact {\n  left: -0.2rem;\n  top: 3.4rem;\n}\n.com-live-home .middle-wrap .contact .mytitle {\n  letter-spacing: 0.1rem;\n}\n.com-live-home .middle-wrap .block-posion {\n  left: -0.2rem;\n  top: -2.8rem;\n  animation-delay: 500ms;\n}\n.com-live-home .middle-wrap .six {\n  left: 0.8rem;\n  top: -1.7rem;\n  animation-delay: 1000ms;\n}\n.com-live-home .middle-wrap .garden {\n  left: 1rem;\n  top: -0.4rem;\n  animation-delay: 1500ms;\n}\n.com-live-home .middle-wrap .overloap-btn {\n  left: 0.5rem;\n  top: -0.5rem;\n  animation-delay: 500ms;\n}\n.com-live-home .middle-wrap .tall-build {\n  left: 1.4rem;\n  top: 0.6rem;\n  animation-delay: 1000ms;\n}\n.com-live-home .middle-wrap .fashion {\n  left: 1rem;\n  top: 2rem;\n  animation-delay: 1500ms;\n}\n.com-live-home .after-btn {\n  z-index: 900;\n}\n.com-live-home .my-model {\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(0,0,0,0.3);\n}\n@-moz-keyframes fade-in {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fade-in {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-o-keyframes fade-in {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fade-in {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n", ""]);
 
 // exports
 
@@ -1971,6 +1992,10 @@ var _data = __webpack_require__(3);
 
 var data = _interopRequireWildcard(_data);
 
+var _play_music = __webpack_require__(67);
+
+var play_music = _interopRequireWildcard(_play_music);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 /***/ }),
@@ -1983,30 +2008,54 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 //require('./styl/menu_back.styl')
 
 Vue.component('com-menu-back', {
-    template: '<div class="com-menu-back com-menu-circle-2d com-menu-circle">\n    <!--<div class="mybtn main-menu" @click="is_open = !is_open">-->\n        <!--<img src="/static/images/2d3d/button_\u83DC\u53551.png" alt="">-->\n    <!--</div>-->\n     <div class="mybtn main-menu" @click="back()">\n           <img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">\n     </div>\n\n\n    </div>',
+    template: '<div class="com-menu-back">\n\n    <!--<div class="mybtn main-menu" @click="is_open = !is_open">-->\n        <!--<img src="/static/images/2d3d/button_\u83DC\u53551.png" alt="">-->\n    <!--</div>-->\n     <!--<div class="mybtn main-menu" @click="back()">-->\n           <!--<img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">-->\n     <!--</div>-->\n        <com-btn-back class="normal-back-btn"></com-btn-back>\n\n    </div>',
     data: function data() {
         return {
-            is_open: true,
+            //is_open:true,
             parStore: ex.vueParStore(this)
         };
     },
 
     methods: {
-        home: function home() {
-            location = '/';
-        },
-        goto_po: function goto_po() {
-            location = '/mb/page3d?page=' + this.parStore.ctx.po_3d;
-            //live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle',menu_vertical:'com-menu-vertical'})
-        },
-        back: function back() {
-            history.back();
-        },
-        goto_720: function goto_720() {
-            location = '/mb/page720?page=' + this.parStore.ctx.page_720;
-        }
+        //home(){
+        //    location = '/'
+        //},
+        //goto_po(){
+        //    location ='/mb/page3d?page=' + this.parStore.ctx.po_3d
+        //    //live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle',menu_vertical:'com-menu-vertical'})
+        //},
+        //back(){
+        //    history.back()
+        //},
+        //goto_720(){
+        //    location ='/mb/page720?page=' + this.parStore.ctx.page_720
+        //}
     }
 });
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+window.play_music = function (music) {
+    var audio = document.createElement("AUDIO");
+    document.body.appendChild(audio);
+    //audio.loop = 'loop'
+    audio.src = music;
+
+    document.body.addEventListener("mousemove", function () {
+        audio.play();
+    });
+    document.addEventListener('click', function () {
+        audio.play();
+    });
+    //document.addEventListener('touchend', function () {
+    //    audio.play()
+    //});
+};
 
 /***/ })
 /******/ ]);

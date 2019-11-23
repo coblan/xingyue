@@ -90,7 +90,22 @@ window.live_home={
         }
         Vue.nextTick(()=>{
             live_root.link_ctx = this.ctx.link_ctx
+
+            //window.audio= new Audio(this.ctx.musice)
+            //var self =this
+            //function play(){
+            //    window.audio.autoplay = true
+            //    window.audio.play()
+            //
+            //}
+            //document.addEventListener('click', play);
+            //document.addEventListener('touchend', play);
+
             })
+
+        play_music(this.ctx.musice)
+
+
     },
 
     methods:{
@@ -103,7 +118,8 @@ window.live_home={
             this.btn_animate=false
         },
         open_video(){
-            live_root.open_live('live_video_page',{src:this.ctx.video_src})
+            //live_root.open_live('live_video_page',{src:this.ctx.video_src})
+            location = '/mb/video?page=ad_video'
         },
         open_500(){
             live_root.open_live('live_page500',{})

@@ -16,6 +16,11 @@ window.live_page_2d={
             childStore:childStore
         }
     },
+    mounted(){
+        if(this.ctx.music){
+            play_music(this.ctx.music)
+        }
+    },
     methods:{
     }
 }
