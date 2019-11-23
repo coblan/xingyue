@@ -7,7 +7,6 @@ window.live_page_2d={
     <div class="content">
         <img  :src="ctx.img_url" alt="">
     </div>
-
     <component :is="ctx.menu_circle"></component>
     </div>`,
     data(){
