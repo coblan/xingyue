@@ -925,12 +925,13 @@ __webpack_require__(58);
 window.live_home = {
     props: ['ctx'],
     basename: 'live-home',
-    template: '<div class="com-live-home" >\n\n    <div class="scroll-area" :class="{\'btn-animate\':btn_animate}">\n        <div class="middle-wrap">\n              <div class="light">\n                    <img src="/static/images/\u52A8\u753B-\u5149\u5708.png" alt="">\n                </div>\n                <div class="liuxing">\n                    <img src="/static/images/\u52A8\u753B-\u6D41\u661F.png" alt="">\n                </div>\n\n\n                   <div class="mybtn btn_500 fade-in-btn" @click="open_500()">\n                        <img src="/static/images/button_500_1.png" alt="">\n                       <div class="mytitle">\u54C1<span>\u724C</span></div>\n                    </div>\n                   <div class="mybtn btn_block fade-in-btn" :class="{active:crt_model==\'block\'}" @click="open_block()">\n                        <img src="/static/images/button_\u533A\u57DF_1.png" alt="">\n                       <div class="mytitle">\u533A<span>\u57DF</span></div>\n                    </div>\n                   <div class="mybtn produce fade-in-btn" :class="{active:crt_model==\'product\'}" @click="open_product()">\n                        <img src="/static/images/button_\u4EA7\u54C1_1.png?v=1" alt="">\n                       <div class="mytitle">\u4EA7<span>\u54C1</span></div>\n                   </div>\n\n                    <!--<div class="mybtn contact" @click="open_contact()">-->\n                        <!--<img src="/static/images/button_\u8054\u7CFB\u65B9\u5F0F_1.png" alt="">-->\n                       <!--<div class="mytitle">\u8054\u7CFB\u65B9<span>\u5F0F</span></div>-->\n                    <!--</div>-->\n                     <div class="mybtn contact fade-in-btn" @click="open_video()">\n                        <img src="/static/images/button_\u64AD\u653E.png" alt="">\n                       <div class="mytitle">\u5BA3\u4F20<span>\u7247</span></div>\n                    </div>\n\n\n\n            <!--<transition name="btn-fade">-->\n                 <div v-if="crt_model==\'block\'">\n                       <div class="mybtn block-posion after-btn fade-in-btn" @click="open_block_pos()">\n                            <img src="/static/images/block_btn/\u533A\u4F4D.png" alt="">\n                        </div>\n                         <div class="mybtn six after-btn fade-in-btn" @click="open_six()">\n                            <img src="/static/images/block_btn/\u4E00\u6E7E\u516D\u6838.png" alt="">\n                        </div>\n                         <div class="mybtn garden after-btn fade-in-btn" @click="open_garden()">\n                            <img src="/static/images/block_btn/\u516C\u56ED\u914D\u5957.png" alt="">\n                        </div>\n                 </div>\n             <!--</transition>-->\n                <!--<transition name="btn-fade">-->\n                        <div v-if="crt_model==\'product\'">\n                       <div class="mybtn overloap-btn after-btn fade-in-btn" @click="open_overlap()">\n                            <img src="/static/images/product/button_\u53E0\u62FC_1.png" alt="">\n                        </div>\n                         <div class="mybtn tall-build after-btn fade-in-btn" @click="open_tall_build()">\n                            <img src="/static/images/product/button_\u9AD8\u5C42_1.png" alt="">\n                        </div>\n                         <div class="mybtn fashion after-btn fade-in-btn" @click="open_yang_fang()">\n                            <img src="/static/images/product/button_\u6D0B\u623F_1.png" alt="">\n                        </div>\n                      </div>\n                <!--</transition>-->\n            </div>\n\n            <transition name="fade">\n               <div class="my-model whole-page" v-show="crt_model!=\'\'" @click="crt_model=\'\'"></div>\n            </transition>\n        </div>\n\n    </div>',
+    template: '<div class="com-live-home" >\n\n    <div class="scroll-area" :class="{\'btn-animate\':btn_animate}">\n        <div class="middle-wrap">\n              <div class="light">\n                    <img src="/static/images/\u52A8\u753B-\u5149\u5708.png" alt="">\n                </div>\n                <div class="liuxing">\n                    <img src="/static/images/\u52A8\u753B-\u6D41\u661F.png" alt="">\n                </div>\n\n\n                   <div class="mybtn btn_500 fade-in-btn level-1"  @click="open_500()">\n                        <img src="/static/images/button_500_1.png" alt="">\n                       <div class="mytitle">\u54C1<span>\u724C</span></div>\n                    </div>\n                   <div class="mybtn btn_block fade-in-btn level-1"  @click="open_block()">\n                        <img src="/static/images/button_\u533A\u57DF_1.png" alt="">\n                       <div class="mytitle">\u533A<span>\u57DF</span></div>\n                    </div>\n                   <div class="mybtn produce btn_produce fade-in-btn level-1"  @click="open_product()">\n                        <img src="/static/images/button_\u4EA7\u54C1_1.png?v=1" alt="">\n                       <div class="mytitle">\u4EA7<span>\u54C1</span></div>\n                   </div>\n\n                    <!--<div class="mybtn contact" @click="open_contact()">-->\n                        <!--<img src="/static/images/button_\u8054\u7CFB\u65B9\u5F0F_1.png" alt="">-->\n                       <!--<div class="mytitle">\u8054\u7CFB\u65B9<span>\u5F0F</span></div>-->\n                    <!--</div>-->\n                     <div class="mybtn contact fade-in-btn level-1" @click="open_video()">\n                        <img src="/static/images/button_\u64AD\u653E.png" alt="">\n                       <div class="mytitle">\u5BA3\u4F20<span>\u7247</span></div>\n                    </div>\n\n\n\n            <!--<transition name="btn-fade">-->\n                 <div v-show="crt_model==\'block\'" class="level-block">\n                       <div class="mybtn block-posion after-btn" @click="open_block_pos()">\n                            <img src="/static/images/block_btn/\u533A\u4F4D.png" alt="" >\n                        </div>\n                         <div class="mybtn six after-btn" @click="open_six()">\n                            <img src="/static/images/block_btn/\u4E00\u6E7E\u516D\u6838.png" alt="" >\n                        </div>\n                         <div class="mybtn garden after-btn " @click="open_garden()">\n                            <img src="/static/images/block_btn/\u516C\u56ED\u914D\u5957.png" alt="" >\n                        </div>\n\n\n                 </div>\n\n             <!--</transition>-->\n                <!--<transition name="btn-fade">-->\n                  <div v-show="crt_model==\'produce\'" class="level-product">\n                       <div class="mybtn overloap-btn after-btn " @click="open_overlap()">\n                            <img src="/static/images/product/button_\u53E0\u62FC_1.png" alt="">\n                        </div>\n                         <div class="mybtn tall-build after-btn " @click="open_tall_build()">\n                            <img src="/static/images/product/button_\u9AD8\u5C42_1.png" alt="">\n                        </div>\n                         <div class="mybtn fashion after-btn" @click="open_yang_fang()">\n                            <img src="/static/images/product/button_\u6D0B\u623F_1.png" alt="">\n                        </div>\n                   </div>\n                <!--</transition>-->\n            </div>\n\n            <transition name="fade">\n               <div class="my-model whole-page" v-show="crt_model!=\'\'" @click="crt_model=\'\'"></div>\n            </transition>\n        </div>\n\n    </div>',
     data: function data() {
         return {
             crt_model: '',
             show: false,
             btn_animate: true
+
             //show_light:true,
         };
     },
@@ -957,9 +958,26 @@ window.live_home = {
         });
 
         play_music(this.ctx.musice);
+
+        $(this.$el).find('.level-1').one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function () {
+            $(this).removeClass('fade-in-btn');
+        });
+
+        $(this.$el).find('.after-btn').bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function () {
+            $(this).removeClass('fade-in-btn');
+        });
     },
 
-
+    watch: {
+        crt_model: function crt_model(nv, ov) {
+            if (ex.isin(nv, ['block', 'produce'])) {
+                $(this.$el).find('.btn_' + nv).addClass('active');
+            }
+            if (ex.isin(ov, ['block', 'produce'])) {
+                $(this.$el).find('.btn_' + ov).removeClass('active');
+            }
+        }
+    },
     methods: {
         activated: function activated() {
             //setTimeout(()=>{
@@ -967,7 +985,7 @@ window.live_home = {
             //},500)
         },
         deactivated: function deactivated() {
-            this.btn_animate = false;
+            //this.btn_animate=false
         },
         open_video: function open_video() {
             //live_root.open_live('live_video_page',{src:this.ctx.video_src})
@@ -977,9 +995,9 @@ window.live_home = {
             live_root.open_live('live_page500', {});
         },
         open_block: function open_block() {
-
             if (!this.crt_model) {
                 this.crt_model = 'block';
+                $(this.$el).find('.level-block .after-btn').addClass('fade-in-btn');
             } else {
                 this.crt_model = '';
             }
@@ -1001,7 +1019,8 @@ window.live_home = {
         },
         open_product: function open_product() {
             if (!this.crt_model) {
-                this.crt_model = 'product';
+                this.crt_model = 'produce';
+                $(this.$el).find('.level-product .after-btn').addClass('fade-in-btn');
             } else {
                 this.crt_model = '';
             }

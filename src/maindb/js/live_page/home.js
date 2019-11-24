@@ -15,15 +15,15 @@ window.live_home={
                 </div>
 
 
-                   <div class="mybtn btn_500 fade-in-btn" @click="open_500()">
+                   <div class="mybtn btn_500 fade-in-btn level-1"  @click="open_500()">
                         <img src="/static/images/button_500_1.png" alt="">
                        <div class="mytitle">品<span>牌</span></div>
                     </div>
-                   <div class="mybtn btn_block fade-in-btn" :class="{active:crt_model=='block'}" @click="open_block()">
+                   <div class="mybtn btn_block fade-in-btn level-1"  @click="open_block()">
                         <img src="/static/images/button_区域_1.png" alt="">
                        <div class="mytitle">区<span>域</span></div>
                     </div>
-                   <div class="mybtn produce fade-in-btn" :class="{active:crt_model=='product'}" @click="open_product()">
+                   <div class="mybtn produce btn_produce fade-in-btn level-1"  @click="open_product()">
                         <img src="/static/images/button_产品_1.png?v=1" alt="">
                        <div class="mytitle">产<span>品</span></div>
                    </div>
@@ -32,7 +32,7 @@ window.live_home={
                         <!--<img src="/static/images/button_联系方式_1.png" alt="">-->
                        <!--<div class="mytitle">联系方<span>式</span></div>-->
                     <!--</div>-->
-                     <div class="mybtn contact fade-in-btn" @click="open_video()">
+                     <div class="mybtn contact fade-in-btn level-1" @click="open_video()">
                         <img src="/static/images/button_播放.png" alt="">
                        <div class="mytitle">宣传<span>片</span></div>
                     </div>
@@ -40,30 +40,33 @@ window.live_home={
 
 
             <!--<transition name="btn-fade">-->
-                 <div v-if="crt_model=='block'">
-                       <div class="mybtn block-posion after-btn fade-in-btn" @click="open_block_pos()">
-                            <img src="/static/images/block_btn/区位.png" alt="">
+                 <div v-show="crt_model=='block'" class="level-block">
+                       <div class="mybtn block-posion after-btn" @click="open_block_pos()">
+                            <img src="/static/images/block_btn/区位.png" alt="" >
                         </div>
-                         <div class="mybtn six after-btn fade-in-btn" @click="open_six()">
-                            <img src="/static/images/block_btn/一湾六核.png" alt="">
+                         <div class="mybtn six after-btn" @click="open_six()">
+                            <img src="/static/images/block_btn/一湾六核.png" alt="" >
                         </div>
-                         <div class="mybtn garden after-btn fade-in-btn" @click="open_garden()">
-                            <img src="/static/images/block_btn/公园配套.png" alt="">
+                         <div class="mybtn garden after-btn " @click="open_garden()">
+                            <img src="/static/images/block_btn/公园配套.png" alt="" >
                         </div>
+
+
                  </div>
+
              <!--</transition>-->
                 <!--<transition name="btn-fade">-->
-                        <div v-if="crt_model=='product'">
-                       <div class="mybtn overloap-btn after-btn fade-in-btn" @click="open_overlap()">
+                  <div v-show="crt_model=='produce'" class="level-product">
+                       <div class="mybtn overloap-btn after-btn " @click="open_overlap()">
                             <img src="/static/images/product/button_叠拼_1.png" alt="">
                         </div>
-                         <div class="mybtn tall-build after-btn fade-in-btn" @click="open_tall_build()">
+                         <div class="mybtn tall-build after-btn " @click="open_tall_build()">
                             <img src="/static/images/product/button_高层_1.png" alt="">
                         </div>
-                         <div class="mybtn fashion after-btn fade-in-btn" @click="open_yang_fang()">
+                         <div class="mybtn fashion after-btn" @click="open_yang_fang()">
                             <img src="/static/images/product/button_洋房_1.png" alt="">
                         </div>
-                      </div>
+                   </div>
                 <!--</transition>-->
             </div>
 
@@ -78,6 +81,7 @@ window.live_home={
             crt_model:'',
             show:false,
             btn_animate:true,
+
             //show_light:true,
         }
     },
@@ -105,9 +109,27 @@ window.live_home={
 
         play_music(this.ctx.musice)
 
+        $(this.$el).find('.level-1').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(){
+            $(this).removeClass('fade-in-btn')
+        })
+
+        $(this.$el).find('.after-btn').bind('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(){
+            $(this).removeClass('fade-in-btn')
+        })
+
 
     },
+    watch:{
+        crt_model(nv,ov){
+            if(ex.isin(nv,['block','produce'])){
+                $(this.$el).find('.btn_'+nv).addClass('active')
+            }
+            if(ex.isin(ov,['block','produce'])){
+                $(this.$el).find('.btn_'+ov).removeClass('active')
+            }
 
+        }
+    },
     methods:{
         activated(){
             //setTimeout(()=>{
@@ -115,7 +137,7 @@ window.live_home={
             //},500)
         },
         deactivated(){
-            this.btn_animate=false
+            //this.btn_animate=false
         },
         open_video(){
             //live_root.open_live('live_video_page',{src:this.ctx.video_src})
@@ -125,9 +147,10 @@ window.live_home={
             live_root.open_live('live_page500',{})
         },
         open_block(){
-
             if(!this.crt_model){
                 this.crt_model='block'
+                $(this.$el).find('.level-block .after-btn').addClass('fade-in-btn')
+
             }else{
                 this.crt_model =''
             }
@@ -151,7 +174,9 @@ window.live_home={
         },
         open_product(){
             if(!this.crt_model){
-                this.crt_model='product'
+                this.crt_model='produce'
+                $(this.$el).find('.level-product .after-btn').addClass('fade-in-btn')
+
             }else{
                 this.crt_model =''
             }
