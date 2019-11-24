@@ -116,10 +116,7 @@ window.live_home={
         $(this.$el).find('.after-btn').bind('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(){
             $(this).removeClass('fade-in-btn')
         })
-        // 优化加载速度
-        ex.load_image('/media/images/block.png')
-        ex.load_image('/media/images/one_six.png')
-        ex.load_image('/media/images/garden.png')
+        
     },
     watch:{
         crt_model(nv,ov){
