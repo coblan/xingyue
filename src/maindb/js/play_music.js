@@ -11,7 +11,6 @@ window.play_music = (music)=>{
             console.log('play')
         },5000)
         document.addEventListener('click', function(){
-            alert('click')
             audio.play().catch(function(error) {
                 console.log(error)
             })
