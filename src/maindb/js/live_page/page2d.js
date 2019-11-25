@@ -8,6 +8,7 @@ window.live_page_2d={
         <img  :src="ctx.img_url" alt="">
     </div>
     <component :is="ctx.menu_circle"></component>
+    <iframe v-if="ctx.musice" src="/music" allow="autoplay" frameborder="0" style="display: none" ></iframe>
     </div>`,
     data(){
         var childStore = new Vue()
@@ -18,7 +19,7 @@ window.live_page_2d={
     },
     mounted(){
         if(this.ctx.music){
-            play_music(this.ctx.music)
+            //play_music(this.ctx.music)
         }
     },
     methods:{

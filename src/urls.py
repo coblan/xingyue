@@ -19,11 +19,13 @@ from hello.engin_menu import MBpageEngine
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import RedirectView 
-
+from maindb import views as maindb_views
 urlpatterns = [
     #url(r'^admin/', admin.site.urls),
+    url(r'music',maindb_views.get_musice),
     url(r'mb/([\w\.\-]+)',MBpageEngine.as_view(),name= MBpageEngine.url_name),
     url(r'^$',RedirectView.as_view(url='/mb/index')) ,
+   
 ]
 
 if settings.DEBUG:

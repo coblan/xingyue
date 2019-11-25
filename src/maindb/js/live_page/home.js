@@ -73,6 +73,15 @@ window.live_home={
             <transition name="fade">
                <div class="my-model whole-page" v-show="crt_model!=''" @click="crt_model=''"></div>
             </transition>
+        <!--<iframe src="https://www.w3school.com.cn/tiy/t.asp?f=html5_audio_autoplay" frameborder="0">-->
+             <!--<audio controls="controls" autoplay="autoplay">-->
+                  <!--<source src="/music" type="audio/mpeg" />-->
+                <!--Your browser does not support the audio element.-->
+                <!--</audio>-->
+
+                <iframe v-if="ctx.musice" src="/music" allow="autoplay" frameborder="0" style="display: none" ></iframe>
+        <!--</iframe>-->
+
         </div>
 
     </div>`,
@@ -107,7 +116,7 @@ window.live_home={
 
             })
 
-        play_music(this.ctx.musice)
+        //play_music(this.ctx.musice)
 
         $(this.$el).find('.level-1').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(){
             $(this).removeClass('fade-in-btn')
@@ -116,7 +125,7 @@ window.live_home={
         $(this.$el).find('.after-btn').bind('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(){
             $(this).removeClass('fade-in-btn')
         })
-        
+
     },
     watch:{
         crt_model(nv,ov){

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 65);
+/******/ 	return __webpack_require__(__webpack_require__.s = 67);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -381,51 +381,51 @@ function updateLink(linkElement, obj) {
 "use strict";
 
 
-var _back = __webpack_require__(5);
+var _back = __webpack_require__(6);
 
 var back = _interopRequireWildcard(_back);
 
-var _menu_circle = __webpack_require__(7);
+var _menu_circle = __webpack_require__(9);
 
 var menu_circle = _interopRequireWildcard(_menu_circle);
 
-var _menu_circle_dp = __webpack_require__(11);
+var _menu_circle_dp = __webpack_require__(13);
 
 var menu_circle_sm = _interopRequireWildcard(_menu_circle_dp);
 
-var _menu_circle_d = __webpack_require__(10);
+var _menu_circle_d = __webpack_require__(12);
 
 var menu_circle_d = _interopRequireWildcard(_menu_circle_d);
 
-var _menu_circle_2d = __webpack_require__(8);
+var _menu_circle_2d = __webpack_require__(10);
 
 var menu_circle_2d = _interopRequireWildcard(_menu_circle_2d);
 
-var _menu_vertical = __webpack_require__(14);
+var _menu_vertical = __webpack_require__(16);
 
 var menu_vertical = _interopRequireWildcard(_menu_vertical);
 
-var _menu_vertical_d = __webpack_require__(15);
+var _menu_vertical_d = __webpack_require__(17);
 
 var menu_vertical_d = _interopRequireWildcard(_menu_vertical_d);
 
-var _menu_circle_ = __webpack_require__(9);
+var _menu_circle_ = __webpack_require__(11);
 
 var menu_circle_720 = _interopRequireWildcard(_menu_circle_);
 
-var _menu_po = __webpack_require__(12);
+var _menu_po = __webpack_require__(14);
 
 var menu_po = _interopRequireWildcard(_menu_po);
 
-var _menu_tallbuild = __webpack_require__(13);
+var _menu_tallbuild = __webpack_require__(15);
 
 var menu_tallbuild = _interopRequireWildcard(_menu_tallbuild);
 
-var _menu_back = __webpack_require__(66);
+var _menu_back = __webpack_require__(8);
 
 var menu_back = _interopRequireWildcard(_menu_back);
 
-var _help = __webpack_require__(6);
+var _help = __webpack_require__(7);
 
 var help = _interopRequireWildcard(_help);
 
@@ -448,45 +448,45 @@ named_ctx.product = [{ name: 'xx', image_2d: '/static/images/2d3d/pic_星空独�
 "use strict";
 
 
-var _home = __webpack_require__(19);
+var _home = __webpack_require__(21);
 
 var live_page_home = _interopRequireWildcard(_home);
 
-var _page = __webpack_require__(22);
+var _page = __webpack_require__(24);
 
 var page500 = _interopRequireWildcard(_page);
 
-var _contact = __webpack_require__(17);
+var _contact = __webpack_require__(19);
 
 var contact = _interopRequireWildcard(_contact);
 
-var _block_pos = __webpack_require__(16);
+var _block_pos = __webpack_require__(18);
 
 var block_pos = _interopRequireWildcard(_block_pos);
 
-var _six = __webpack_require__(23);
+var _six = __webpack_require__(25);
 
 var six = _interopRequireWildcard(_six);
 
-var _garden = __webpack_require__(18);
+var _garden = __webpack_require__(20);
 
 var garden = _interopRequireWildcard(_garden);
 
-var _page3d = __webpack_require__(21);
+var _page3d = __webpack_require__(23);
 
 var page3d = _interopRequireWildcard(_page3d);
 
-var _page2d = __webpack_require__(20);
+var _page2d = __webpack_require__(22);
 
 var page2d = _interopRequireWildcard(_page2d);
 
-var _vedio_page = __webpack_require__(24);
+var _vedio_page = __webpack_require__(26);
 
 var vedio_page = _interopRequireWildcard(_vedio_page);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-__webpack_require__(62);
+__webpack_require__(64);
 
 /***/ }),
 /* 5 */
@@ -495,7 +495,43 @@ __webpack_require__(62);
 "use strict";
 
 
-__webpack_require__(45);
+window.play_music = function (music) {
+    //var audio = document.createElement("AUDIO")
+    //document.body.appendChild(audio);
+    ////audio.loop = 'loop'
+    //audio.src = music
+
+    //document.body.addEventListener("mousemove", function () {
+    //    audio.play()
+    //})
+    //document.addEventListener('click', function () {
+    //    audio.play()
+    //});
+    var audio = new Audio(music);
+    audio.loop = true;
+    setInterval(function () {
+        audio.play().catch(function (error) {
+            console.log(error);
+        });
+        console.log('play');
+    }, 5000);
+    document.addEventListener('click', function () {
+        audio.play();
+    });
+
+    //document.addEventListener('touchend', function () {
+    //    audio.play()
+    //});
+};
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(47);
 
 Vue.component('com-btn-back', {
     template: '<div class="com-btn-back" @click="back()">\n        <img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">\n    </div>',
@@ -507,13 +543,13 @@ Vue.component('com-btn-back', {
 });
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(46);
+__webpack_require__(48);
 
 Vue.component('com-pop-help', {
     template: '<div class="com-pop-help">\n    <div class="close-btn" @click="get_close()">\n        <img src="/static/images/help/button_\u5173\u95ED.png" alt="">\n    </div>\n     <div class="handle-btn">\n        <img src="/static/images/help/pic_\u6559\u7A0B1.png" alt="">\n     </div>\n     <div class="handle-btn">\n        <img src="/static/images/help/pic_\u6559\u7A0B2.png" alt="">\n     </div>\n     <div class="handle-btn">\n        <img src="/static/images/help/pic_\u6559\u7A0B3.png" alt="">\n     </div>\n     <div class="i-know" @click="get_close()">\n     <img src="/static/images/help/button_\u77E5\u9053\u4E86.png" alt="">\n     </div>\n    </div>',
@@ -525,13 +561,48 @@ Vue.component('com-pop-help', {
 });
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(47);
+//require('./styl/menu_back.styl')
+
+Vue.component('com-menu-back', {
+    template: '<div class="com-menu-back">\n\n    <!--<div class="mybtn main-menu" @click="is_open = !is_open">-->\n        <!--<img src="/static/images/2d3d/button_\u83DC\u53551.png" alt="">-->\n    <!--</div>-->\n     <!--<div class="mybtn main-menu" @click="back()">-->\n           <!--<img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">-->\n     <!--</div>-->\n        <com-btn-back class="normal-back-btn"></com-btn-back>\n\n    </div>',
+    data: function data() {
+        return {
+            //is_open:true,
+            parStore: ex.vueParStore(this)
+        };
+    },
+
+    methods: {
+        //home(){
+        //    location = '/'
+        //},
+        //goto_po(){
+        //    location ='/mb/page3d?page=' + this.parStore.ctx.po_3d
+        //    //live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle',menu_vertical:'com-menu-vertical'})
+        //},
+        //back(){
+        //    history.back()
+        //},
+        //goto_720(){
+        //    location ='/mb/page720?page=' + this.parStore.ctx.page_720
+        //}
+    }
+});
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(49);
 
 Vue.component('com-menu-circle', {
     template: '<div class="com-menu-circle">\n    <div class="mybtn main-menu" @click="is_open = !is_open">\n        <img src="/static/images/2d3d/button_\u83DC\u53551.png" alt="">\n    </div>\n     <transition name="btn-fade">\n        <div v-show="is_open">\n            <div class="mybtn back-btn" @click="back()">\n                <img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">\n            </div>\n             <div class="mybtn btn-720">\n                <img src="/static/images/2d3d/button_720.png" alt="">\n            </div>\n              <div class="mybtn btn-first-page" @click="home()">\n                <img src="/static/images/2d3d/button_\u9996\u9875.png" alt="">\n            </div>\n        </div>\n    </transition>\n\n    </div>',
@@ -552,7 +623,7 @@ Vue.component('com-menu-circle', {
 });
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -585,13 +656,13 @@ Vue.component('com-menu-circle-2d', {
 });
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(48);
+__webpack_require__(50);
 
 Vue.component('com-menu-circle-720', {
     template: '<div class="com-menu-circle-720">\n     <div class="mybtn main-menu" @click="is_open = !is_open">\n           <img src="/static/images/2d3d/button_720.png" alt="">\n    </div>\n     <transition name="btn-fade">\n        <div v-show="is_open">\n            <div class="mybtn back-btn" @click="back()">\n                <img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">\n            </div>\n             <div class="mybtn btn-house" @click="open_house()">\n                <img src="/static/images/2d3d/\u6237\u578B.png" alt="">\n            </div>\n            <div class="mybtn btn-po" @click="goto_po()">\n                <img src="/static/images/2d3d/button_\u5256\u5207\u6237\u578B1.png" alt="">\n            </div>\n\n        </div>\n    </transition>\n\n    </div>',
@@ -621,13 +692,13 @@ Vue.component('com-menu-circle-720', {
 });
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(49);
+__webpack_require__(51);
 
 Vue.component('com-menu-circle-d', {
     template: '<div class="com-menu-circle-d">\n    <!--<div class="mybtn main-menu" @click="is_open = !is_open">-->\n        <!--<img src="/static/images/2d3d/button_\u83DC\u53551.png" alt="">-->\n    <!--</div>-->\n     <div class="mybtn main-menu" @click="is_open = !is_open">\n           <img v-if="parStore.ctx.crt_btn ==\'d1\'" src="/static/images/2d3d/button_D1.png" alt="">\n           <img v-if="parStore.ctx.crt_btn ==\'d2\'" src="/static/images/2d3d/button_D2.png" alt="">\n           <img  v-if="parStore.ctx.crt_btn ==\'d3\'" src="/static/images/2d3d/button_D3.png" alt="">\n    </div>\n     <transition name="btn-fade">\n        <div v-show="is_open">\n            <div class="mybtn back-btn" @click="back()">\n                <img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">\n            </div>\n             <div class="mybtn btn-house" @click="open_house()">\n                <img src="/static/images/2d3d/\u6237\u578B.png" alt="">\n            </div>\n            <div class="mybtn btn-po" @click="goto_po()">\n                <img src="/static/images/2d3d/button_\u5256\u5207\u6237\u578B1.png" alt="">\n            </div>\n\n            <div class="mybtn btn-720"  @click="goto_720()">\n                <img src="/static/images/2d3d/button_720.png" alt="">\n            </div>\n\n            <!--<div class="mybtn btn-first-page" @click="home()">-->\n                <!--<img src="/static/images/2d3d/button_\u9996\u9875.png" alt="">-->\n            <!--</div>-->\n\n        </div>\n    </transition>\n\n    </div>',
@@ -660,13 +731,13 @@ Vue.component('com-menu-circle-d', {
 });
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(50);
+__webpack_require__(52);
 
 Vue.component('com-menu-circle-dp', {
     template: '<div class="com-menu-circle-dp">\n    <div class="mybtn main-menu" @click="is_open = !is_open">\n        <img src="/static/images/2d3d/button_\u83DC\u53551.png" alt="">\n    </div>\n\n     <transition name="btn-fade">\n        <div v-show="is_open">\n            <div class="mybtn back-btn" @click="back()">\n                <img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">\n            </div>\n              <div class="mybtn btn-first-page" @click="home()">\n                <img src="/static/images/2d3d/button_\u9996\u9875.png" alt="">\n            </div>\n\n            <div class="mybtn d1" @click="open_d1()">\n                <img  src="/static/images/2d3d/button_D1.png" alt="">\n            </div>\n            <div class="mybtn d2" @click="open_d2()">\n                <img  src="/static/images/2d3d/button_D2.png" alt="">\n\n            </div>\n             <div class="mybtn d3" @click="open_d3()">\n                <img  src="/static/images/2d3d/button_D3.png" alt="">\n            </div>\n        </div>\n    </transition>\n\n    </div>',
@@ -697,13 +768,13 @@ Vue.component('com-menu-circle-dp', {
 });
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(51);
+__webpack_require__(53);
 
 Vue.component('com-menu-po', {
     template: '<div class="com-menu-po">\n    <div class="mybtn main-menu" @click="is_open = !is_open">\n         <img src="/static/images/2d3d/button_\u5256\u5207\u6237\u578B1.png" alt="">\n    </div>\n     <transition name="btn-fade">\n        <div v-show="is_open">\n            <div class="mybtn back-btn" @click="back()">\n                <img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">\n            </div>\n             <div class="mybtn btn-720" @click="goto_720()">\n                <img src="/static/images/2d3d/button_720.png" alt="">\n            </div>\n              <div class="mybtn btn-first-page" @click="open_house()">\n               <img src="/static/images/2d3d/\u6237\u578B.png" alt="">\n            </div>\n        </div>\n    </transition>\n\n    </div>',
@@ -731,13 +802,13 @@ Vue.component('com-menu-po', {
 });
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(52);
+__webpack_require__(54);
 
 Vue.component('com-menu-tallbuild', {
     template: '<div class="com-menu-tallbuild com-menu-circle-2d com-menu-circle">\n    <div class="mybtn main-menu" @click="is_open = !is_open">\n        <img src="/static/images/2d3d/button_\u83DC\u53551.png" alt="">\n    </div>\n     <transition name="btn-fade">\n        <div v-show="is_open">\n            <div class="mybtn back-btn" @click="back()">\n                <img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">\n            </div>\n             <!--<div class="mybtn btn-720" @click="goto_po()">-->\n                <!--<img src="/static/images/2d3d/button_\u5256\u5207\u6237\u578B1.png" alt="">-->\n            <!--</div>-->\n              <div class="mybtn btn-first-page"  @click="home()">\n                <img src="/static/images/2d3d/button_\u9996\u9875.png" alt="">\n                 <!--<img src="/static/images/2d3d/button_720.png" alt="">-->\n            </div>\n        </div>\n    </transition>\n\n    </div>',
@@ -766,13 +837,13 @@ Vue.component('com-menu-tallbuild', {
 });
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(53);
+__webpack_require__(55);
 
 Vue.component('com-menu-vertical', {
     template: '<div class="com-menu-vertical">\n    <div class="mybtn f1" @click="open_f1()">\n        <img src="/static/images/2d3d/button_F1.png" alt="">\n    </div>\n    <div class="mybtn f2" @click="open_f2()">\n        <img src="/static/images/2d3d/button_F2.png" alt="">\n    </div>\n\n    </div>',
@@ -805,13 +876,13 @@ Vue.component('com-menu-vertical', {
 });
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(54);
+__webpack_require__(56);
 
 Vue.component('com-menu-vertical-d', {
 
@@ -845,52 +916,6 @@ Vue.component('com-menu-vertical-d', {
 });
 
 /***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(55);
-
-window.live_block_pos = {
-    props: ['ctx'],
-    basename: 'live-block-pos',
-    template: '<div class="com-live-block-pos general-page">\n    <div class="scroll-area">\n           <div class="banner">\n            <img src="/static/images/block/back_\u533A\u4F4D\u56FE\u5E95\u56FE.jpg" alt="">\n        </div>\n        <div class="devid-line title-line">\n            <img src="/static/images/pic_\u5206\u5272\u7EBF.png" alt="">\n        </div>\n        <div class="mytitle">\n            <span>\u5929\u5E9C\u65B0\u533A\u6838\u5FC3\u5C45\u4F4F\u533A\u533A\u4F4D\u56FE</span>\n        </div>\n        <div class="right-title">\n            <span>\u533A\u4F4D\u56FE</span>\n        </div>\n       <com-btn-back class="normal-back-btn"></com-btn-back>\n\n    </div>\n    </div>',
-    mounted: function mounted() {
-        if (ex.os.isTablet) {
-            var hh = window.innerWidth / 0.563;
-            $(this.$el).find('.scroll-area').height(hh + 'px');
-        }
-    },
-
-    methods: {}
-};
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(56);
-
-window.live_contact = {
-    props: ['ctx'],
-    basename: 'live-contact',
-    template: '<div class="com-live-contact general-page">\n    <div class="scroll-area">\n        <div class="contace0" >\n            <img src="/static/images/button_\u8054\u7CFB\u65B9\u5F0F_1.png" alt="">\n        </div>\n        <div class="contace1">\n            <img src="/static/images/contact/txt_\u8054\u7CFB1.png" alt="">\n        </div>\n        <div class="contact2">\n            <img src="/static/images/contact/txt_\u8054\u7CFB2.png" alt="">\n        </div>\n        <div class="contact3">\n            <img src="/static/images/contact/txt_\u8054\u7CFB3.png" alt="">\n        </div>\n       <com-btn-back class="normal-back-btn"></com-btn-back>\n    </div>\n\n    </div>',
-    mounted: function mounted() {
-        if (ex.os.isTablet) {
-            var hh = window.innerWidth / 0.563;
-            $(this.$el).find('.scroll-area').height(hh + 'px');
-        }
-    },
-
-    methods: {}
-};
-
-/***/ }),
 /* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -899,10 +924,10 @@ window.live_contact = {
 
 __webpack_require__(57);
 
-window.live_garden = {
+window.live_block_pos = {
     props: ['ctx'],
-    basename: 'live-garden',
-    template: '<div class="com-live-garden general-page">\n    <div class="scroll-area">\n        <div class="banner">\n            <img src="/static/images/block/back_\u516C\u56ED\u914D\u5957.jpg" alt="">\n        </div>\n        <div class="title1">\n            <span>\u81EA\u7136\u6DF1\u5904.\u8FD1\u4EAB\u9187\u719F</span>\n        </div>\n        <div class="title2">\n            <span>Starlight Lakeshore</span>\n        </div>\n        <div class="devid-line title-line">\n            <img src="/static/images/pic_\u5206\u5272\u7EBF.png" alt="">\n        </div>\n        <div class="title4">\n            <div>\u4E2D\u94C1.\u661F\u6708\u5C71\u6E56\u5750\u843D\u4E8E\u4E2D\u94C1\u9ED1\u9F99\u6EE9.\u56FD\u9645\u65C5\u6E38\u5EA6\u5047\u533A\u7684\u6838\u5FC3\u677F\u5757\u5185,</div>\n            <div>\u88AB200\u4EA9\u6E7F\u5730\u516C\u56ED\u73AF\u62B1\u3002\u5343\u4EA9\u6E7F\u5730\u751F\u6001\u516C\u56ED\u4E0E\u89C4\u5212\u4E2D\u7684</div>\n            <div>\u56DB\u5DDD\u7701\u4EBA\u6C11\u533B\u9662\u8FD1\u5728\u54AB\u5C3A\uFF0C\u6B65\u884C10\u5206\u949F\u5373\u8FBE\u91D1\u6C99\u6E7E\u56FD\u9645\u5EA6\u5047\u6838\u5FC3\u533A\u3002</div>\n            <div>\u79BB\u5C18\u4E0D\u79BB\u57CE\u3001\u95F9\u4E2D\u53D6\u9759\u7684\u8212\u9002\u65F6\u5149\u89E6\u624B\u53EF\u53CA\u3002</div>\n        </div>\n         <div class="right-title">\n            <span>\u516C\u56ED\u914D\u5957</span>\n        </div>\n       <com-btn-back class="normal-back-btn"></com-btn-back>\n    </div>\n    </div>',
+    basename: 'live-block-pos',
+    template: '<div class="com-live-block-pos general-page">\n    <div class="scroll-area">\n           <div class="banner">\n            <img src="/static/images/block/back_\u533A\u4F4D\u56FE\u5E95\u56FE.jpg" alt="">\n        </div>\n        <div class="devid-line title-line">\n            <img src="/static/images/pic_\u5206\u5272\u7EBF.png" alt="">\n        </div>\n        <div class="mytitle">\n            <span>\u5929\u5E9C\u65B0\u533A\u6838\u5FC3\u5C45\u4F4F\u533A\u533A\u4F4D\u56FE</span>\n        </div>\n        <div class="right-title">\n            <span>\u533A\u4F4D\u56FE</span>\n        </div>\n       <com-btn-back class="normal-back-btn"></com-btn-back>\n\n    </div>\n    </div>',
     mounted: function mounted() {
         if (ex.os.isTablet) {
             var hh = window.innerWidth / 0.563;
@@ -922,10 +947,56 @@ window.live_garden = {
 
 __webpack_require__(58);
 
+window.live_contact = {
+    props: ['ctx'],
+    basename: 'live-contact',
+    template: '<div class="com-live-contact general-page">\n    <div class="scroll-area">\n        <div class="contace0" >\n            <img src="/static/images/button_\u8054\u7CFB\u65B9\u5F0F_1.png" alt="">\n        </div>\n        <div class="contace1">\n            <img src="/static/images/contact/txt_\u8054\u7CFB1.png" alt="">\n        </div>\n        <div class="contact2">\n            <img src="/static/images/contact/txt_\u8054\u7CFB2.png" alt="">\n        </div>\n        <div class="contact3">\n            <img src="/static/images/contact/txt_\u8054\u7CFB3.png" alt="">\n        </div>\n       <com-btn-back class="normal-back-btn"></com-btn-back>\n    </div>\n\n    </div>',
+    mounted: function mounted() {
+        if (ex.os.isTablet) {
+            var hh = window.innerWidth / 0.563;
+            $(this.$el).find('.scroll-area').height(hh + 'px');
+        }
+    },
+
+    methods: {}
+};
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(59);
+
+window.live_garden = {
+    props: ['ctx'],
+    basename: 'live-garden',
+    template: '<div class="com-live-garden general-page">\n    <div class="scroll-area">\n        <div class="banner">\n            <img src="/static/images/block/back_\u516C\u56ED\u914D\u5957.jpg" alt="">\n        </div>\n        <div class="title1">\n            <span>\u81EA\u7136\u6DF1\u5904.\u8FD1\u4EAB\u9187\u719F</span>\n        </div>\n        <div class="title2">\n            <span>Starlight Lakeshore</span>\n        </div>\n        <div class="devid-line title-line">\n            <img src="/static/images/pic_\u5206\u5272\u7EBF.png" alt="">\n        </div>\n        <div class="title4">\n            <div>\u4E2D\u94C1.\u661F\u6708\u5C71\u6E56\u5750\u843D\u4E8E\u4E2D\u94C1\u9ED1\u9F99\u6EE9.\u56FD\u9645\u65C5\u6E38\u5EA6\u5047\u533A\u7684\u6838\u5FC3\u677F\u5757\u5185,</div>\n            <div>\u88AB200\u4EA9\u6E7F\u5730\u516C\u56ED\u73AF\u62B1\u3002\u5343\u4EA9\u6E7F\u5730\u751F\u6001\u516C\u56ED\u4E0E\u89C4\u5212\u4E2D\u7684</div>\n            <div>\u56DB\u5DDD\u7701\u4EBA\u6C11\u533B\u9662\u8FD1\u5728\u54AB\u5C3A\uFF0C\u6B65\u884C10\u5206\u949F\u5373\u8FBE\u91D1\u6C99\u6E7E\u56FD\u9645\u5EA6\u5047\u6838\u5FC3\u533A\u3002</div>\n            <div>\u79BB\u5C18\u4E0D\u79BB\u57CE\u3001\u95F9\u4E2D\u53D6\u9759\u7684\u8212\u9002\u65F6\u5149\u89E6\u624B\u53EF\u53CA\u3002</div>\n        </div>\n         <div class="right-title">\n            <span>\u516C\u56ED\u914D\u5957</span>\n        </div>\n       <com-btn-back class="normal-back-btn"></com-btn-back>\n    </div>\n    </div>',
+    mounted: function mounted() {
+        if (ex.os.isTablet) {
+            var hh = window.innerWidth / 0.563;
+            $(this.$el).find('.scroll-area').height(hh + 'px');
+        }
+    },
+
+    methods: {}
+};
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(60);
+
 window.live_home = {
     props: ['ctx'],
     basename: 'live-home',
-    template: '<div class="com-live-home" >\n\n    <div class="scroll-area" :class="{\'btn-animate\':btn_animate}">\n        <div class="middle-wrap">\n              <div class="light">\n                    <img src="/static/images/\u52A8\u753B-\u5149\u5708.png" alt="">\n                </div>\n                <div class="liuxing">\n                    <img src="/static/images/\u52A8\u753B-\u6D41\u661F.png" alt="">\n                </div>\n\n\n                   <div class="mybtn btn_500 fade-in-btn level-1"  @click="open_500()">\n                        <img src="/static/images/button_500_1.png" alt="">\n                       <div class="mytitle">\u54C1<span>\u724C</span></div>\n                    </div>\n                   <div class="mybtn btn_block fade-in-btn level-1"  @click="open_block()">\n                        <img src="/static/images/button_\u533A\u57DF_1.png" alt="">\n                       <div class="mytitle">\u533A<span>\u57DF</span></div>\n                    </div>\n                   <div class="mybtn produce btn_produce fade-in-btn level-1"  @click="open_product()">\n                        <img src="/static/images/button_\u4EA7\u54C1_1.png?v=1" alt="">\n                       <div class="mytitle">\u4EA7<span>\u54C1</span></div>\n                   </div>\n\n                    <!--<div class="mybtn contact" @click="open_contact()">-->\n                        <!--<img src="/static/images/button_\u8054\u7CFB\u65B9\u5F0F_1.png" alt="">-->\n                       <!--<div class="mytitle">\u8054\u7CFB\u65B9<span>\u5F0F</span></div>-->\n                    <!--</div>-->\n                     <div class="mybtn contact fade-in-btn level-1" @click="open_video()">\n                        <img src="/static/images/button_\u64AD\u653E.png" alt="">\n                       <div class="mytitle">\u5BA3\u4F20<span>\u7247</span></div>\n                    </div>\n\n\n\n            <!--<transition name="btn-fade">-->\n                 <div v-show="crt_model==\'block\'" class="level-block">\n                       <div class="mybtn block-posion after-btn" @click="open_block_pos()">\n                            <img src="/static/images/block_btn/\u533A\u4F4D.png" alt="" >\n                        </div>\n                         <div class="mybtn six after-btn" @click="open_six()">\n                            <img src="/static/images/block_btn/\u4E00\u6E7E\u516D\u6838.png" alt="" >\n                        </div>\n                         <div class="mybtn garden after-btn " @click="open_garden()">\n                            <img src="/static/images/block_btn/\u516C\u56ED\u914D\u5957.png" alt="" >\n                        </div>\n\n\n                 </div>\n\n             <!--</transition>-->\n                <!--<transition name="btn-fade">-->\n                  <div v-show="crt_model==\'produce\'" class="level-product">\n                       <div class="mybtn overloap-btn after-btn " @click="open_overlap()">\n                            <img src="/static/images/product/button_\u53E0\u62FC_1.png" alt="">\n                        </div>\n                         <div class="mybtn tall-build after-btn " @click="open_tall_build()">\n                            <img src="/static/images/product/button_\u9AD8\u5C42_1.png" alt="">\n                        </div>\n                         <div class="mybtn fashion after-btn" @click="open_yang_fang()">\n                            <img src="/static/images/product/button_\u6D0B\u623F_1.png" alt="">\n                        </div>\n                   </div>\n                <!--</transition>-->\n            </div>\n\n            <transition name="fade">\n               <div class="my-model whole-page" v-show="crt_model!=\'\'" @click="crt_model=\'\'"></div>\n            </transition>\n        </div>\n\n    </div>',
+    template: '<div class="com-live-home" >\n\n    <div class="scroll-area" :class="{\'btn-animate\':btn_animate}">\n        <div class="middle-wrap">\n              <div class="light">\n                    <img src="/static/images/\u52A8\u753B-\u5149\u5708.png" alt="">\n                </div>\n                <div class="liuxing">\n                    <img src="/static/images/\u52A8\u753B-\u6D41\u661F.png" alt="">\n                </div>\n\n\n                   <div class="mybtn btn_500 fade-in-btn level-1"  @click="open_500()">\n                        <img src="/static/images/button_500_1.png" alt="">\n                       <div class="mytitle">\u54C1<span>\u724C</span></div>\n                    </div>\n                   <div class="mybtn btn_block fade-in-btn level-1"  @click="open_block()">\n                        <img src="/static/images/button_\u533A\u57DF_1.png" alt="">\n                       <div class="mytitle">\u533A<span>\u57DF</span></div>\n                    </div>\n                   <div class="mybtn produce btn_produce fade-in-btn level-1"  @click="open_product()">\n                        <img src="/static/images/button_\u4EA7\u54C1_1.png?v=1" alt="">\n                       <div class="mytitle">\u4EA7<span>\u54C1</span></div>\n                   </div>\n\n                    <!--<div class="mybtn contact" @click="open_contact()">-->\n                        <!--<img src="/static/images/button_\u8054\u7CFB\u65B9\u5F0F_1.png" alt="">-->\n                       <!--<div class="mytitle">\u8054\u7CFB\u65B9<span>\u5F0F</span></div>-->\n                    <!--</div>-->\n                     <div class="mybtn contact fade-in-btn level-1" @click="open_video()">\n                        <img src="/static/images/button_\u64AD\u653E.png" alt="">\n                       <div class="mytitle">\u5BA3\u4F20<span>\u7247</span></div>\n                    </div>\n\n\n\n            <!--<transition name="btn-fade">-->\n                 <div v-show="crt_model==\'block\'" class="level-block">\n                       <div class="mybtn block-posion after-btn" @click="open_block_pos()">\n                            <img src="/static/images/block_btn/\u533A\u4F4D.png" alt="" >\n                        </div>\n                         <div class="mybtn six after-btn" @click="open_six()">\n                            <img src="/static/images/block_btn/\u4E00\u6E7E\u516D\u6838.png" alt="" >\n                        </div>\n                         <div class="mybtn garden after-btn " @click="open_garden()">\n                            <img src="/static/images/block_btn/\u516C\u56ED\u914D\u5957.png" alt="" >\n                        </div>\n\n\n                 </div>\n\n             <!--</transition>-->\n                <!--<transition name="btn-fade">-->\n                  <div v-show="crt_model==\'produce\'" class="level-product">\n                       <div class="mybtn overloap-btn after-btn " @click="open_overlap()">\n                            <img src="/static/images/product/button_\u53E0\u62FC_1.png" alt="">\n                        </div>\n                         <div class="mybtn tall-build after-btn " @click="open_tall_build()">\n                            <img src="/static/images/product/button_\u9AD8\u5C42_1.png" alt="">\n                        </div>\n                         <div class="mybtn fashion after-btn" @click="open_yang_fang()">\n                            <img src="/static/images/product/button_\u6D0B\u623F_1.png" alt="">\n                        </div>\n                   </div>\n                <!--</transition>-->\n            </div>\n\n            <transition name="fade">\n               <div class="my-model whole-page" v-show="crt_model!=\'\'" @click="crt_model=\'\'"></div>\n            </transition>\n        <!--<iframe src="https://www.w3school.com.cn/tiy/t.asp?f=html5_audio_autoplay" frameborder="0">-->\n             <!--<audio controls="controls" autoplay="autoplay">-->\n                  <!--<source src="/music" type="audio/mpeg" />-->\n                <!--Your browser does not support the audio element.-->\n                <!--</audio>-->\n\n                <iframe v-if="ctx.musice" src="/music" allow="autoplay" frameborder="0" style="display: none" ></iframe>\n        <!--</iframe>-->\n\n        </div>\n\n    </div>',
     data: function data() {
         return {
             crt_model: '',
@@ -957,7 +1028,7 @@ window.live_home = {
             //document.addEventListener('touchend', play);
         });
 
-        play_music(this.ctx.musice);
+        //play_music(this.ctx.musice)
 
         $(this.$el).find('.level-1').one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function () {
             $(this).removeClass('fade-in-btn');
@@ -1047,18 +1118,18 @@ window.live_home = {
 };
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(59);
+__webpack_require__(61);
 
 window.live_page_2d = {
     props: ['ctx'],
     basename: 'live-page-2d',
-    template: '<div class="com-live-page-2d">\n    <div class="content">\n        <img  :src="ctx.img_url" alt="">\n    </div>\n    <component :is="ctx.menu_circle"></component>\n    </div>',
+    template: '<div class="com-live-page-2d">\n    <div class="content">\n        <img  :src="ctx.img_url" alt="">\n    </div>\n    <component :is="ctx.menu_circle"></component>\n    <iframe v-if="ctx.musice" src="/music" allow="autoplay" frameborder="0" style="display: none" ></iframe>\n    </div>',
     data: function data() {
         var childStore = new Vue();
         childStore.ctx = this.ctx;
@@ -1068,7 +1139,7 @@ window.live_page_2d = {
     },
     mounted: function mounted() {
         if (this.ctx.music) {
-            play_music(this.ctx.music);
+            //play_music(this.ctx.music)
         }
     },
 
@@ -1076,18 +1147,18 @@ window.live_page_2d = {
 };
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(60);
+__webpack_require__(62);
 
 window.live_page_3d = {
     props: ['ctx'],
     basename: 'live-page-3d',
-    template: '<div class="com-live-page-3d">\n    <component :is="ctx.menu_circle"></component>\n     <component :is="ctx.menu_vertical" ></component>\n\n     <iframe v-show="is_show"  :src="ctx.link3d" style="width: 100%;height: 100%"></iframe>\n     <!--<iframe allowvr="yes" scrolling="no"  :src="ctx.link3d" frameborder="0" width="100%" height="100%"></iframe>-->\n     \n    </div>',
+    template: '<div class="com-live-page-3d">\n    <component :is="ctx.menu_circle"></component>\n     <component :is="ctx.menu_vertical" ></component>\n\n     <iframe v-show="is_show"  :src="ctx.link3d" style="width: 100%;height: 100%"></iframe>\n     <!--<iframe allowvr="yes" scrolling="no"  :src="ctx.link3d" frameborder="0" width="100%" height="100%"></iframe>-->\n     <iframe v-if="ctx.musice" src="/music" allow="autoplay" frameborder="0" style="display: none" ></iframe>\n    </div>',
     data: function data() {
         var childStore = new Vue();
         childStore.ctx = this.ctx;
@@ -1113,22 +1184,22 @@ window.live_page_3d = {
         setTimeout(function () {
             _this.is_show = true;
         }, 500);
-        if (this.ctx.music) {
-            play_music(this.ctx.music);
-        }
+        //if(this.ctx.music){
+        //    play_music(this.ctx.music)
+        //}
     },
 
     methods: {}
 };
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(61);
+__webpack_require__(63);
 
 window.live_page500 = {
     props: ['ctx'],
@@ -1147,13 +1218,13 @@ window.live_page500 = {
 };
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(63);
+__webpack_require__(65);
 
 window.live_six = {
     props: ['ctx'],
@@ -1170,13 +1241,13 @@ window.live_six = {
 };
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(64);
+__webpack_require__(66);
 
 window.live_video_page = {
     props: ['ctx'],
@@ -1193,7 +1264,7 @@ window.live_video_page = {
 };
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1207,7 +1278,7 @@ exports.push([module.i, ".com-btn-back img {\n  width: 1rem;\n  height: auto;\n}
 
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1221,7 +1292,7 @@ exports.push([module.i, ".com-pop-help {\n  background: #fff;\n  width: 4.5rem;\
 
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1235,7 +1306,7 @@ exports.push([module.i, ".com-menu-circle {\n  position: absolute;\n  bottom: 1r
 
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1249,7 +1320,7 @@ exports.push([module.i, ".com-menu-circle-720 {\n  position: absolute;\n  bottom
 
 
 /***/ }),
-/* 29 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1263,7 +1334,7 @@ exports.push([module.i, ".com-menu-circle-d {\n  position: absolute;\n  bottom: 
 
 
 /***/ }),
-/* 30 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1277,7 +1348,7 @@ exports.push([module.i, ".com-menu-circle-dp {\n  position: absolute;\n  bottom:
 
 
 /***/ }),
-/* 31 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1291,7 +1362,7 @@ exports.push([module.i, ".com-menu-po {\n  position: absolute;\n  bottom: 1rem;\
 
 
 /***/ }),
-/* 32 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1305,7 +1376,7 @@ exports.push([module.i, ".com-menu-tallbuild .btn-first-page {\n  left: -1.6rem;
 
 
 /***/ }),
-/* 33 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1319,7 +1390,7 @@ exports.push([module.i, ".com-menu-vertical .f1 {\n  right: 0.2rem;\n  bottom: 6
 
 
 /***/ }),
-/* 34 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1333,7 +1404,7 @@ exports.push([module.i, ".com-menu-vertical-d .f1 {\n  right: 0.2rem;\n  bottom:
 
 
 /***/ }),
-/* 35 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1347,7 +1418,7 @@ exports.push([module.i, ".com-live-block-pos .title-line {\n  padding-top: 0.3re
 
 
 /***/ }),
-/* 36 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1361,7 +1432,7 @@ exports.push([module.i, ".com-live-contact {\n  background: url(\"/static/images
 
 
 /***/ }),
-/* 37 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1375,7 +1446,7 @@ exports.push([module.i, ".com-live-garden {\n  text-align: center;\n  font-size:
 
 
 /***/ }),
-/* 38 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1389,7 +1460,7 @@ exports.push([module.i, ".btn-animate .fade-in-btn {\n  opacity: 0;\n  animation
 
 
 /***/ }),
-/* 39 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1403,7 +1474,7 @@ exports.push([module.i, ".com-live-page-2d {\n  height: 100%;\n  width: 100%;\n 
 
 
 /***/ }),
-/* 40 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1417,7 +1488,7 @@ exports.push([module.i, ".com-live-page-3d {\n  background: url(\"/static/images
 
 
 /***/ }),
-/* 41 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1431,7 +1502,7 @@ exports.push([module.i, ".com-live-page500 {\n  background: url(\"/static/images
 
 
 /***/ }),
-/* 42 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1445,7 +1516,7 @@ exports.push([module.i, ".banner img {\n  width: 100%;\n  height: auto;\n}\n.gen
 
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1459,7 +1530,7 @@ exports.push([module.i, ".com-live-six {\n  text-align: center;\n  font-size: 0.
 
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -1471,58 +1542,6 @@ exports.push([module.i, ".com-live-video-page {\n  background-color: #000;\n  wi
 
 // exports
 
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(25);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./back.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./back.styl");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 46 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(26);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./help.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./help.styl");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
 
 /***/ }),
 /* 47 */
@@ -1540,8 +1559,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle.styl");
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./back.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./back.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1566,8 +1585,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle_720.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle_720.styl");
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./help.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./help.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1592,8 +1611,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle_lg.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle_lg.styl");
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1618,8 +1637,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle_sm.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle_sm.styl");
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle_720.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle_720.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1644,8 +1663,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_po.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_po.styl");
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle_lg.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle_lg.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1670,8 +1689,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_tallbuild.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_tallbuild.styl");
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle_sm.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_circle_sm.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1696,8 +1715,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_vertical.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_vertical.styl");
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_po.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_po.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1722,8 +1741,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_vertical_d.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_vertical_d.styl");
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_tallbuild.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_tallbuild.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1748,8 +1767,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./block_pos.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./block_pos.styl");
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_vertical.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_vertical.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1774,8 +1793,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./contact.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./contact.styl");
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_vertical_d.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./menu_vertical_d.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1800,8 +1819,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./garden.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./garden.styl");
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./block_pos.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./block_pos.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1826,8 +1845,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./home.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./home.styl");
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./contact.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./contact.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1852,8 +1871,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page2d.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page2d.styl");
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./garden.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./garden.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1878,8 +1897,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page3d.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page3d.styl");
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./home.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./home.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1904,8 +1923,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page500.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page500.styl");
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page2d.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page2d.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1930,8 +1949,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./share.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./share.styl");
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page3d.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page3d.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1956,8 +1975,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./six.styl", function() {
-			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./six.styl");
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page500.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./page500.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1982,6 +2001,58 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./share.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./share.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(45);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./six.styl", function() {
+			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./six.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(46);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
 		module.hot.accept("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./video_page.styl", function() {
 			var newContent = require("!!../../../../../../../../coblan/webcode/node_modules/css-loader/index.js!../../../../../../../../coblan/webcode/node_modules/stylus-loader/index.js!./video_page.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
@@ -1993,7 +2064,7 @@ if(false) {
 }
 
 /***/ }),
-/* 65 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2011,82 +2082,11 @@ var _data = __webpack_require__(3);
 
 var data = _interopRequireWildcard(_data);
 
-var _play_music = __webpack_require__(67);
+var _play_music = __webpack_require__(5);
 
 var play_music = _interopRequireWildcard(_play_music);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-/***/ }),
-/* 66 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-//require('./styl/menu_back.styl')
-
-Vue.component('com-menu-back', {
-    template: '<div class="com-menu-back">\n\n    <!--<div class="mybtn main-menu" @click="is_open = !is_open">-->\n        <!--<img src="/static/images/2d3d/button_\u83DC\u53551.png" alt="">-->\n    <!--</div>-->\n     <!--<div class="mybtn main-menu" @click="back()">-->\n           <!--<img src="/static/images/page500/button_\u8FD4\u56DE.png" alt="">-->\n     <!--</div>-->\n        <com-btn-back class="normal-back-btn"></com-btn-back>\n\n    </div>',
-    data: function data() {
-        return {
-            //is_open:true,
-            parStore: ex.vueParStore(this)
-        };
-    },
-
-    methods: {
-        //home(){
-        //    location = '/'
-        //},
-        //goto_po(){
-        //    location ='/mb/page3d?page=' + this.parStore.ctx.po_3d
-        //    //live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle',menu_vertical:'com-menu-vertical'})
-        //},
-        //back(){
-        //    history.back()
-        //},
-        //goto_720(){
-        //    location ='/mb/page720?page=' + this.parStore.ctx.page_720
-        //}
-    }
-});
-
-/***/ }),
-/* 67 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-window.play_music = function (music) {
-    //var audio = document.createElement("AUDIO")
-    //document.body.appendChild(audio);
-    ////audio.loop = 'loop'
-    //audio.src = music
-
-    //document.body.addEventListener("mousemove", function () {
-    //    audio.play()
-    //})
-    //document.addEventListener('click', function () {
-    //    audio.play()
-    //});
-    var audio = new Audio(music);
-    audio.loop = true;
-    setInterval(function () {
-        audio.play().catch(function (error) {
-            console.log(error);
-        });
-        console.log('play');
-    }, 5000);
-    document.addEventListener('click', function () {
-        audio.play();
-    });
-
-    //document.addEventListener('touchend', function () {
-    //    audio.play()
-    //});
-};
 
 /***/ })
 /******/ ]);

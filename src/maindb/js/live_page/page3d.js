@@ -9,7 +9,7 @@ window.live_page_3d={
 
      <iframe v-show="is_show"  :src="ctx.link3d" style="width: 100%;height: 100%"></iframe>
      <!--<iframe allowvr="yes" scrolling="no"  :src="ctx.link3d" frameborder="0" width="100%" height="100%"></iframe>-->
-     
+     <iframe v-if="ctx.musice" src="/music" allow="autoplay" frameborder="0" style="display: none" ></iframe>
     </div>`,
     data(){
         var childStore = new Vue()
@@ -34,9 +34,9 @@ window.live_page_3d={
         setTimeout(()=>{
             this.is_show=true
         },500)
-        if(this.ctx.music){
-            play_music(this.ctx.music)
-        }
+        //if(this.ctx.music){
+        //    play_music(this.ctx.music)
+        //}
 
     },
     methods:{
