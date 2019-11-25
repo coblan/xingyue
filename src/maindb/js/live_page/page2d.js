@@ -19,7 +19,7 @@ window.live_page_2d={
     },
     mounted(){
         if(this.ctx.music){
-            //play_music(this.ctx.music)
+            play_music(this.ctx.music)
         }
     },
     methods:{
