@@ -149,7 +149,8 @@ window.live_home={
         },
         open_video(){
             //live_root.open_live('live_video_page',{src:this.ctx.video_src})
-            location = '/mb/video?page=ad_video'
+            //location = '/mb/video?page=ad_video'
+            live_root.open_page('/mb/video?page=ad_video')
         },
         open_500(){
             live_root.open_live('live_page500',{})
@@ -191,7 +192,8 @@ window.live_home={
 
         },
         open_overlap(){
-            location = '/mb/page3d?page=overlap'
+            //location = '/mb/page3d?page=overlap'
+            live_root.open_page('/mb/page3d?page=overlap')
             //live_root.open_live('live_page_3d',this.ctx.link_ctx.overlap)
             //live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle-sm',menu_vertical:'com-menu-vertical-d',link3d:named_ctx.first3d})
             //live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle',menu_vertical:'com-menu-vertical'})
