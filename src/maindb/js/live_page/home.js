@@ -73,14 +73,13 @@ window.live_home={
             <transition name="fade">
                <div class="my-model whole-page" v-show="crt_model!=''" @click="crt_model=''"></div>
             </transition>
-        <!--<iframe src="https://www.w3school.com.cn/tiy/t.asp?f=html5_audio_autoplay" frameborder="0">-->
-             <!--<audio controls="controls" autoplay="autoplay">-->
-                  <!--<source src="/music" type="audio/mpeg" />-->
-                <!--Your browser does not support the audio element.-->
-                <!--</audio>-->
+<!--<iframe :src="ctx.musice" allow="autoplay" id="audio" style="display:none"></iframe>-->
 
-                <iframe v-if="ctx.musice" src="/music" allow="autoplay" frameborder="0" style="display: none" ></iframe>
-        <!--</iframe>-->
+<!--<audio id="player" autoplay loop>-->
+    <!--<source :src="ctx.musice" type="audio/mp3">-->
+<!--</audio>-->
+                <iframe v-if="ctx.musice" src="/music" allow="autoplay" frameborder="0" style="display: none" id="iframeChild"></iframe>
+
 
         </div>
 
@@ -116,7 +115,7 @@ window.live_home={
 
             })
 
-        //play_music(this.ctx.musice)
+        play_music(this.ctx.musice)
 
         $(this.$el).find('.level-1').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(){
             $(this).removeClass('fade-in-btn')
@@ -185,7 +184,6 @@ window.live_home={
             if(!this.crt_model){
                 this.crt_model='produce'
                 $(this.$el).find('.level-product .after-btn').addClass('fade-in-btn')
-
             }else{
                 this.crt_model =''
             }

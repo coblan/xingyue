@@ -1,26 +1,23 @@
 window.play_music = (music)=>{
-    //var audio = document.createElement("AUDIO")
-    //document.body.appendChild(audio);
-    ////audio.loop = 'loop'
-    //audio.src = music
+    setTimeout(()=>{
+        var ccd =$(document.getElementById('iframeChild').contentWindow.document).find('audio')
+        var audio = ccd[0]
+        //var audio= new Audio(music)
+        audio.loop=true
+        setInterval(()=>{
+            audio.play().catch(function(error) {
+                console.log(error)
+            })
+            console.log('play')
+        },5000)
+        document.addEventListener('click', function(){
+            alert('click')
+            audio.play().catch(function(error) {
+                console.log(error)
+            })
+        },false);
+    },500)
 
-    //document.body.addEventListener("mousemove", function () {
-    //    audio.play()
-    //})
-    //document.addEventListener('click', function () {
-    //    audio.play()
-    //});
-    var audio= new Audio(music)
-    audio.loop=true
-    setInterval(()=>{
-        audio.play().catch(function(error) {
-            console.log(error)
-        })
-        console.log('play')
-    },5000)
-    document.addEventListener('click', function(){
-        audio.play()
-    });
 
     //document.addEventListener('touchend', function () {
     //    audio.play()
