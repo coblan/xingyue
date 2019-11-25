@@ -36,20 +36,24 @@ Vue.component('com-menu-circle-dp',{
     },
     methods:{
         home(){
-            location = '/'
+            //location = '/'
+            live_root.open_page('/')
         },
         back(){
             history.back()
         },
         open_d1(){
-            location = '/mb/page3d?page=xing_kong'
+            live_root.open_page('/mb/page3d?page=xing_kong')
+            //location = '/mb/page3d?page=xing_kong'
             //live_root.open_live('live_page_3d',live_root.link_ctx.xing_kong)
         },
         open_d2(){
-            location = '/mb/page3d?page=xing_yue'
+            live_root.open_page('/mb/page3d?page=xing_yue')
+            //location = '/mb/page3d?page=xing_yue'
         },
         open_d3(){
-            location = '/mb/page3d?page=xing_hai'
+            live_root.open_page( '/mb/page3d?page=xing_hai')
+            //location = '/mb/page3d?page=xing_hai'
         }
     }
 })

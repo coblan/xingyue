@@ -30,18 +30,21 @@ Vue.component('com-menu-circle-720',{
     },
     methods:{
         home(){
-            location = '/'
+            //location = '/'
+            live_root.open_page('/')
         },
         back(){
             history.back()
         },
         open_house(){
-            location='/mb/page2d?page='+this.parStore.ctx.page2d
+            live_root.open_page('/mb/page2d?page='+this.parStore.ctx.page2d)
+            //location='/mb/page2d?page='+this.parStore.ctx.page2d
             //var active =this.parStore.ctx.active
             //live_root.open_live('live_page_2d',{menu_circle:'com-menu-circle-2d',content_img:named_ctx.product[active].image_2d})
         },
         goto_po(){
-            location ='/mb/page3d?page=' + this.parStore.ctx.po_3d
+            live_root.open_page('/mb/page3d?page=' + this.parStore.ctx.po_3d)
+            //location ='/mb/page3d?page=' + this.parStore.ctx.po_3d
         },
     }
 })

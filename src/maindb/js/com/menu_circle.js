@@ -27,7 +27,8 @@ Vue.component('com-menu-circle',{
     },
     methods:{
         home(){
-            location = '/'
+            //location = '/'
+            live_root.open_page('/')
         },
         back(){
             history.back()

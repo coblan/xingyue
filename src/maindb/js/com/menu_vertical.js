@@ -22,7 +22,8 @@ Vue.component('com-menu-vertical',{
         open_f1(){
             if(this.parStore.ctx.crt_btn!='f1' && this.parStore.ctx.f1_page){
                 var url =ex.appendSearch('/mb/page3d',{page:this.parStore.ctx.f1_page,})
-                location = url
+                live_root.open_page(url)
+
             }
             //if(this.parStore.ctx.active !=0){
             //    live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle-lg',menu_vertical:'com-menu-vertical-d',active:0})
@@ -31,7 +32,7 @@ Vue.component('com-menu-vertical',{
         open_f2(){
             if(this.parStore.ctx.crt_btn!='f2' && this.parStore.ctx.f2_page){
                 var url =ex.appendSearch('/mb/page3d',{page:this.parStore.ctx.f2_page,})
-                location = url
+                live_root.open_page(url)
             }
         },
     }

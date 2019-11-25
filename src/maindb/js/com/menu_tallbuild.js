@@ -30,17 +30,20 @@ Vue.component('com-menu-tallbuild',{
     },
     methods:{
         home(){
-            location = '/'
+            //location = '/'
+            live_root.open_page('/')
         },
         goto_po(){
-            location ='/mb/page3d?page=' + this.parStore.ctx.po_3d
+            live_root.open_page('/mb/page3d?page=' + this.parStore.ctx.po_3d)
+            //location ='/mb/page3d?page=' + this.parStore.ctx.po_3d
             //live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle',menu_vertical:'com-menu-vertical'})
         },
         back(){
             history.back()
         },
         goto_720(){
-            location ='/mb/page720?page=' + this.parStore.ctx.page_720
+            live_root.open_page('/mb/page720?page=' + this.parStore.ctx.page_720)
+            //location ='/mb/page720?page=' + this.parStore.ctx.page_720
         }
     }
 })

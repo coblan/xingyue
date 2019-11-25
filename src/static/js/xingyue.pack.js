@@ -614,7 +614,8 @@ Vue.component('com-menu-circle', {
 
     methods: {
         home: function home() {
-            location = '/';
+            //location = '/'
+            live_root.open_page('/');
         },
         back: function back() {
             history.back();
@@ -640,17 +641,20 @@ Vue.component('com-menu-circle-2d', {
 
     methods: {
         home: function home() {
-            location = '/';
+            //location = '/'
+            live_root.open_page('/');
         },
         goto_po: function goto_po() {
-            location = '/mb/page3d?page=' + this.parStore.ctx.po_3d;
+            live_root.open_page('/mb/page3d?page=' + this.parStore.ctx.po_3d);
+            //location ='/mb/page3d?page=' + this.parStore.ctx.po_3d
             //live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle',menu_vertical:'com-menu-vertical'})
         },
         back: function back() {
             history.back();
         },
         goto_720: function goto_720() {
-            location = '/mb/page720?page=' + this.parStore.ctx.page_720;
+            live_root.open_page('/mb/page720?page=' + this.parStore.ctx.page_720);
+            //location ='/mb/page720?page=' + this.parStore.ctx.page_720
         }
     }
 });
@@ -675,18 +679,21 @@ Vue.component('com-menu-circle-720', {
 
     methods: {
         home: function home() {
-            location = '/';
+            //location = '/'
+            live_root.open_page('/');
         },
         back: function back() {
             history.back();
         },
         open_house: function open_house() {
-            location = '/mb/page2d?page=' + this.parStore.ctx.page2d;
+            live_root.open_page('/mb/page2d?page=' + this.parStore.ctx.page2d);
+            //location='/mb/page2d?page='+this.parStore.ctx.page2d
             //var active =this.parStore.ctx.active
             //live_root.open_live('live_page_2d',{menu_circle:'com-menu-circle-2d',content_img:named_ctx.product[active].image_2d})
         },
         goto_po: function goto_po() {
-            location = '/mb/page3d?page=' + this.parStore.ctx.po_3d;
+            live_root.open_page('/mb/page3d?page=' + this.parStore.ctx.po_3d);
+            //location ='/mb/page3d?page=' + this.parStore.ctx.po_3d
         }
     }
 });
@@ -711,21 +718,25 @@ Vue.component('com-menu-circle-d', {
 
     methods: {
         home: function home() {
-            location = '/';
+            //location = '/'
+            live_root.open_page('/');
         },
         back: function back() {
             history.back();
         },
         open_house: function open_house() {
-            location = '/mb/page2d?page=' + this.parStore.ctx.page2d;
+            live_root.open_page('/mb/page2d?page=' + this.parStore.ctx.page2d);
+            //location='/mb/page2d?page='+this.parStore.ctx.page2d
             //var active =this.parStore.ctx.active
             //live_root.open_live('live_page_2d',{menu_circle:'com-menu-circle-2d',content_img:named_ctx.product[active].image_2d})
         },
         goto_po: function goto_po() {
-            location = '/mb/page3d?page=' + this.parStore.ctx.po_3d;
+            live_root.open_page('/mb/page3d?page=' + this.parStore.ctx.po_3d);
+            //location ='/mb/page3d?page=' + this.parStore.ctx.po_3d
         },
         goto_720: function goto_720() {
-            location = '/mb/page720?page=' + this.parStore.ctx.page_720;
+            live_root.open_page('/mb/page720?page=' + this.parStore.ctx.page_720);
+            //location ='/mb/page720?page=' + this.parStore.ctx.page_720
         }
     }
 });
@@ -749,20 +760,24 @@ Vue.component('com-menu-circle-dp', {
 
     methods: {
         home: function home() {
-            location = '/';
+            //location = '/'
+            live_root.open_page('/');
         },
         back: function back() {
             history.back();
         },
         open_d1: function open_d1() {
-            location = '/mb/page3d?page=xing_kong';
+            live_root.open_page('/mb/page3d?page=xing_kong');
+            //location = '/mb/page3d?page=xing_kong'
             //live_root.open_live('live_page_3d',live_root.link_ctx.xing_kong)
         },
         open_d2: function open_d2() {
-            location = '/mb/page3d?page=xing_yue';
+            live_root.open_page('/mb/page3d?page=xing_yue');
+            //location = '/mb/page3d?page=xing_yue'
         },
         open_d3: function open_d3() {
-            location = '/mb/page3d?page=xing_hai';
+            live_root.open_page('/mb/page3d?page=xing_hai');
+            //location = '/mb/page3d?page=xing_hai'
         }
     }
 });
@@ -821,17 +836,20 @@ Vue.component('com-menu-tallbuild', {
 
     methods: {
         home: function home() {
-            location = '/';
+            //location = '/'
+            live_root.open_page('/');
         },
         goto_po: function goto_po() {
-            location = '/mb/page3d?page=' + this.parStore.ctx.po_3d;
+            live_root.open_page('/mb/page3d?page=' + this.parStore.ctx.po_3d);
+            //location ='/mb/page3d?page=' + this.parStore.ctx.po_3d
             //live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle',menu_vertical:'com-menu-vertical'})
         },
         back: function back() {
             history.back();
         },
         goto_720: function goto_720() {
-            location = '/mb/page720?page=' + this.parStore.ctx.page_720;
+            live_root.open_page('/mb/page720?page=' + this.parStore.ctx.page_720);
+            //location ='/mb/page720?page=' + this.parStore.ctx.page_720
         }
     }
 });
@@ -860,7 +878,7 @@ Vue.component('com-menu-vertical', {
         open_f1: function open_f1() {
             if (this.parStore.ctx.crt_btn != 'f1' && this.parStore.ctx.f1_page) {
                 var url = ex.appendSearch('/mb/page3d', { page: this.parStore.ctx.f1_page });
-                location = url;
+                live_root.open_page(url);
             }
             //if(this.parStore.ctx.active !=0){
             //    live_root.open_live('live_page_3d',{menu_circle:'com-menu-circle-lg',menu_vertical:'com-menu-vertical-d',active:0})
@@ -869,7 +887,7 @@ Vue.component('com-menu-vertical', {
         open_f2: function open_f2() {
             if (this.parStore.ctx.crt_btn != 'f2' && this.parStore.ctx.f2_page) {
                 var url = ex.appendSearch('/mb/page3d', { page: this.parStore.ctx.f2_page });
-                location = url;
+                live_root.open_page(url);
             }
         }
     }
@@ -1131,7 +1149,7 @@ __webpack_require__(61);
 window.live_page_2d = {
     props: ['ctx'],
     basename: 'live-page-2d',
-    template: '<div class="com-live-page-2d">\n    <div class="content">\n        <img  :src="ctx.img_url" alt="">\n    </div>\n    <component :is="ctx.menu_circle"></component>\n    <iframe v-if="ctx.musice" src="/music" allow="autoplay" frameborder="0" style="display: none" ></iframe>\n    </div>',
+    template: '<div class="com-live-page-2d">\n    <div class="content">\n        <img  :src="ctx.img_url" alt="">\n    </div>\n    <component :is="ctx.menu_circle"></component>\n    <iframe v-if="ctx.music" src="/music" allow="autoplay" frameborder="0" style="display: none" ></iframe>\n    </div>',
     data: function data() {
         var childStore = new Vue();
         childStore.ctx = this.ctx;
@@ -1160,7 +1178,7 @@ __webpack_require__(62);
 window.live_page_3d = {
     props: ['ctx'],
     basename: 'live-page-3d',
-    template: '<div class="com-live-page-3d">\n    <component :is="ctx.menu_circle"></component>\n     <component :is="ctx.menu_vertical" ></component>\n\n     <iframe v-show="is_show"  :src="ctx.link3d" style="width: 100%;height: 100%"></iframe>\n     <!--<iframe allowvr="yes" scrolling="no"  :src="ctx.link3d" frameborder="0" width="100%" height="100%"></iframe>-->\n     <iframe v-if="ctx.musice" src="/music" allow="autoplay" frameborder="0" style="display: none" ></iframe>\n    </div>',
+    template: '<div class="com-live-page-3d">\n    <component :is="ctx.menu_circle"></component>\n     <component :is="ctx.menu_vertical" ></component>\n\n     <iframe v-show="is_show"  :src="ctx.link3d" style="width: 100%;height: 100%"></iframe>\n     <!--<iframe allowvr="yes" scrolling="no"  :src="ctx.link3d" frameborder="0" width="100%" height="100%"></iframe>-->\n     <iframe v-if="ctx.music" src="/music" allow="autoplay" frameborder="0" style="display: none" ></iframe>\n    </div>',
     data: function data() {
         var childStore = new Vue();
         childStore.ctx = this.ctx;
