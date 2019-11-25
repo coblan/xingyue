@@ -18,7 +18,7 @@ class Home(object):
              'editor_ctx':{
                  'link_ctx':page_ctx,
                  #'video_src': settings.BIG_MEDIA + '/video/中铁·星月山湖 网络版 11.13~1.mp4',
-                 'musice':settings.BIG_MEDIA + '/mp3/Music.mp3',
+                 'music':settings.BIG_MEDIA + '/mp3/Music.mp3',
             },
             'editor':'live_home',
             'init_express':'''ex.each(["/static/images/page500/back_品牌.jpg","/static/images/back_通用底图.jpg","%(block)s","%(one_sixe)s","%(garden)s"],img=>{

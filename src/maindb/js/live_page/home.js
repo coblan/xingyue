@@ -78,7 +78,7 @@ window.live_home={
 <!--<audio id="player" autoplay loop>-->
     <!--<source :src="ctx.musice" type="audio/mp3">-->
 <!--</audio>-->
-                <iframe v-if="ctx.musice" src="/music" allow="autoplay" frameborder="0" style="display: none" id="iframeChild"></iframe>
+                <iframe v-if="ctx.music" src="/music" allow="autoplay" frameborder="0" style="display: none" id="iframeChild"></iframe>
 
 
         </div>
@@ -115,7 +115,7 @@ window.live_home={
 
             })
 
-        play_music(this.ctx.musice)
+        play_music(this.ctx.music)
 
         $(this.$el).find('.level-1').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',function(){
             $(this).removeClass('fade-in-btn')

@@ -8,7 +8,7 @@ window.live_page_2d={
         <img  :src="ctx.img_url" alt="">
     </div>
     <component :is="ctx.menu_circle"></component>
-    <iframe v-if="ctx.music" src="/music" allow="autoplay" frameborder="0" style="display: none" ></iframe>
+   <iframe v-if="ctx.music" src="/music" allow="autoplay" frameborder="0" style="display: none" id="iframeChild"></iframe>
     </div>`,
     data(){
         var childStore = new Vue()
